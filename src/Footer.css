@@ -1,0 +1,11 @@
+footer {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+p {
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,16 @@
+@font-face {
+    font-family: cyberpunk;
+    src: url('../public/Cyberpunk-Regular.ttf');
+}
+
+main {
+    background-image: url('../public/mainbackground.png');
+    background-size: cover;
+    height: 1000px;
+}
+
+h1 {
+    color: yellow;
+    background-color: black;
+    font-family: cyberpunk;
+}
