@@ -9,7 +9,7 @@ const Header = () => {
                     <li>
                         <a href="#" class="sublogoIcon" >
                             <img src="" alt="" />
-                            <span class="nav-item">Logo</span>
+                            <span class="nav-logo">Logo</span>
                         </a>
                     </li>
                     <li>
@@ -39,7 +39,7 @@ const Header = () => {
                     <li>
                         <a href="#" class="sublogoIcon" >
                             <img src="" alt="" />
-                            <span class="nav-item">Search</span>
+                            <span class="nav-search">Search</span>
                         </a>
                     </li>
                 </ul>
