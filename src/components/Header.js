@@ -12,7 +12,7 @@ const Header = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="/games" class="sublogoIcon" >
+                        <a href="/gamelist" class="sublogoIcon" >
                             <img src="" alt="" />
                             <span class="nav-item">Games</span>
                         </a>
@@ -42,6 +42,7 @@ const Header = () => {
                         </a>
                     </li>
                     <li>
+                        {/* temp link to a game's page */}
                         <a href="gamepage" class="sublogoIcon" >
                             <img src="" alt="" />
                             <span class="nav-search">Search</span>
