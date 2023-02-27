@@ -123,6 +123,8 @@ a {
     width: 1000px;
     margin: auto;
     justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .gameThing {
@@ -131,6 +133,8 @@ a {
     height: 400px;
     width: 600px;
     margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 /* LOGIN PAGE STYLIZATION */
