@@ -5,8 +5,9 @@
 }
 
 main {
-    background-image: url('../public/mainbackground.png');
-    background-size: cover;
+    /* background-image: url('../public/mainbackground.png');
+    background-size: cover; */
+    background-image: linear-gradient(to bottom, #050b13, #11131e, #1c1727, #2b192e, #3c1b30, #431a2f, #4a192c, #511929, #511627, #501324, #501022, #4f0c1f);
     height: auto;
 }
 
@@ -79,6 +80,10 @@ p {
 }
 
 /*Header stylization*/
+header {
+    background-color: rgba(5,12,18,255);
+}
+
 ul {
     display: flex;
     align-items: center;
@@ -87,22 +92,28 @@ ul {
 
 }
 
-a {
+button {
     text-decoration: none;
+    color: rgba(88,221,229,255);
 }
 
 .nav-item {
-    background-color: black;
-    color: white;
+    background-color: rgba(44,17,25,0.6);
+    color: rgba(88,221,229,255);
     text-align: center;
+    border-width: 3px;
+    border-color: rgba(88,221,229,255);
     padding: 15px;
-    background: linear-gradient(to bottom, #a90329 0%, #a90329 15%, #a90329 15%, #a90329 29%, #8f0222 36%, #8f0222 39%, #6d0019 63%, #6d0019 92%);
-    opacity: .80;
+    /* background: linear-gradient(to bottom, #a90329 0%, #a90329 15%, #a90329 15%, #a90329 29%, #8f0222 36%, #8f0222 39%, #6d0019 63%, #6d0019 92%); */
+    /* opacity: .80; */
     height: 40px;
     width: 90px;
     -webkit-clip-path: polygon(69% 0, 100% 0, 100% 100%, 12% 100%, 0 88%, 0 4%, 58% 4%);
     clip-path: polygon(69% 0, 100% 0, 100% 100%, 12% 100%, 0 88%, 0 4%, 58% 4%);
+}
 
+.nav-item:hover {
+    background-color: rgba(106,39,44,255);
 }
 
 .nav-logo {
@@ -435,7 +446,10 @@ body#profile {
 .loginBox {
     height: 400px;
     width: 400px;
-    background-color: #0072b1;
+    background-color: rgba(0,0,0,0.4);
+    border-color: rgba(88,221,229,255);
+    border-width: 3px;
+    color: rgba(26,250,141,255);
     padding: 36px;
     -webkit-clip-path: polygon(0 100%, 0 7%, 8% 0, 79% 0, 84% 6%, 94% 6%, 100% 11%, 100% 65%, 95% 73%, 95% 85%, 81% 100%, 29% 100%);
     clip-path: polygon(0 100%, 0 7%, 8% 0, 79% 0, 84% 6%, 94% 6%, 100% 11%, 100% 65%, 95% 73%, 95% 85%, 81% 100%, 29% 100%);
@@ -444,6 +458,7 @@ body#profile {
 .formTitle {
     all: unset;
     font-size: 24px;
+    
 }
 
 .loginForm {
@@ -464,12 +479,19 @@ body#profile {
 }
 
 .formButton {
-    background-color: aquamarine;
+    color: black;
+    background-color: rgba(26,250,141,0.4);
+    border-color: rgba(26,250,141,255);
+    border-width: 2px;
     height: 30px;
     width: 75px;
     margin-right: 5px;
     -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
     clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
+}
+
+.formButton:hover {
+    background-color: rgba(26,250,141,255);
 }
 
 .loginForm a {

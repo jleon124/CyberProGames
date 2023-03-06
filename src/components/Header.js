@@ -1,21 +1,23 @@
 import React from 'react'
-import './Header.css'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
+    const navigate = useNavigate();
+
     return (
         <header>
             <nav>
                 <ul>
                     <li>
-                        <a href="/" >
+                        <button onClick={() => navigate("/")} >
                             <img src= '/cpg_logo.png' alt="CyberProGames logo" width='100' height='100'/>
-                        </a>
+                        </button>
                     </li>
                     <li>
-                        <a href="/gamelist" class="sublogoIcon" >
+                        <button onClick={() => navigate("/gamelist")} class="sublogoIcon" >
                             <img src="" alt="" />
                             <span class="nav-item">Games</span>
-                        </a>
+                        </button>
                     </li>
                     <li>
                         <a href="/about" class="sublogoIcon" >
