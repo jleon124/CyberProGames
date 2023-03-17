@@ -2,6 +2,14 @@
 @font-face {
     font-family: cyberpunk;
     src: url('../public/Cyberpunk-Regular.ttf');
+
+}
+
+@font-face {
+    font-family: cyber_text;
+    src: url('../public/Valorax-lg25V.otf');
+    
+    
 }
 
 main {
@@ -69,9 +77,9 @@ hr {
 /* footer stylization */
 footer {
     display: flex;
-    align-items: center;
     list-style: none;
     justify-content: space-evenly;
+    background-image: linear-gradient(to bottom, #4f0c1f, #410f28, #30122b, #201428, #131221, #0e101d, #090e18, #050b13, #050b13, #050b13, #050b13, #050b13);
 }
 
 p {
@@ -148,14 +156,14 @@ button {
     align-items: center;
 }
 
-/* About page stuff ---- Starts-----*/
+/* ABOUT PAGE STYLE ---- Starts-----*/
 
 .profile_about_Box{
     border-style: solid;
-    border-width: 5px;
-    border-color: rgb(255, 255, 255);
+    border-width: 3px;
+    border-color:  rgba(88,221,229,255);
     text-align: center;
-    background-color: #fcee0a;
+    background-color: rgba(6,11,19,0.8);
     height: 450px;
     width: 600px;
     clip-path: polygon(50% 0%, 91% 0, 100% 10%, 100% 100%, 8% 100%, 0 91%, 0 0);
@@ -165,13 +173,19 @@ button {
     
 }
 
+.profile_about_Box:hover{
+    background-color: rgba(106,39,43,255);
+
+
+}
+
 .box_profile_img{
     background: rgba(0, 0, 0, 0.5);
     height: 350px;
     width: 250px;
     position: absolute;
     z-index: 2;
-    margin-left: 330px;
+    margin-left: 380px;
     margin-bottom: 400px;
 
 }
@@ -179,10 +193,12 @@ button {
 
 .profileBox_right_side{
     text-align: center;
-    background-color: #720451;
+    background-color: rgba(6,11,19,255);
+    border-width: 3px;
+    border-color: rgba(88,221,229,255);
     height: 450px;
     width: 600px;
-    clip-path: polygon(50% 0%, 91% 0, 100% 10%, 100% 100%, 8% 100%, 0 91%, 0 1%);
+    clip-path: polygon(50% 0%, 91% 0, 100% 10%, 100% 100%, 8% 100%, 0 91%, 0 0);
     margin: 50px;
     float: right;
 
@@ -210,18 +226,21 @@ button {
 
 .about_description{
     text-align: center;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(185,21,178,1) 61%, rgba(31,24,245,1) 100%, rgba(0,212,255,1) 100%);
+    background-color: rgba(0,0,0,0.4);
+    border-color: rgba(88,221,229,255);
+    border-width: 3px;
     height: 320px;
     width: 650px;
     clip-path: polygon(50% 0%, 100% 0, 100% 88%, 95% 100%, 25% 100%, 0 100%, 0 0);
     margin-left: 100px;
     margin-top: 100px;
     
+    
 }
 
+
 .about_title_page{
-    margin-top: 200px;
+    padding-top: 70px;
     margin-left: 100px;
     font-size: 100px;
     color: yellow;
@@ -236,15 +255,16 @@ button {
 
 }
 
+
 .profile_desciptions{
     background: rgba(0, 0, 0, 0);
     padding-left: 30px;    
     padding-top: 100px;
     text-align: left;
-    font-family: Tomorrow, sans-serif;
+    font-family: cyber_text;
     font-size: 1.00rem;
     text-transform: uppercase;
-    color: black;
+    color:rgba(26,250,141,255);
     line-height: 2;
     font-weight: bold;
 
@@ -252,13 +272,13 @@ button {
 
 .profile_desciptions_right{
     background: rgba(0, 0, 0, 0);
-    padding-left: 300px;    
+    padding-left: 280px;    
     padding-top: 100px;
     text-align: left;
-    font-family: Tomorrow, sans-serif;
+    font-family: cyber_text;
     font-size: 1.00rem;
     text-transform: uppercase;
-    color: black;
+    color:rgba(26,250,141,255);;
     line-height: 2;
     font-weight: bold;
     
@@ -271,7 +291,7 @@ button {
     font-family: Tomorrow, sans-serif;
     font-size: 1.00rem;
     text-transform: uppercase;
-    color: black;
+    color: rgba(26,250,141,255);
     line-height: 2;
     font-weight: bold;
 }
@@ -281,40 +301,41 @@ button {
 }
 
 #About_page{
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(185,21,178,1) 61%, rgba(31,24,245,1) 100%, rgba(0,212,255,1) 100%); 
-    
+    background-image: linear-gradient(to bottom, #050b13, #11131e, #1c1727, #2b192e, #3c1b30, #431a2f, #4a192c, #511929, #511627, #501324, #501022, #4f0c1f);
     
 }
 
-#footer_repeater{
+.footer_repeater{
     position: absolute;
     width: 100%;
-  
+      
 }
 
 .footer_grid{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    margin-top: 70px;
-    margin-left: 300px;
-    margin-right: 300px;
-    margin-bottom: 200px;
-    column-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
+  grid-auto-rows: minmax(150px, auto);
+  grid-gap: 1em;
+  margin-top: 100px;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-bottom: 200px;
     
 }
 
 .footer_grid_item{
-    text-align: center;
+    text-align: left;
 
 }
 
 .footer_title{
     background: rgba(0, 0, 0, 0);
-    font-family: Tomorrow, sans-serif;
+    font-family: BlenderProBold,sans-serif;
     font-size: 20px;
     text-transform: uppercase;
-    color: black;
+    color: #29bffd;
     line-height: 2;
     font-weight: bold;
 
@@ -322,15 +343,26 @@ button {
 
 .footer_text{
     background: rgba(0, 0, 0, 0);
-    font-family: Tomorrow, sans-serif;
-    font-size: 15px;
+    font-family: BlenderProBold,sans-serif;
+    font-size: .875rem;
     text-transform: uppercase;
     color: rgb(255, 255, 255);
     line-height: 2;
-    font-weight: bold;
-    text-align: left;
-    padding-left: 40px;
 
+}
+
+
+.footer_text:hover{
+    text-decoration: underline;
+    color: #29bffd;
+    cursor: pointer;
+}
+
+.rights_text{
+    background: rgba(0, 0, 0, 0);
+    margin-top: 80px;
+    font-family: 'Courier New', Courier, monospace;
+   
 }
     
 /* Profile page styles */
@@ -518,3 +550,23 @@ body#profile {
     display: flex;
     flex-direction: column;
 }
+
+
+/* SETTING(Account) PAGE STYLE ---- STARTS-----*/
+
+#Account_page{
+    background-image: linear-gradient(to bottom, #050b13, #11131e, #1c1727, #2b192e, #3c1b30, #431a2f, #4a192c, #511929, #511627, #501324, #501022, #4f0c1f);
+
+}
+
+.setting_headers{
+    background: rgba(0, 0, 0, 0);
+    font-family: cyber_text;
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 100px;
+    
+}
+
+
+/* SETTING(Account) PAGE STYLE ---- ENDS-----*/

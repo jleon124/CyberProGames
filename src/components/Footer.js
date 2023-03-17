@@ -4,23 +4,91 @@ const Footer = () => {
 
     return (
         <footer>
-            
-            <div class="footer-column">
-    <h1>Column 1</h1>
-    <p>Content for column 1</p>
-  </div>
-  <div class="footer-column">
-    <h1>Column 2</h1>
-    <p>Content for column 2</p>
-  </div>
-  <div class="footer-column">
-    <h1>Column 3</h1>
-    <p>Content for column 3</p>
-  </div>
-  <div class="footer-column">
-    <h1>Column 4</h1>
-    <p>Content for column 4</p>
-  </div>
+          
+
+  
+  <img src= '/footer_razor_img.png' alt="footer" class ="footer_repeater"/>
+ 
+ <br></br>
+
+ <div class="footer_grid">
+   <div class="footer_grid_item">
+     <h1 class="footer_title">CyberProGames</h1>
+     <p class="footer_text">About Us</p>
+     <p class="footer_text">Terms of use</p>
+     <p class="footer_text">blah</p>
+     <p class="footer_text">blah</p>
+     <p class="footer_text">blah</p>
+     <p class="footer_text">blah</p>
+
+
+   </div>
+
+
+
+
+   <div class="footer_grid_item">
+   <h1 class="footer_title">Browse Games</h1>
+     <p class="footer_text">Program games</p>
+     <p class="footer_text">Fun games</p>
+     <p class="footer_text">blah</p>
+     <p class="footer_text">blah</p>
+     <p class="footer_text">blah</p>
+     <p class="footer_text">blah</p>
+     
+     
+   </div>
+
+
+
+
+
+   <div class="footer_grid_item">
+   <h1 class="footer_title">More</h1>
+     <p class="footer_text">blah</p>
+     <p class="footer_text">blah</p>
+     <p class="footer_text">blah</p>
+     <p class="footer_text">blah</p>
+     <p class="footer_text">blah</p>
+     <p class="footer_text">blah</p>
+     
+     
+   </div>
+
+
+
+
+
+
+
+   <div class="footer_grid_item">
+   <h1 class="footer_title">Follow Us</h1>
+     <p class="footer_text">LinkedIn</p>
+     <p class="footer_text">blah</p>
+     <p class="footer_text">blah</p>
+     <p class="footer_text">blah</p>
+     <p class="footer_text">blah</p>
+     <p class="footer_text">blah</p>
+     
+     
+   </div>
+
+
+ </div>
+
+ 
+
+ 
+
+  <h1 class="rights_text">© 2023 CyberProGames.com All Rights Reserved. </h1>
+
+
+
+      
+
+
+
+
         </footer>
     )
 }
