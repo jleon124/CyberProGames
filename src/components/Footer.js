@@ -73,6 +73,7 @@ const Footer = () => {
      
    </div>
 
+   <h1 class="rights_text">© 2023 CyberProGames.com All Rights Reserved. </h1>
 
  </div>
 
@@ -80,7 +81,7 @@ const Footer = () => {
 
  
 
-  <h1 class="rights_text">© 2023 CyberProGames.com All Rights Reserved. </h1>
+  {/* <h1 class="rights_text">© 2023 CyberProGames.com All Rights Reserved. </h1> */}
 
 
 
