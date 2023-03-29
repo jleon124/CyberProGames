@@ -17,8 +17,10 @@ const HomePage = () => {
                 </div>
 
                 <div class=" col-span-2 flex justify-evenly">
-                    <GameBox />
-                    <GameBox />
+                    <GameBox 
+                    title={"Game 1"}/>
+                    <GameBox 
+                    title={"Game 2"}/>
                 </div>
 
             </div>
