@@ -16,11 +16,11 @@ main {
     height: auto;
 }
 
-h1 {
+/* h1 {
     color: yellow;
     background-color: black;
     font-family: cyberpunk;
-}
+} */
 
 .gameList {
     display: flex;
@@ -79,10 +79,10 @@ footer {
     background-image: linear-gradient(to bottom, #4f0c1f, #410f28, #30122b, #201428, #131221, #0e101d, #090e18, #050b13, #050b13, #050b13, #050b13, #050b13);
 }
 
-p {
+/* p {
     background-color: black;
     color: white;
-}
+} */
 
 /*Header stylization*/
 header {
@@ -132,7 +132,7 @@ button {
 }
 
 /*Game pages sytlization*/
-.displayGame {
+/* .displayGame {
     text-align: center;
     background-color: #0072b1;
     height: 600px;
@@ -151,7 +151,7 @@ button {
     margin: auto;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /* ABOUT PAGE STYLE ---- Starts-----*/
 
