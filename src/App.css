@@ -9,11 +9,79 @@
     src: url('../public/Valorax-lg25V.otf');
 }
 
+/* Classic color theme  */
+#classic {
+    background-color: #f3ebf6;
+}
+
+/* Samurai color theme */
+#samurai {
+    background-color: #46045e;
+}
+
+/* Retro color theme  */
+#Retro {
+    background-color: #46045e;
+}
+
+
+.color-switcher{
+    width: 10rem;
+    padding: 1rem;
+
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform:  translate(0, -50%);
+
+}
+
+.theme-options {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: right;
+    padding: 20px 0;
+    border-radius: 4px;
+    
+
+}
+
+#theme-white{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color:  #ffffff;
+
+}
+
+#theme-blue{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: #2600ff;
+
+}
+
+#theme-orange{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: #fa2500;
+
+}
+
+
+
+
+
+
+
+
 main {
     /* background-image: url('../public/mainbackground.png');
-    background-size: cover; */
+    background-size: cover;  */
     background-image: linear-gradient(to bottom, #050b13, #11131e, #1c1727, #2b192e, #3c1b30, #431a2f, #4a192c, #511929, #511627, #501324, #501022, #4f0c1f);
-    height: auto;
+    /* height: auto; */
 }
 
 /* h1 {
@@ -155,212 +223,86 @@ button {
 
 /* ABOUT PAGE STYLE ---- Starts-----*/
 
-.profile_about_Box{
-    border-style: solid;
-    border-width: 3px;
-    border-color:  rgba(88,221,229,255);
-    text-align: center;
-    background-color: rgba(6,11,19,0.8);
-    height: 450px;
-    width: 600px;
+.profile_about_Box {
     clip-path: polygon(50% 0%, 91% 0, 100% 10%, 100% 100%, 8% 100%, 0 91%, 0 0);
-    margin: 50px;
-    margin-top: 50px;
- 
-    
-}
 
-.profile_about_Box:hover{
-    background-color: rgba(106,39,43,255);
+  }
 
-
-}
-
-.box_profile_img{
+  .box_profile_img {
     background: rgba(0, 0, 0, 0.5);
-    height: 350px;
-    width: 250px;
-    position: absolute;
-    z-index: 2;
-    margin-left: 380px;
-    margin-bottom: 400px;
 
-}
+  }
 
-
-.profileBox_right_side{
-    text-align: center;
-    background-color: rgba(6,11,19,255);
-    border-width: 3px;
-    border-color: rgba(88,221,229,255);
-    height: 450px;
-    width: 600px;
+  .profileBox_right_side {
     clip-path: polygon(50% 0%, 91% 0, 100% 10%, 100% 100%, 8% 100%, 0 91%, 0 0);
-    margin: 50px;
-    float: right;
 
-}
+  }
 
-.box_profile_img_right{
+  .box_profile_img_right {
     background: rgba(0, 0, 0, 0.5);
-    height: 350px;
-    width: 250px;
-    position: absolute;
-    z-index: 2;
-    right: 330px;
-    padding: 10px;
-    margin-right: 50px;
-    margin-bottom: 400px;
-    
-}
 
-.white_profileBox{
-    background: rgba(0,0,0,0);
-    height: 500px;
-    width: 400px;
+  }
 
-}
+  .white_profileBox {
+    background: rgba(0, 0, 0, 0);
 
-.about_description{
-    text-align: center;
-    background-color: rgba(0,0,0,0.4);
-    border-color: rgba(88,221,229,255);
-    border-width: 3px;
-    height: 320px;
-    width: 650px;
+  }
+
+  .about_description {
     clip-path: polygon(50% 0%, 100% 0, 100% 88%, 95% 100%, 25% 100%, 0 100%, 0 0);
-    margin-left: 100px;
-    margin-top: 100px;
-    
-    
-}
 
+  }
 
-.about_title_page{
-    padding-top: 70px;
-    margin-left: 100px;
-    font-size: 100px;
-    color: yellow;
+  .about_title_page {
     font-family: cyberpunk;
-    background: rgba(0,0,0,0);
-    font-weight: bolder;
-
-}
-
-#about_logo{
-    margin-left: 100px;
-
-}
-
-
-.profile_desciptions{
     background: rgba(0, 0, 0, 0);
-    padding-left: 30px;    
-    padding-top: 100px;
-    text-align: left;
-    font-family: cyber_text;
-    font-size: 1.00rem;
-    text-transform: uppercase;
-    color:rgba(26,250,141,255);
-    line-height: 2;
-    font-weight: bold;
 
-}
+  }
 
-.profile_desciptions_right{
+
+  .profile_desciptions {
     background: rgba(0, 0, 0, 0);
-    padding-left: 280px;    
-    padding-top: 100px;
-    text-align: left;
-    font-family: cyber_text;
-    font-size: 1.00rem;
-    text-transform: uppercase;
-    color:rgba(26,250,141,255);;
-    line-height: 2;
-    font-weight: bold;
     
-}
 
-.about_text{
+  }
+
+  .profile_desciptions_right {
     background: rgba(0, 0, 0, 0);
-    text-align: left;
-    padding: 50px;
-    font-family: Tomorrow, sans-serif;
-    font-size: 1.00rem;
-    text-transform: uppercase;
-    color: rgba(26,250,141,255);
-    line-height: 2;
-    font-weight: bold;
-}
+  
 
-.color_text{
-    color: rgb(255, 255, 255);
-}
+  }
 
-#About_page{
-    background-image: linear-gradient(to bottom, #050b13, #11131e, #1c1727, #2b192e, #3c1b30, #431a2f, #4a192c, #511929, #511627, #501324, #501022, #4f0c1f);
-    
-}
-
-.footer_repeater{
-    position: absolute;
-    width: 100%;
-      
-}
-
-.footer_grid{
-  display: flex;
-  flex-wrap: wrap;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(300px, 1fr));
-  grid-auto-rows: minmax(150px, auto);
-  grid-gap: 1em;
-  margin-top: 100px;
-  margin-left: 300px;
-  margin-right: 300px;
-  margin-bottom: 200px;
-    
-}
-
-.footer_grid_item{
-    text-align: left;
-
-}
-
-.footer_title{
+  .about_text {
     background: rgba(0, 0, 0, 0);
-    font-family: BlenderProBold,sans-serif;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #29bffd;
-    line-height: 2;
-    font-weight: bold;
 
-}
+  }
 
-.footer_text{
+  .footer_repeater {
+    @apply absolute w-full;
+  }
+
+  .footer_grid {
+    @apply flex flex-wrap grid grid-cols-[repeat(4,minmax(300px,1fr))] auto-rows-[minmax(150px,auto)] gap-[1em] mt-[100px] mb-[200px] mx-[300px];
+  }
+
+ 
+  .footer_title {
+    @apply text-xl uppercase text-[#29bffd] leading-loose font-[bold];
     background: rgba(0, 0, 0, 0);
-    font-family: BlenderProBold,sans-serif;
-    font-size: .875rem;
-    text-transform: uppercase;
-    color: rgb(255, 255, 255);
-    line-height: 2;
+    font-family: BlenderProBold, sans-serif;
+  }
 
-}
-
-
-.footer_text:hover{
-    text-decoration: underline;
-    color: #29bffd;
-    cursor: pointer;
-}
-
-.rights_text{
+  .footer_text {
+    @apply text-sm uppercase text-white leading-loose hover:underline hover:text-[#29bffd] hover:cursor-pointer;
     background: rgba(0, 0, 0, 0);
-    margin-top: 80px;
-    font-family: 'Courier New', Courier, monospace;
-   
-}
+    font-family: BlenderProBold, sans-serif;
+  }
+
+  .rights_text {
+    @apply mt-20;
+    background: rgba(0, 0, 0, 0);
+    font-family: "Courier New", Courier, monospace;
+  }
     
 /* Profile page styles */
 
@@ -551,19 +493,156 @@ body#profile {
 
 /* SETTING(Account) PAGE STYLE ---- STARTS-----*/
 
-#Account_page{
+/* #Account_page{
     background-image: linear-gradient(to bottom, #050b13, #11131e, #1c1727, #2b192e, #3c1b30, #431a2f, #4a192c, #511929, #511627, #501324, #501022, #4f0c1f);
 
-}
+} */
 
-.setting_headers{
+.setting-headers{
     background: rgba(0, 0, 0, 0);
     font-family: cyber_text;
-    font-size: 40px;
-    color: rgba(0, 0, 0, 0.5);
-    margin: 100px;
+    /* font-size: 40px;
+    margin-left: 50px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.4); */
+}
+
+/* .semi-title{
+    margin-left: 50px;
+    color: rgba(26,250,141,255);
+    font-size: 25px;
+
+} */
+
+/* .security-change{
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+
+} */
+
+.pic-container{
+    /* display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: 500px;
+    margin-top: 80px; */
+    justify-content: left;
+    /* column-gap: 50px;
+    grid-row-gap: 20px; */
+
+}
+
+#profile-main-pic{
+    position: absolute;
+    margin-left: 150px;
+    margin-top: 50px;
     
 }
+
+.choose-img-text{
+    position: absolute;
+    background-color:  rgba(0, 0, 0, 0);
+    font-size: 20px;
+    color: rgba(26,250,141,255);
+    margin-left: 520px;
+
+}
+
+.theme-selector-box{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    justify-content: left;
+    column-gap: 50px;
+    grid-row-gap: 20px;
+
+}
+
+.theme-button{
+    background-color: rgba(26,250,141,0.4);
+    height: 50px;
+    width: 80px;
+    clip-path: polygon(50% 0%, 100% 0, 100% 88%, 95% 100%, 25% 100%, 0 100%, 0 0);
+
+}
+
+.palete-shape{
+    background-color: rgba(26,250,141,0.4);
+    height: 50px;
+    width: 350px;
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
+
+}
+
+.clear-box{
+    background-color:  rgba(0, 0, 0, 0.4);
+    margin-left: 100px;
+    padding-top: 10px;
+    padding-bottom: 200px;
+    margin-right: 100px;
+    
+
+}
+
+.clear-box2{
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 10px;
+    margin-top: 30px;
+    padding-bottom: 60px;    
+
+}
+
+.inputEntry-settings {
+    height: 40px;
+    width: 300px;
+    margin: 10px 0px;
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
+}
+
+.save-changes{
+    background-color: #000;
+    height: 60px;
+    width: 110px;
+    -webkit-clip-path: polygon(69% 0, 100% 0, 100% 100%, 12% 100%, 0 88%, 0 4%, 58% 4%);
+    clip-path: polygon(69% 0, 100% 0, 100% 100%, 12% 100%, 0 88%, 0 4%, 58% 4%);
+    float: right;
+    margin-right: 100px;
+    margin-top: 100px;
+    border-width: 3px;
+    border-color: rgba(88,221,229,255);
+    
+}
+
+.save-changes:hover{
+    background-color: #ffffff;
+    color: #000;
+    border-color: #000;
+
+}
+
+
+/* #sam-pic{
+    position: absolute;
+    height: 1000px;
+    right: 0;
+    
+
+} */
+
+
+.dispaly-none {
+    @apply hidden;
+}
+
+
 
 
 /* SETTING(Account) PAGE STYLE ---- ENDS-----*/
