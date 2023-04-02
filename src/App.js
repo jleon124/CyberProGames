@@ -18,7 +18,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="gamelist" element={<GamesList />} />
           <Route path="about" element={<About />} />
-          <Route path="account" element={<Account />} />
+          <Route src='./drkMod.js' path="account" element={<Account />} />
           <Route path="profile" element={<Profile />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="register" element={<RegisterPage />} />
