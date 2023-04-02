@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'cyber': ['Cyberpunk']
+        'cyber': ['Cyberpunk'],
+        'valo': ["Valo"]
       }
     },
   },

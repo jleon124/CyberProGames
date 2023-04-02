@@ -5,9 +5,10 @@ const GamePage = () => {
   return (
     <main className='h-[1750px] pt-5 pb-5'>
       <h1 class="text-[yellow] font-cyber text-5xl mb-12 ml-36">CyberProGames</h1>
-      <h2 className='text-center text-[white]'>Game Title Here</h2>
+      <h2 className='text-center text-[white]'>Linux Quiz</h2>
       <div className='text-center bg-cyan-600 m-auto justify-center items-center flex h-[600px] w-9/12'>
-        <div className='text-center bg-black m-auto justify-center items-center h-[400px] w-[600px]'>   
+        <div className='text-center bg-black m-auto justify-center items-center h-[475px] w-[900px]'> 
+        <iframe frameborder="0" src="https://itch.io/embed-upload/7632259?color=333333" allowfullscreen="" width="900" height="475"><a href="https://mimsthemims.itch.io/linux-quiz">Play Linux Quiz on itch.io</a></iframe> 
         </div>
       </div>
         <br></br>
