@@ -4,12 +4,12 @@ const About = () => {
   return (
 
     <>
-    <body className='bg-[linear-gradient(to_bottom,#050b13,#11131e,#1c1727,#2b192e,#3c1b30,#431a2f,#4a192c,#511929,#511627,#501324,#501022,#4f0c1f)]'>
-    <h1 class="about_title_page text-[100px] text-[yellow] font-[bolder] ml-[100px] pt-[70px]">CyberProGames</h1>
+    <body className='h-auto bg-[linear-gradient(to_bottom,#050b13,#11131e,#1c1727,#2b192e,#3c1b30,#431a2f,#4a192c,#511929,#511627,#501324,#501022,#4f0c1f)]'>
+    <h1 class="about_title_page text-5xl text-[yellow] font-[bolder] ml-[100px] pt-[70px]">CyberProGames</h1>
 
     <br></br><br></br>
 
-    <img src= '/cpg_logo.png' alt="CyberProGames logo" width='300' height='300' className="ml-[100px]"/>
+    {/* <img src= '/cpg_logo.png' alt="CyberProGames logo" width='300' height='300' className="ml-[100px]"/> */}
        
 
     <div class="about_description text-center bg-[rgba(0,0,0,0.4)] h-80 w-[650px] ml-[100px] mt-[100px] border-[rgba(88,221,229,255)] border-[3px]">
@@ -141,8 +141,7 @@ const About = () => {
     <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
     <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
     <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-    <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-    <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+    <br></br><br></br><br></br><br></br>
 
    
 

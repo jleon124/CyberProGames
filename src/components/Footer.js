@@ -48,7 +48,7 @@ const Footer = () => {
           <p class="footer_text">blah</p>
         </div>
 
-        <h1 class="rights_text">© 2023 CyberProGames <br/> All Rights Reserved. </h1>
+        <h1 class="rights_text text-[yellow]">© 2023 CyberProGames <br/> All Rights Reserved. </h1>
 
       </div>
     </footer>

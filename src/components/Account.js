@@ -7,7 +7,7 @@ const Account = () => {
 
     <body className='bg-[linear-gradient(to_bottom,#050b13,#11131e,#1c1727,#2b192e,#3c1b30,#431a2f,#4a192c,#511929,#511627,#501324,#501022,#4f0c1f)]'>
 
-      <h1 className="about_title_page text-[100px] text-[yellow] font-[bolder] ml-[100px] pt-[70px]">CyberProGames</h1>
+      <h1 className="about_title_page text-5xl text-[yellow] font-[bolder] ml-[100px] pt-[70px]">CyberProGames</h1>
       <br></br><br></br>
 
       <div className="clear-box2">
