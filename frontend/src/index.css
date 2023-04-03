@@ -7,6 +7,11 @@
   src: url('../public/Cyberpunk-Regular.ttf');
 }
 
+@font-face {
+  font-family: "Valo";
+  src: url('../public/Valorax-lg25V.otf');
+}
+
 @layer utilities {
   .game-box {
     clip-path: polygon(20% 0%, 90% 0, 100% 9%, 100% 80%, 100% 100%, 9% 99%, 0 89%, 0 0);

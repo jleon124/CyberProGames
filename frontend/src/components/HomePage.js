@@ -8,7 +8,7 @@ const HomePage = () => {
 
             <div class="grid grid-cols-4 grid-rows-2 mx-36 ">
 
-                <p class=" col-span-2 text-white text-2xl ">A website with a purpose of hosting various games ranging
+                <p class=" col-span-2 text-[#1afa8d] text-xl ">A website with a purpose of hosting various games ranging
                     from just-for-fun to game to learning about programming/computer
                     science.</p>
 
@@ -18,14 +18,15 @@ const HomePage = () => {
 
                 <div class=" col-span-2 flex justify-evenly">
                     <GameBox 
-                    title={"Game 1"}/>
+                    title={"Linux Quiz Show"}
+                    src={"Quizshowgraphic.png"}
+                    link={"gamepage"}/>
                     <GameBox 
                     title={"Game 2"}/>
                 </div>
 
             </div>
-
-            <h1 class="text-[yellow] font-cyber text-3xl mb-6 ml-36">Trending</h1>
+            <h1 class="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Trending</h1>
             <div class="flex justify-evenly">
                 <GameBox />
                 <GameBox />
@@ -33,7 +34,7 @@ const HomePage = () => {
                 <GameBox />
             </div>
 
-            <h1 class="text-[yellow] font-cyber text-3xl mb-6 ml-36">Programming</h1>
+            <h1 class="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Programming</h1>
             <div class="flex justify-evenly">
                 <GameBox />
                 <GameBox />
@@ -41,7 +42,7 @@ const HomePage = () => {
                 <GameBox />
             </div>
 
-            <h1 class="text-[yellow] font-cyber text-3xl mb-6 ml-36">Fun</h1>
+            <h1 class="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Fun</h1>
             <div class="flex justify-evenly ">
                 <GameBox />
                 <GameBox />

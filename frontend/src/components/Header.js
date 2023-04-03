@@ -13,12 +13,12 @@ const Header = () => {
                             <img src= '/cpg_logo.png' alt="CyberProGames logo" width='100' height='100'/>
                         </button>
                     </li>
-                    <li>
+                    {/* <li>
                         <button onClick={() => navigate("/gamelist")} class="sublogoIcon" >
                             <img src="" alt="" />
                             <span class="nav-item">Games</span>
                         </button>
-                    </li>
+                    </li> */}
                     <li>
                         <a href="/about" class="sublogoIcon" >
                             <img src="" alt="" />
@@ -28,13 +28,13 @@ const Header = () => {
                     <li>
                         <a href="/account" class="sublogoIcon" >
                             <img src="" alt="" />
-                            <span class="nav-item">Account</span>
+                            <span class="nav-item">Settings</span>
                         </a>
                     </li>
                     <li>
                         <a href="/profile" class="sublogoIcon" >
                             <img src="" alt="" />
-                            <span class="nav-item">Proflie</span>
+                            <span class="nav-item">Profile</span>
                         </a>
                     </li>
                     <li>
@@ -43,13 +43,12 @@ const Header = () => {
                             <span class="nav-item">Login</span>
                         </a>
                     </li>
-                    <li>
-                        {/* temp link to a game's page */}
+                    {/* <li>
                         <a href="gamepage" class="sublogoIcon" >
                             <img src="" alt="" />
                             <span class="nav-search">Search</span>
                         </a>
-                    </li>
+                    </li> */}
                 </ul>
             </nav>
         </header>

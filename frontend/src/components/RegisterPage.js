@@ -27,7 +27,6 @@ const RegisterPage = () => {
             placeholder=" Password"
             required
           />
-          <label class="text-white" for="humanVeri">Are you human? <input type="checkbox" name="human"/></label>
           <nav class="mt-[5px]">
             <button class="text-black bg-emerald-700 border-[#1afa8d] border-2 h-[30px] w-[75px] mr-[5px] hover:bg-[#1afa8d] form-button-box" onClick={() => navigate("/login")}>Back</button>
             <button class="text-black bg-emerald-700 border-[#1afa8d] border-2 h-[30px] w-[75px] mr-[5px] hover:bg-[#1afa8d] form-button-box" type="submit">Sign up</button>
