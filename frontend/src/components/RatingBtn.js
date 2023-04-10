@@ -66,7 +66,7 @@ function RatingBtn()
 
     <div>
         <button
-        className={` ${activeBtn === "dislike" ? "bg-[#FF0063]" : ""} flex items-center justify-evenly h-10 w-[90px] p-[15px] bg-[rgba(44,17,25,0.6)] text-[rgba(88,221,229,255)] border-[3px] border-[rgba(88,221,229,255)]`}
+        className={` ${activeBtn === "dislike" ? "bg-red-600" : ""} flex items-center justify-evenly h-10 w-[90px] p-[15px] bg-[rgba(44,17,25,0.6)] text-[rgba(88,221,229,255)] border-[3px] border-[rgba(88,221,229,255)]`}
         onClick={handleDisikeClick}>
         <BsFillHandThumbsDownFill/> {dislikeCount}
         </button>
