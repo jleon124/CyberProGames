@@ -19,20 +19,13 @@ const HomePage = () => {
                 <div class=" col-span-2 flex justify-evenly">
                     <GameBox 
                     title={"Linux Quiz Show"}
-                    src={"Quizshowgraphic.png"}
+                    src={"quizshow.png"}
                     link={"gamepage"}/>
-                    <GameBox 
-                    title={"Game 2"}/>
+                    <GameBox />
                 </div>
 
             </div>
-            <h1 class="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Trending</h1>
-            <div class="flex justify-evenly">
-                <GameBox />
-                <GameBox />
-                <GameBox />
-                <GameBox />
-            </div>
+
 
             <h1 class="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Programming</h1>
             <div class="flex justify-evenly">
@@ -49,6 +42,15 @@ const HomePage = () => {
                 <GameBox />
                 <GameBox />
             </div>
+
+            <h1 class="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Coming Soon</h1>
+            <div class="flex justify-evenly">
+                <GameBox />
+                <GameBox />
+                <GameBox />
+                <GameBox />
+            </div>
+
         </main>
     )
 }
