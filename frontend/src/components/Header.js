@@ -1,17 +1,24 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { useLogout } from '../hooks/useLogout'
+import { useAuthContext } from '../hooks/useAuthContext'
 
 const Header = () => {
-    const navigate = useNavigate();
+    const { logout } = useLogout()
+    const { user } = useAuthContext()
+
+    const handleClick = () => {
+        logout()
+    }
 
     return (
         <header>
             <nav>
                 <ul>
                     <li>
-                        <button onClick={() => navigate("/")} >
-                            <img src= '/cpg_logo.png' alt="CyberProGames logo" width='100' height='100'/>
-                        </button>
+                        <Link to="/">
+                            <img src='/cpg_logo.png' alt="CyberProGames logo" width='100' height='100' />
+                        </Link>
                     </li>
                     {/* <li>
                         <button onClick={() => navigate("/gamelist")} class="sublogoIcon" >
@@ -20,38 +27,48 @@ const Header = () => {
                         </button>
                     </li> */}
                     <li>
-                        <a href="/about" class="sublogoIcon" >
+                        <Link to="/about" class="sublogoIcon" >
                             <img src="" alt="" />
                             <span class="nav-item">About</span>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/account" class="sublogoIcon" >
+                        <Link to="/account" class="sublogoIcon" >
                             <img src="" alt="" />
                             <span class="nav-item">Settings</span>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/profile" class="sublogoIcon" >
+                        <Link to="/profile" class="sublogoIcon" >
                             <img src="" alt="" />
                             <span class="nav-item">Profile</span>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/login" class="sublogoIcon" >
-                            <img src="" alt="" />
-                            <span class="nav-item">Login</span>
-                        </a>
-                    </li>
-                    {/* <li>
+                        {user && (
+                            <button class="nav-item" onClick={handleClick}>Logout</button>
+                        )}
+
+                        {!user && (
+                            <Link to="/login">
+                                <span class="nav-item">Login</span>
+                            </Link>
+                        )}
+
+                    {/* <Link to="/login" class="sublogoIcon" >
+                        <img src="" alt="" />
+                        <span class="nav-item">Login</span>
+                    </Link> */}
+                </li>
+                {/* <li>
                         <a href="gamepage" class="sublogoIcon" >
                             <img src="" alt="" />
                             <span class="nav-search">Search</span>
                         </a>
                     </li> */}
-                </ul>
-            </nav>
-        </header>
+            </ul>
+        </nav>
+        </header >
     )
 }
 

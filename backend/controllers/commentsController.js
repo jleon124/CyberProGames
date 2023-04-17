@@ -1,5 +1,104 @@
-// const Comment = require('../models/Comment')
-// const User = require('../models/User')
+const Comment = require('../models/Comment')
+const User = require('../models/User')
+
+// @desc    Get all comments
+// @route   GET /api/comment
+// @access  Private
+const getAllComments = async (req, res) => {
+    const comments = await Comment.find().lean()
+
+    if (!comments?.length) {
+        return res.status(400).json({ message: 'No comments found' })
+    }
+
+    res.json(comments)
+}
+
+// @desc    Get comment
+// @route   GET /api/comment
+// @access  Private
+const getComment = async (req, res) => {
+    const { id } = req.params
+
+    const comment = await Comment.findById(id).exec()
+
+    if (!comment) {
+        return res.status(400).json({ message: 'Comment not found' })
+    }
+
+    res.json(comment)
+}
+
+// @desc    Create new comment
+// @route   POST /api/comment
+// @access  Private
+const createComment = async (req, res) => {
+    const { content } = req.body
+
+    if (!content) {
+        res.status(400).json({ message: 'Content missing' })
+    }
+
+    const comment = await Comment.create({ content })
+
+    if (comment) {
+        return res.status(201).json({ message: 'New comment created' })
+    } else {
+        return res.status(400).json({ message: 'Invaldi comment data received' })
+    }
+}
+
+// @desc    Update comment
+// @route   PATCH /api/comment/:id
+// @access  Private
+const updateComment = async (req, res) => {
+    const { id, content } = req.body
+
+    if (!content) {
+        return res.status(400).json({ message: 'All fields required' })
+    }
+
+    const comment = await Comment.findById(id).exec()
+
+    if (!comment) {
+        return res.status(400).json({ message: 'Comment not found' })
+    }
+
+    comment.content = content
+
+    const updatedComment = await comment.save()
+
+    res.json(`Comment with id: ${updateComment.id} updated`)
+}
+
+// @desc    Delete comment
+// @route   DELETE /api/comment/:id
+// @access  Private
+const deleteComment = async (req, res) => {
+    const { id } = req.params
+
+    if (!id) {
+        return res.status(400).json({ message: 'Comment ID required' })
+    }
+
+    const comment = await Comment.findById(id).exec()
+
+    if (!comment) {
+        return res.status(400).json({ message: 'Comment not found' })
+    }
+
+    const result = await comment.deleteOne()
+
+    res.json(`Comment with ID: ${result.id} deleted`)
+}
+
+module.exports = {
+    getAllComments,
+    getComment,
+    createComment,
+    updateComment,
+    deleteComment
+}
 
 // // Create
 // const createComment = async (req, res) => {
