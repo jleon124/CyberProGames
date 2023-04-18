@@ -1,12 +1,12 @@
 /* Main stylization for website */
 @font-face {
     font-family: cyberpunk;
-    src: url('../public/Cyberpunk-Regular.ttf');
+    src: url('../public/fonts/Cyberpunk-Regular.ttf');
 }
 
 @font-face {
     font-family: cyber_text;
-    src: url('../public/Valorax-lg25V.otf');
+    src: url('../public/fonts/Valorax-lg25V.otf');
 }
 
 /* Classic color theme  */

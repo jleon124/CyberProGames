@@ -4,14 +4,12 @@ import { useAuthContext } from '../hooks/useAuthContext'
 const UserInfo = () => {
     const { user } = useAuthContext()
 
-    const { picture } = 'eyeprofile.png'
-
     const showProfilePicture = (user) => {
         switch (user.profilePicture) {
             case 2:
-                return 'eye_profile.png'
+                return 'profilepictures/eye_profile.png'
             default:
-                return 'default_profilepic.png'
+                return 'profilepictures/default_profilepic.png'
         }
     }
 

@@ -19,7 +19,7 @@ const HomePage = () => {
                 <div class=" col-span-2 flex justify-evenly">
                     <GameBox 
                     title={"Linux Quiz Show"}
-                    src={"quizshow.png"}
+                    src={"gameboxicons/quizshow.png"}
                     link={"gamepage"}/>
                     <GameBox />
                 </div>
