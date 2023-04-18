@@ -27,47 +27,46 @@ const Header = () => {
                         </button>
                     </li> */}
                     <li>
-                        <Link to="/about" class="sublogoIcon" >
-                            <img src="" alt="" />
-                            <span class="nav-item">About</span>
+                        <Link to="/about" class="nav-item">
+                            About
                         </Link>
                     </li>
                     <li>
-                        <Link to="/account" class="sublogoIcon" >
-                            <img src="" alt="" />
-                            <span class="nav-item">Settings</span>
+                        <Link to="/settings" class="nav-item">
+                            Settings
                         </Link>
                     </li>
                     <li>
-                        <Link to="/profile" class="sublogoIcon" >
-                            <img src="" alt="" />
-                            <span class="nav-item">Profile</span>
+                        <Link to="/profile" class="nav-item">
+                            Profile
                         </Link>
                     </li>
                     <li>
                         {user && (
-                            <button class="nav-item" onClick={handleClick}>Logout</button>
-                        )}
-
-                        {!user && (
-                            <Link to="/login">
-                                <span class="nav-item">Login</span>
+                            <Link to="/" class="nav-item" onClick={handleClick}>
+                                Logout
                             </Link>
                         )}
 
-                    {/* <Link to="/login" class="sublogoIcon" >
+                        {!user && (
+                            <Link to="/login" class="nav-item">
+                                Login
+                            </Link>
+                        )}
+
+                        {/* <Link to="/login" class="sublogoIcon" >
                         <img src="" alt="" />
                         <span class="nav-item">Login</span>
                     </Link> */}
-                </li>
-                {/* <li>
+                    </li>
+                    {/* <li>
                         <a href="gamepage" class="sublogoIcon" >
                             <img src="" alt="" />
                             <span class="nav-search">Search</span>
                         </a>
                     </li> */}
-            </ul>
-        </nav>
+                </ul>
+            </nav>
         </header >
     )
 }

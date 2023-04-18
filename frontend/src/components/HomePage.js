@@ -8,27 +8,31 @@ const HomePage = () => {
 
             <div class="grid grid-cols-4 grid-rows-2 mx-36 ">
 
-                <p class=" col-span-2 text-[#1afa8d] text-xl ">A website with a purpose of hosting various games ranging
-                    from just-for-fun to game to learning about programming/computer
-                    science.</p>
+                <div class="bg-black/40 col-span-2 mb-4">
+                    <p class="  text-[#58dde5] text-lg ">A website that hosts various games ranging
+                        from just-for-fun to learning about programming/computer
+                        science.</p>
+                </div>
+
 
                 <div class="justify-self-center col-span-2 row-span-2 text-center bg-cyan-600 h-[500px] w-[500px] leaderboard-box ">
                     <p>Leaderboard</p>
                 </div>
 
-                <div class=" col-span-2 flex justify-evenly">
-                    <GameBox 
-                    title={"Linux Quiz Show"}
-                    src={"quizshow.png"}
-                    link={"gamepage"}/>
+                <div class=" col-span-2 flex ">
+                    <GameBox
+                        title={"Linux Quiz Show"}
+                        src={"gameboxicons/quizshow.png"}
+                        link={"gamepage"} 
+                        style={"mr-36"}/>
                     <GameBox />
                 </div>
 
             </div>
 
 
-            <h1 class="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Programming</h1>
-            <div class="flex justify-evenly">
+            <h1 class="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 pt-20 pb-4">Programming</h1>
+            <div class="flex justify-evenly pb-6">
                 <GameBox />
                 <GameBox />
                 <GameBox />
@@ -36,7 +40,7 @@ const HomePage = () => {
             </div>
 
             <h1 class="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Fun</h1>
-            <div class="flex justify-evenly ">
+            <div class="flex justify-evenly pb-6">
                 <GameBox />
                 <GameBox />
                 <GameBox />
@@ -44,7 +48,7 @@ const HomePage = () => {
             </div>
 
             <h1 class="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Coming Soon</h1>
-            <div class="flex justify-evenly">
+            <div class="flex justify-evenly pb-6">
                 <GameBox />
                 <GameBox />
                 <GameBox />

@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       fontFamily: {
         'cyber': ['Cyberpunk'],
-        'valo': ["Valo"]
+        'valo': ["Valo"],
+        'mono': ["Courier New"],
       }
     },
   },
