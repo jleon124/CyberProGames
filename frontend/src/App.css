@@ -140,17 +140,7 @@ hr {
 
 
 /* footer stylization */
-footer {
-    display: flex;
-    list-style: none;
-    justify-content: space-evenly;
-    background-image: linear-gradient(to bottom, #4f0c1f, #410f28, #30122b, #201428, #131221, #0e101d, #090e18, #050b13, #050b13, #050b13, #050b13, #050b13);
-}
 
-/* p {
-    background-color: black;
-    color: white;
-} */
 
 /*Header stylization*/
 header {
@@ -276,37 +266,9 @@ button {
     background: rgba(0, 0, 0, 0);
 
   }
-
-  .footer_repeater {
-    @apply absolute w-full;
-  }
-
-  .footer_grid {
-    @apply flex flex-wrap grid grid-cols-[repeat(4,minmax(300px,1fr))] auto-rows-[minmax(150px,auto)] gap-[1em] mt-[100px]  mx-[300px];
-  }
-
- 
-  .footer_title {
-    @apply text-xl uppercase text-[#29bffd] leading-loose font-[bold];
-    background: rgba(0, 0, 0, 0);
-    font-family: BlenderProBold, sans-serif;
-  }
-
-  .footer_text {
-    @apply text-sm uppercase text-white leading-loose hover:underline hover:text-[#29bffd] hover:cursor-pointer;
-    background: rgba(0, 0, 0, 0);
-    font-family: BlenderProBold, sans-serif;
-  }
-
-  .rights_text {
-    @apply mt-20;
-    background: rgba(0, 0, 0, 0);
-    font-family: "Courier New", Courier, monospace;
-  }
     
 /* Profile page styles */
 
-___
 /* Profile page styles /
   / making a custom clip path */
   .clip-custom1{
@@ -550,13 +512,5 @@ ___
     
 
 } */
-
-
-.dispaly-none {
-    @apply hidden;
-}
-
-
-
 
 /* SETTING(Account) PAGE STYLE ---- ENDS-----*/

@@ -1,56 +1,42 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <footer>
-      <img src='/footer_razor_img.png' alt="footer" class="footer_repeater" />
+    <footer class="flex flex-col font-mono bg-[linear-gradient(to_bottom,#4f0c1f,#410f28,#30122b,#201428,#131221,#0e101d,#090e18,#050b13,#050b13,#050b13,#050b13,#050b13)]">
+      <img src='/footer_razor_img.png' alt="footer" class="absolute w-full" />
 
-      <br></br>
+      <section class="my-20 w-full flex justify-evenly">
 
-      <div class="footer_grid">
-        <div class="footer_grid_item">
-          <h1 class="footer_title">CyberProGames</h1>
-          <p class="footer_text">About Us</p>
-          <p class="footer_text">Terms of use</p>
-          <p class="footer_text">blah</p>
-          <p class="footer_text">blah</p>
-          <p class="footer_text">blah</p>
-          <p class="footer_text">blah</p>
+        <div class="text-[white] flex flex-col">
+          <h1 class="text-[#29bffd] text-xl"><strong>CyberProGames</strong></h1>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/settings">Settings</Link>
+          <Link to="/profile">Profile</Link>
         </div>
 
-        <div class="footer_grid_item">
-          <h1 class="footer_title">Browse Games</h1>
-          <p class="footer_text">Program games</p>
-          <p class="footer_text">Fun games</p>
-          <p class="footer_text">blah</p>
-          <p class="footer_text">blah</p>
-          <p class="footer_text">blah</p>
-          <p class="footer_text">blah</p>
+        <div class="text-white flex flex-col">
+          <h1 class="text-[#29bffd] text-xl"><strong>Browse Games</strong></h1>
+          <Link to="/gamepage">Game</Link>
+          <Link to="/gamepage">Game</Link>
+          <Link to="/gamepage">Game</Link>
+          <Link to="/gamepage">Game</Link>
         </div>
 
-        <div class="footer_grid_item">
-          <h1 class="footer_title">More</h1>
-          <p class="footer_text">blah</p>
-          <p class="footer_text">blah</p>
-          <p class="footer_text">blah</p>
-          <p class="footer_text">blah</p>
-          <p class="footer_text">blah</p>
-          <p class="footer_text">blah</p>
+        <div class="text-white flex flex-col">
+          <h1 class="text-[#29bffd] text-xl"><strong>Follow Us</strong></h1>
+          <Link to="https://www.linkedin.com/in/m1darl1ng/" target="blank">Miranda</Link>
+          <Link to="https://www.linkedin.com/in/jafet-leon-perez/" target="blank">Jafet</Link>
+          <Link to="https://www.linkedin.com/in/-saif-shaikh/" target="blank">Saif</Link>
+          <Link to="https://www.linkedin.com/in/javier-zarate-zaragoza-7b6817240/" target="blank">Javier</Link>
         </div>
 
-        <div class="footer_grid_item">
-          <h1 class="footer_title">Follow Us</h1>
-          <p class="footer_text">LinkedIn</p>
-          <p class="footer_text">blah</p>
-          <p class="footer_text">blah</p>
-          <p class="footer_text">blah</p>
-          <p class="footer_text">blah</p>
-          <p class="footer_text">blah</p>
-        </div>
 
-        <h1 class="rights_text text-[yellow]">© 2023 CyberProGames <br/> All Rights Reserved. </h1>
+      </section>
 
-      </div>
+      <h1 class="text-[yellow] mt-0.5 mb-14 self-center">© 2023 CyberProGames All Rights Reserved. </h1>
+
     </footer>
   )
 }
