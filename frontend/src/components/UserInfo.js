@@ -6,8 +6,20 @@ const UserInfo = () => {
 
     const showProfilePicture = (user) => {
         switch (user.profilePicture) {
+            case 1:
+                return 'profilepictures/default_profilepic.png'
             case 2:
                 return 'profilepictures/eye_profile.png'
+            case 3:
+                return 'profilepictures/glasses_profile.png'
+            case 4:
+                return 'profilepictures/griz_profile.png'
+            case 5:
+                return 'profilepictures/img_profile.png'
+            case 6:
+                return 'profilepictures/mask_profilepic.png'
+            case 7:
+                return 'profilepictures/angy_profilepic.png'
             default:
                 return 'profilepictures/default_profilepic.png'
         }
@@ -39,7 +51,7 @@ const UserInfo = () => {
                     <p>Created at {user.createdAt}</p>
                 </div>
             </div>
-            <img src={showProfilePicture(user)} class="w-32 h-32 rounded-full absolute top-36 left-1/3 transform -translate-x-1/2 z-30"></img>
+            <img alt='userpic' src={showProfilePicture(user)} class="w-32 h-32 rounded-full absolute top-36 left-1/3 transform -translate-x-1/2 z-30"></img>
         </>
     )
 }
