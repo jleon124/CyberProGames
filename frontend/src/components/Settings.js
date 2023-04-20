@@ -1,8 +1,8 @@
 import React from 'react'
-import { useAuthContext } from '../hooks/useAuthContext'
+import { useSelector } from 'react-redux'
 
 const Account = () => {
-  const { user } = useAuthContext()
+  const user = useSelector((state) => state.user)
 
   const showProfilePicture = (user) => {
     switch (user.profilePicture) {
