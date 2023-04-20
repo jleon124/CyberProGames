@@ -38,15 +38,15 @@ const About = () => {
         <div class="profile_about_Box  bg-[rgba(6,11,19,0.8)] h-[450px] w-[600px] m-[50px] border-solid border-4 border-[rgba(88,221,229,255)] hover:bg-[rgba(106,39,43,255)">
           <div>
             <p class="profile_desciptions text-left uppercase text-[rgba(26,250,141,255)] leading-loose pl-[30px] pt-[70px] font-sans font-extrabold text-lg">
-              Name: <h class="text-white">Miranda </h><br></br>
-              <h class="text-white">Darlington</h> <br></br>
-              Gender: <h class="text-white">Female</h><br></br>
-              Age: <h class="text-white">Data Lost</h><br></br>
-              Height: <h class="text-white">Data Lost</h><br></br>
-              Skills: <h class="text-white">HTML, CSS, Java</h> <br></br>
+              Name: <a class="text-white">Miranda </a><br></br>
+              <a class="text-white">Darlington</a> <br></br>
+              Gender: <a class="text-white">Female</a><br></br>
+              Age: <a class="text-white">Data Lost</a><br></br>
+              Height: <a class="text-white">Data Lost</a><br></br>
+              Skills: <a class="text-white">HTML, CSS, Java</a> <br></br>
               <br></br>
-              Role: <h class="text-white">Unknown</h><br></br>
-              Social content: <h class="text-white"><a href="https://www.linkedin.com/in/m1darl1ng/" target="blank" >LinkedIn</a></h>
+              Role: <a class="text-white">Unknown</a><br></br>
+              Social content: <a class="text-white"><a href="https://www.linkedin.com/in/m1darl1ng/" target="blank" >LinkedIn</a></a>
             </p>
 
           </div>
@@ -67,14 +67,14 @@ const About = () => {
         <div class="profileBox_right_side text-center bg-[rgba(6,11,19,255)] h-[450px] w-[600px] float-right m-[50px] border-[3px] border-[rgba(88,221,229,255)]">
           <div>
             <p class="profile_desciptions_right text-left uppercase text-[rgba(26,250,141,255)] leading-loose pl-[280px] pt-[70px] font-sans font-extrabold text-lg">
-              Name: <h class="text-white">Jafet Leon-Perez</h> <br></br>
-              Gender: <h class="text-white">Male</h><br></br>
-              Age: <h class="text-white">Data Lost</h><br></br>
-              Height: <h class="text-white">Data Lost</h><br></br>
-              Skills: <h class="text-white">HTML, CSS, Java</h> <br></br>
+              Name: <a class="text-white">Jafet Leon-Perez</a> <br></br>
+              Gender: <a class="text-white">Male</a><br></br>
+              Age: <a class="text-white">Data Lost</a><br></br>
+              Height: <a class="text-white">Data Lost</a><br></br>
+              Skills: <a class="text-white">HTML, CSS, Java</a> <br></br>
               <br></br>
-              Role: <h class="text-white">Unknown</h><br></br>
-              Social content: <h class="text-white"><a href="https://www.linkedin.com/in/jafet-leon-perez/" target="blank">LinkedIn</a></h>
+              Role: <a class="text-white">Unknown</a><br></br>
+              Social content: <a class="text-white"><a href="https://www.linkedin.com/in/jafet-leon-perez/" target="blank">LinkedIn</a></a>
             </p>
 
           </div>
@@ -95,14 +95,14 @@ const About = () => {
         <div class="profile_about_Box  bg-[rgba(6,11,19,0.8)] h-[450px] w-[600px] m-[50px] border-solid border-4 border-[rgba(88,221,229,255)] hover:bg-[rgba(106,39,43,255)">
           <div>
             <p class="profile_desciptions text-left uppercase text-[rgba(26,250,141,255)] leading-loose pl-[30px] pt-[70px] font-sans font-extrabold text-lg">
-              Name: <h class="text-white">Saif Shaikh</h> <br></br>
-              Gender: <h class="text-white">Male</h><br></br>
-              Age: <h class="text-white">Data Lost</h><br></br>
-              Height: <h class="text-white">Data Lost</h><br></br>
-              Skills: <h class="text-white">HTML, CSS, Java</h> <br></br>
+              Name: <a class="text-white">Saif Shaikh</a> <br></br>
+              Gender: <a class="text-white">Male</a><br></br>
+              Age: <a class="text-white">Data Lost</a><br></br>
+              Height: <a class="text-white">Data Lost</a><br></br>
+              Skills: <a class="text-white">HTML, CSS, Java</a> <br></br>
               <br></br>
-              Role: <h class="text-white">Unknown</h><br></br>
-              Social content: <h class="text-white"><a href="https://www.linkedin.com/in/-saif-shaikh/" target="blank">LinkedIn</a></h>
+              Role: <a class="text-white">Unknown</a><br></br>
+              Social content: <a class="text-white"><a href="https://www.linkedin.com/in/-saif-shaikh/" target="blank">LinkedIn</a></a>
             </p>
 
           </div>
@@ -122,15 +122,15 @@ const About = () => {
         <div class="profileBox_right_side text-center bg-[rgba(6,11,19,255)] h-[450px] w-[600px] float-right m-[50px] border-[3px] border-[rgba(88,221,229,255)]">
           <div>
             <p class="profile_desciptions_right text-left uppercase text-[rgba(26,250,141,255)] leading-loose pl-[280px] pt-[70px] font-sans font-extrabold text-lg">
-              Name: <h class="text-white">Javier Zarate</h> <br></br>
-              <h class="text-white">Zaragoza</h> <br></br>
-              Gender: <h class="text-white">Male</h><br></br>
-              Age: <h class="text-white">Data Lost</h><br></br>
-              Height: <h class="text-white">Data Lost</h><br></br>
-              Skills: <h class="text-white">HTML, CSS, Java</h> <br></br>
+              Name: <a class="text-white">Javier Zarate</a> <br></br>
+              <a class="text-white">Zaragoza</a> <br></br>
+              Gender: <a class="text-white">Male</a><br></br>
+              Age: <a class="text-white">Data Lost</a><br></br>
+              Height: <a class="text-white">Data Lost</a><br></br>
+              Skills: <a class="text-white">HTML, CSS, Java</a> <br></br>
               <br></br>
-              Role: <h class="text-white">Unknown</h><br></br>
-              Social content: <h class="text-white"><a href="https://www.linkedin.com/in/javier-zarate-zaragoza-7b6817240/" target="blank">LinkedIn</a></h>
+              Role: <a class="text-white">Unknown</a><br></br>
+              Social content: <a class="text-white"><a href="https://www.linkedin.com/in/javier-zarate-zaragoza-7b6817240/" target="blank">LinkedIn</a></a>
             </p>
 
           </div>
