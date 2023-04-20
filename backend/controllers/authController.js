@@ -2,56 +2,74 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const User = require('../models/User')
 
-// Register User
+// @desc    Register a user
+// @route   POST auth/register
+// @access  Private
 const register = async (req, res) => {
-    const {
-        username,
-        email,
-        password,
-        description,
-        profilePicture,
-        favGames,
-        recentlyPlayed
-    } = res.body
 
-    const hashedPwd = await bcrypt.hash(password, 10)
+  // grab values from request body
+  const { username, email, password } = req.body
 
-    const userObject = new User({
-        username,
-        email,
-        password: hashedPwd,
-        description,
-        profilePicture,
-        favGames,
-        recentlyPlayed
-    })
+  // check if values are present
+  if (!username || !email || !password) {
+    return res.status(400).json({ message: 'All fields are required' })
+  }
 
-    const user = await User.create(userObject)
+  // check if another user has same username
+  const duplicate = await User.findOne({ username }).collation({ locale: 'en', strength: 2 }).lean().exec()
 
-    if (user) {
-        res.status(201).json({ message: `New user ${username} created` })
-    } else {
-        res.status(500).json({ message: `Invalid user data received` })
-    }
+  if (duplicate) {
+    return res.status(409).json({ message: 'Duplicate username' })
+  }
+
+  // scramble password with salt rounds
+  const hashedPwd = await bcrypt.hash(password, 10)
+
+  // create new user with values
+  const newUser = new User({
+    username,
+    email,
+    password: hashedPwd
+  })
+
+  // upload new user to db
+  const savedUser = await User.create(newUser)
+
+  // check if user created
+  if (savedUser) {
+    res.status(201).json({ message: `New user ${username} created` })
+  } else {
+    res.status(500).json({ message: `Invalid user data received` })
+  }
 }
 
-// Login
+// @desc    Login a user
+// @route   POST auth/login
+// @access  Private
 const login = async (req, res) => {
-    const { email , password } = req.body
 
-    const user = await User.findOne({email: email})
+  // grab values from request body
+  const { email, password } = req.body
 
-    if (!user) {
-        return res.status(400).json({ message: 'User does not exist'})
-    }
+  // try to find user with email
+  const user = await User.findOne({ email: email })
+  if (!user) {
+    return res.status(400).json({ message: 'User does not exist' })
+  }
 
-    const isMatch = await bcrypt.compare(password, user.password)
+  // see if passwords match
+  const isMatch = await bcrypt.compare(password, user.password)
+  if (!isMatch) {
+    return res.status(400).json({ message: 'Invalid credentials' })
+  }
 
-    if (!isMatch) {
-        return res.status(400).json({ message: 'Invalid credentials'})
-    }
+  // create token with method for id
+  const token = jwt.sign({ id: user._id }, process.env.ACCESS_TOKEN_SECRET)
+  delete user.password
+  res.status(200).json({ token, user })
+}
 
-    const accessToken = jwt.sign({ id: user._id }, process.env.ACCESS_TOKEN_SECRET)
-    delete user.password
-    res.status(200).json({ accessToken, user })
+module.exports = {
+  register,
+  login
 }
