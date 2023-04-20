@@ -1,20 +1,41 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useLogin } from '../hooks/useLogin';
+import { setLogin } from '../state/index'
+import { useDispatch } from "react-redux";
 
 const LoginPage = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const { login, error, isLoading } = useLogin()
+  const dispatch = useDispatch();
 
   // handlers to set values
   const onEmailChanged = e => setEmail(e.target.value)
   const onPasswordChanged = e => setPassword(e.target.value)
 
+  const login = async (email, password) => {
+    const loggedInResponse = await fetch('http://localhost:3500/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    })
+
+    const loggedIn = await loggedInResponse.json()
+
+    if (loggedIn) {
+      dispatch(
+        setLogin({
+          user: loggedIn.user,
+          token: loggedIn.token
+        })
+      )
+      navigate('/')
+    }
+  }
+
   const onLoginUserClicked = async (e) => {
     e.preventDefault()
 
-    await login(email, password)
+    login(email, password)
   }
 
   const navigate = useNavigate();
@@ -44,8 +65,7 @@ const LoginPage = () => {
           />
           <nav class="mt-[5px]">
             <button class="text-black bg-emerald-700 border-[#1afa8d] border-2 h-[30px] w-[75px] mr-[5px] hover:bg-[#1afa8d] form-button-box" onClick={() => navigate("/")}>Back</button>
-            <button class="text-black bg-emerald-700 border-[#1afa8d] border-2 h-[30px] w-[75px] mr-[5px] hover:bg-[#1afa8d] form-button-box" disabled={isLoading} type="submit">Login</button>
-            {error && <div class="text-white">{error}</div>}
+            <button class="text-black bg-emerald-700 border-[#1afa8d] border-2 h-[30px] w-[75px] mr-[5px] hover:bg-[#1afa8d] form-button-box" type="submit">Login</button>
           </nav>
           <a class="text-[#1afa8d] mt-[10px] underline cursor-pointer hover:no-underline" href='/register'>Sign-up?</a>
         </form>
