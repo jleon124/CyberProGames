@@ -1,10 +1,10 @@
 import React from 'react'
-import GameBox from './GameBox'
-import RatingBtn from './RatingBtn'
-import FavBtn from './FavBtn'
-import Description from './Description'
-import Comments from './Comments'
-import GamePageBox from './GamePageBox'
+import GameBox from '../components/GameBox'
+import RatingBtn from '../components/RatingBtn'
+import FavBtn from '../components/FavBtn'
+import Description from '../components/Description'
+import Comments from '../components/Comments'
+import GamePageBox from '../components/GamePageBox'
 
 const GamePage = () => {
   return (
