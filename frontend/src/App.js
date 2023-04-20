@@ -10,10 +10,11 @@ import RegisterPage from './components/RegisterPage';
 import GamePage from './components/GamePage-QuizShow';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
-import { useAuthContext } from './hooks/useAuthContext';
+import { useSelector } from 'react-redux';
 
 function App() {
-  const { user } = useAuthContext()
+
+  const isAuth = Boolean(useSelector((state) => state.token))
 
   return (
     <div className="App">
@@ -21,13 +22,19 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />} >
             <Route index element={<HomePage />} />
-            <Route path="gamelist" element={<GamesList />} />
-            <Route path="about" element={<About />} />
-            <Route path="settings" element={user ? <Settings /> : <Navigate to="/login" />} />
-            <Route path="profile" element={user ? <Profile /> : <Navigate to="/login" />} />
-            <Route path="login" element={<LoginPage />} />
-            <Route path="register" element={<RegisterPage />} />
-            <Route path="gamepage" element={<GamePage />} />
+            <Route path="/gamelist" element={<GamesList />} />
+            <Route path="/about" element={<About />} />
+            <Route
+              path="/settings"
+              element={isAuth ? <Settings /> : <Navigate to="/login" />}
+            />
+            <Route
+              path="/profile"
+              element={isAuth ? <Profile /> : <Navigate to="/login" />}
+            />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/gamepage" element={<GamePage />} />
           </Route>
         </Routes>
       </BrowserRouter>

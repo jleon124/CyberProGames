@@ -18,8 +18,9 @@ app.use(express.urlencoded({ extended: false }))
 
 // ROUTES
 app.use('/', express.static('public'), require('./routes/root'))
-app.use('/api/user', require('./routes/usersRoutes'))
-app.use('api/comment', require('./routes/commentsRoutes'))
+app.use('/auth', require('./routes/authRoutes'))
+app.use('/user', require('./routes/usersRoutes'))
+app.use('/comment', require('./routes/commentsRoutes'))
 
 // MONGOOSE SETUP
 const PORT = process.env.PORT || 3500

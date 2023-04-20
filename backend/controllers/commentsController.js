@@ -1,46 +1,64 @@
 const Comment = require('../models/Comment')
-const User = require('../models/User')
 
 // @desc    Get all comments
-// @route   GET /api/comment
+// @route   GET /comment/all
 // @access  Private
 const getAllComments = async (req, res) => {
-    const comments = await Comment.find().lean()
 
+    // get comments quickly with lean
+    const comments = await Comment.find({}).lean()
+
+    // check if there are any comments
     if (!comments?.length) {
         return res.status(400).json({ message: 'No comments found' })
     }
 
-    res.json(comments)
+    // send response with users
+    res.status(200).json(comments)
 }
 
 // @desc    Get comment
-// @route   GET /api/comment
+// @route   GET /comment/:userId/comments
 // @access  Private
 const getComment = async (req, res) => {
-    const { id } = req.params
 
-    const comment = await Comment.findById(id).exec()
+    // get user id from url
+    const { userId } = req.params
 
-    if (!comment) {
+    // check if id is valid
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(400).json({ message: 'Invalid ID' })
+    }
+
+    // get comments from the db with specific userId
+    const comments = await Comment.find({ userId })
+
+    // check if there are any comments
+    if (!comments) {
         return res.status(400).json({ message: 'Comment not found' })
     }
 
-    res.json(comment)
+
+    res.status(200).json(comments)
 }
 
 // @desc    Create new comment
-// @route   POST /api/comment
+// @route   POST /comment/new
 // @access  Private
 const createComment = async (req, res) => {
+
+    // grab values from request body
     const { content } = req.body
 
+    // check if values are present
     if (!content) {
         res.status(400).json({ message: 'Content missing' })
     }
 
+    // create comment with values
     const comment = await Comment.create({ content })
 
+    // check if comment is created
     if (comment) {
         return res.status(201).json({ message: 'New comment created' })
     } else {
@@ -49,47 +67,67 @@ const createComment = async (req, res) => {
 }
 
 // @desc    Update comment
-// @route   PATCH /api/comment/:id
+// @route   PATCH /comment/:id/edit
 // @access  Private
 const updateComment = async (req, res) => {
-    const { id, content } = req.body
 
+    // grab comment id from url
+    const { id } = req.body
+
+    // check if id is valid
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(400).json({ message: 'Invalid ID' })
+    }
+
+    // get the comment from the db with id
+    const comment = await Comment.findById(id).exec()
+
+    // check if there is a comment
+    if (!comment) {
+        return res.status(400).json({ message: 'Comment not found' })
+    }
+
+    // grab content from request body
+    const { content } = req.body
+
+    // check if there is content
     if (!content) {
         return res.status(400).json({ message: 'All fields required' })
     }
 
-    const comment = await Comment.findById(id).exec()
-
-    if (!comment) {
-        return res.status(400).json({ message: 'Comment not found' })
-    }
-
+    // set content
     comment.content = content
 
+    // grab the updated comment
     const updatedComment = await comment.save()
 
-    res.json(`Comment with id: ${updateComment.id} updated`)
+    // send response stating comment was updated
+    res.status(200).json(`Comment with id: ${updatedComment.id} updated`)
 }
 
 // @desc    Delete comment
-// @route   DELETE /api/comment/:id
+// @route   DELETE /comment/:id
 // @access  Private
 const deleteComment = async (req, res) => {
+
+    // get comment id from url
     const { id } = req.params
 
-    if (!id) {
-        return res.status(400).json({ message: 'Comment ID required' })
+    // check if id is valid
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(400).json({ message: 'Invalid ID' })
     }
 
-    const comment = await Comment.findById(id).exec()
+    // delete comment with id
+    const comment = await Comment.findOneAndDelete({ _id: id })
 
+    // check if there is a comment
     if (!comment) {
         return res.status(400).json({ message: 'Comment not found' })
     }
 
-    const result = await comment.deleteOne()
-
-    res.json(`Comment with ID: ${result.id} deleted`)
+    // send response stating what comment id was deleted
+    res.status(200).json({ message: `Comment with ID ${comment._id} deleted` })
 }
 
 module.exports = {
@@ -99,55 +137,3 @@ module.exports = {
     updateComment,
     deleteComment
 }
-
-// // Create
-// const createComment = async (req, res) => {
-//     const { userId, content } = req.body
-
-//     const user = await User.findById(userId)
-
-//     const newComment = new Comment({
-//         userId,
-//         author: user.username,
-//         content,
-//         likes: {},
-//         dislikes: {},
-//     })
-//     await newComment.save()
-
-//     const comment = await Comment.find()
-
-//     res.status(201).json(comment)
-// }
-
-// // Get
-// const getComments = async (req, res) => {
-//     const comment = await Comment.find().lean()
-//     if (!notes?.length) {
-//         return res.status(404).json({ message: 'No notes found' })
-//     }
-
-//     res.status(200).json(comment)
-// }
-
-// // Update
-// const likeComment = async (req, res) => {
-//     const { id } = req.params
-//     const { userId } = req.body
-//     const comment = await Comment.findById(id)
-//     const isLiked = comment.likes.get(userId)
-
-//     if (isLiked) {
-//         comment.likes.delete(userId)
-//     } else {
-//         comment.likes.set(userId, true)
-//     }
-
-//     const updatedComment = await Comment.findByIdAndUpdate(
-//         id,
-//         { likes: comment.likes },
-//         { new: true }
-//     )
-
-//     res.status(200).json(updatedComment)
-// }

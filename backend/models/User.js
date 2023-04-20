@@ -4,41 +4,37 @@ const userSchema = new mongoose.Schema(
     {
         username: {
             type: String,
-            required: true,
-            min: 3,
-            max: 30,
             unique: true,
+            required: true
         },
         email: {
             type: String,
-            required: true,
             unique: true,
+            required: true
         },
         password: {
             type: String,
-            required: true,
-            min: 5,
+            required: true
         },
         description: {
             type: String,
             default: "",
-            max: 1200,
         },
         profilePicture: {
             type: Number,
-            required: true,
             default: 1,
+            required: true
         },
         favGames: {
             type: Array,
-            default: [],
+            default: []
         },
-        recentlyPlayed: {
+        recentGames: {
             type: Array,
-            default: [],
+            default: []
         }
     },
     { timestamps: true }
 )
 
-module.exports = mongoose.model('users', userSchema)
+module.exports = mongoose.model('Users', userSchema)
