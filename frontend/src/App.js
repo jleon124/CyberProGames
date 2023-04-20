@@ -1,13 +1,13 @@
 import './App.css';
 import Layout from './components/Layout';
-import HomePage from './components/HomePage';
+import HomePage from './pages/HomePage';
 import GamesList from './components/GamesList';
-import About from './components/About';
-import Settings from './components/Settings'
-import Profile from './components/Profile';
-import LoginPage from './components/LoginPage';
-import RegisterPage from './components/RegisterPage';
-import GamePage from './components/GamePage-QuizShow';
+import About from './pages/About';
+import Settings from './pages/Settings'
+import Profile from './pages/Profile';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import GamePage from './pages/GamePage-QuizShow';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 import { useSelector } from 'react-redux';
@@ -39,7 +39,8 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
-  );
+  )
+
 }
 
 export default App;

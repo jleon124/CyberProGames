@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
+
   return (
     <footer class="flex flex-col font-mono bg-[linear-gradient(to_bottom,#4f0c1f,#410f28,#30122b,#201428,#131221,#0e101d,#090e18,#050b13,#050b13,#050b13,#050b13,#050b13)]">
       <img src='/footer_razor_img.png' alt="footer" class="absolute w-full" />
@@ -39,6 +40,7 @@ const Footer = () => {
 
     </footer>
   )
+  
 }
 
 export default Footer

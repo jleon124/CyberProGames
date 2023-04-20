@@ -1,8 +1,8 @@
 import React from 'react'
 
 const About = () => {
+  
   return (
-
     <>
       <body className='h-auto bg-[linear-gradient(to_bottom,#050b13,#11131e,#1c1727,#2b192e,#3c1b30,#431a2f,#4a192c,#511929,#511627,#501324,#501022,#4f0c1f)]'>
         <h1 class="about_title_page text-5xl text-[yellow] font-[bolder] ml-[100px] pt-[70px]">CyberProGames</h1>
@@ -10,7 +10,6 @@ const About = () => {
         <br></br><br></br>
 
         {/* <img src= '/cpg_logo.png' alt="CyberProGames logo" width='300' height='300' className="ml-[100px]"/> */}
-
 
         <div class="about_description text-center bg-[rgba(0,0,0,0.4)] h-80 w-[650px] ml-[100px] mt-[100px] border-[rgba(88,221,229,255)] border-[3px]">
           <p class="about_text text-left text-base uppercase text-[rgba(26,250,141,255)] leading-loose font-bold p-[50px] font-sans">
@@ -28,8 +27,6 @@ const About = () => {
 
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-
-
 
         <div class="box_profile_img h-[350px] w-[250px] absolute z-[2] ml-[380px] mb-[400px]">
           <img src='teampictures/miranda_pic.png' alt="souvenir"></img>
@@ -52,13 +49,7 @@ const About = () => {
           </div>
         </div>
 
-
-
-
         <div class="white_profileBox h-[500px] w-[400px]"></div>
-
-
-
 
         <div class="box_profile_img_right h-[350px] w-[250px] absolute z-[2] mr-[50px] mb-[400px] p-2.5 right-[330px]">
           <img src='teampictures/jafet_pic.png' alt="souvenir" />
@@ -80,14 +71,8 @@ const About = () => {
           </div>
         </div>
 
-
-
-
         <div class="white_profileBox h-[500px] w-[400px]"></div>
         <div class="white_profileBox h-[500px] w-[400px]"></div>
-
-
-
 
         <div class="box_profile_img h-[350px] w-[250px] absolute z-[2] ml-[380px] mb-[400px]">
           <img src='teampictures/person_holder.png' alt="souvenir" />
@@ -108,13 +93,7 @@ const About = () => {
           </div>
         </div>
 
-
-
-
         <div class="white_profileBox h-[500px] w-[400px]"></div>
-
-
-
 
         <div class="box_profile_img_right h-[350px] w-[250px] absolute z-[2] mr-[50px] mb-[400px] p-2.5 right-[330px]">
           <img src='teampictures/Javier_pic.png' alt="souvenir" />
@@ -143,15 +122,10 @@ const About = () => {
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <br></br><br></br><br></br><br></br>
 
-
-
-
-
-
       </body>
     </>
-
   )
+
 }
 
 export default About

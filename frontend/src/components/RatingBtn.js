@@ -1,15 +1,12 @@
 import { useState } from 'react';
 import React from "react";
-import {BsFillHandThumbsDownFill,  BsFillHandThumbsUpFill} from 'react-icons/bs'
+import { BsFillHandThumbsDownFill, BsFillHandThumbsUpFill } from 'react-icons/bs'
 
-
-
-function RatingBtn()
-{
+function RatingBtn() {
 
   const [likeCount, setLikeCount] = useState(50);
   const [dislikeCount, setDislikeCount] = useState(25);
- 
+
   const [activeBtn, setActiveBtn] = useState("none");
 
   const handleLikeClick = () => {
@@ -18,13 +15,13 @@ function RatingBtn()
       setActiveBtn("like");
       return;
     }
- 
-    if (activeBtn === 'like'){
+
+    if (activeBtn === 'like') {
       setLikeCount(likeCount - 1);
       setActiveBtn("none");
       return;
     }
- 
+
     if (activeBtn === "dislike") {
       setLikeCount(likeCount + 1);
       setDislikeCount(dislikeCount - 1);
@@ -38,13 +35,13 @@ function RatingBtn()
       setActiveBtn("dislike");
       return;
     }
-   
-    if (activeBtn === 'dislike'){
+
+    if (activeBtn === 'dislike') {
       setDislikeCount(dislikeCount - 1);
       setActiveBtn("none");
       return;
     }
- 
+
     if (activeBtn === "like") {
       setDislikeCount(dislikeCount + 1);
       setLikeCount(likeCount - 1);
@@ -52,35 +49,27 @@ function RatingBtn()
     }
   };
 
-
-  return(
+  return (
     <div className='flex '>
-        <div className='pl-44 pr-4'>
-            <button
-            className={` ${activeBtn === "like" ? "bg-green-600" : ""} flex items-center justify-evenly h-10 w-[90px] p-[15px] bg-[rgba(44,17,25,0.6)] text-[rgba(88,221,229,255)] border-[3px] border-[rgba(88,221,229,255)]`}
-            onClick={handleLikeClick}> 
-            <BsFillHandThumbsUpFill/> {likeCount}
-            </button>
-        </div>
-
-
-    <div>
+      <div className='pl-44 pr-4'>
         <button
-        className={` ${activeBtn === "dislike" ? "bg-red-600" : ""} flex items-center justify-evenly h-10 w-[90px] p-[15px] bg-[rgba(44,17,25,0.6)] text-[rgba(88,221,229,255)] border-[3px] border-[rgba(88,221,229,255)]`}
-        onClick={handleDisikeClick}>
-        <BsFillHandThumbsDownFill/> {dislikeCount}
+          className={` ${activeBtn === "like" ? "bg-green-600" : ""} flex items-center justify-evenly h-10 w-[90px] p-[15px] bg-[rgba(44,17,25,0.6)] text-[rgba(88,221,229,255)] border-[3px] border-[rgba(88,221,229,255)]`}
+          onClick={handleLikeClick}>
+          <BsFillHandThumbsUpFill /> {likeCount}
         </button>
+      </div>
+
+      <div>
+        <button
+          className={` ${activeBtn === "dislike" ? "bg-red-600" : ""} flex items-center justify-evenly h-10 w-[90px] p-[15px] bg-[rgba(44,17,25,0.6)] text-[rgba(88,221,229,255)] border-[3px] border-[rgba(88,221,229,255)]`}
+          onClick={handleDisikeClick}>
+          <BsFillHandThumbsDownFill /> {dislikeCount}
+        </button>
+      </div>
+
     </div>
-
-
-    </div>
-
   )
 
 }
-
-
-
-
 
 export default RatingBtn;

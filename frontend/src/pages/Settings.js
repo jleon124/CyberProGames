@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 const Account = () => {
+
   const user = useSelector((state) => state.user)
 
   const showProfilePicture = (user) => {
@@ -118,9 +119,8 @@ const Account = () => {
       <script src='./drkMod.js'></script>
 
     </body>
-
-
   )
+
 }
 
 export default Account

@@ -31,6 +31,7 @@ const Profile = () => {
       </body>
     </main>
   )
+
 }
 
 

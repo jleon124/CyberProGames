@@ -4,6 +4,7 @@ import { setLogin } from '../state/index'
 import { useDispatch } from "react-redux";
 
 const LoginPage = () => {
+
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const dispatch = useDispatch();
@@ -72,6 +73,7 @@ const LoginPage = () => {
       </div>
     </main>
   )
+
 }
 
 export default LoginPage 
