@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 const Account = () => {
+
   const user = useSelector((state) => state.user)
 
   const showProfilePicture = (user) => {
@@ -26,7 +27,7 @@ const Account = () => {
   }
 
   return (
-    <body className='bg-[linear-gradient(to_bottom,#050b13,#11131e,#1c1727,#2b192e,#3c1b30,#431a2f,#4a192c,#511929,#511627,#501324,#501022,#4f0c1f)]'>
+    <main className='bg-[linear-gradient(to_bottom,#050b13,#11131e,#1c1727,#2b192e,#3c1b30,#431a2f,#4a192c,#511929,#511627,#501324,#501022,#4f0c1f)]'>
 
       <h1 className="about_title_page text-5xl text-[yellow] font-[bolder] ml-[100px] pt-[70px]">CyberProGames</h1>
       <br></br><br></br>
@@ -117,10 +118,9 @@ const Account = () => {
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
       <script src='./drkMod.js'></script>
 
-    </body>
-
-
+    </main>
   )
+
 }
 
 export default Account

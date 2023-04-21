@@ -1,23 +1,23 @@
 @font-face {
-    font-family: cyberfont;
-    src: url('../Cyberpunk-Regular.ttf');
+  font-family: cyberfont;
+  src: url('../Cyberpunk-Regular.ttf');
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-family: 'cyberfont';
+  font-family: 'cyberfont';
 }
 
 body {
-    min-height: 100vh;
-    background-color: black;
-    color: #FFFF00;
-    display: grid;
-    place-content: center;
-    padding: 1rem;
+  min-height: 100vh;
+  background-color: black;
+  color: #FFFF00;
+  display: grid;
+  place-content: center;
+  padding: 1rem;
 }

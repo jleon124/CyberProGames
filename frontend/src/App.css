@@ -1,73 +1,66 @@
 /* Main stylization for website */
 @font-face {
-    font-family: cyberpunk;
-    src: url('../public/fonts/Cyberpunk-Regular.ttf');
+  font-family: cyberpunk;
+  src: url('../public/fonts/Cyberpunk-Regular.ttf');
 }
 
 @font-face {
-    font-family: cyber_text;
-    src: url('../public/fonts/Valorax-lg25V.otf');
+  font-family: cyber_text;
+  src: url('../public/fonts/Valorax-lg25V.otf');
 }
 
 /* Classic color theme  */
 #classic {
-    background-color: #f3ebf6;
+  background-color: #f3ebf6;
 }
 
 /* Samurai color theme */
 #samurai {
-    background-color: #46045e;
+  background-color: #46045e;
 }
 
 /* Retro color theme  */
 #Retro {
-    background-color: #46045e;
+  background-color: #46045e;
 }
 
 
-.color-switcher{
-    width: 10rem;
-    padding: 1rem;
-
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform:  translate(0, -50%);
-
+.color-switcher {
+  width: 10rem;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 .theme-options {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: right;
-    padding: 20px 0;
-    border-radius: 4px;
-    
-
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: right;
+  padding: 20px 0;
+  border-radius: 4px;
 }
 
-#theme-white{
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    background-color:  #ffffff;
-
+#theme-white {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
 }
 
-#theme-blue{
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    background-color: #2600ff;
-
+#theme-blue {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: #2600ff;
 }
 
-#theme-orange{
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    background-color: #fa2500;
-
+#theme-orange {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: #fa2500;
 }
 
 
@@ -78,10 +71,10 @@
 
 
 main {
-    /* background-image: url('../public/mainbackground.png');
+  /* background-image: url('../public/mainbackground.png');
     background-size: cover;  */
-    background-image: linear-gradient(to bottom, #050b13, #11131e, #1c1727, #2b192e, #3c1b30, #431a2f, #4a192c, #511929, #511627, #501324, #501022, #4f0c1f);
-    /* height: auto; */
+  background-image: linear-gradient(to bottom, #050b13, #11131e, #1c1727, #2b192e, #3c1b30, #431a2f, #4a192c, #511929, #511627, #501324, #501022, #4f0c1f);
+  /* height: auto; */
 }
 
 /* h1 {
@@ -91,51 +84,51 @@ main {
 } */
 
 .gameList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .trending_gameList {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .programming_gameList {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .fun_gameList {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .gameBox {
-    text-align: center;
-    background-color: #0072b1;
-    height: 250px;
-    width: 200px;
-    -webkit-clip-path: polygon(20% 0%, 90% 0, 100% 9%, 100% 80%, 100% 100%, 9% 99%, 0 89%, 0 0);
-    clip-path: polygon(20% 0%, 90% 0, 100% 9%, 100% 80%, 100% 100%, 9% 99%, 0 89%, 0 0);
-    margin: 20px;
+  text-align: center;
+  background-color: #0072b1;
+  height: 250px;
+  width: 200px;
+  -webkit-clip-path: polygon(20% 0%, 90% 0, 100% 9%, 100% 80%, 100% 100%, 9% 99%, 0 89%, 0 0);
+  clip-path: polygon(20% 0%, 90% 0, 100% 9%, 100% 80%, 100% 100%, 9% 99%, 0 89%, 0 0);
+  margin: 20px;
 
 }
 
 .leaderboard_box {
-    text-align: center;
-    background-color: #0072b1;
-    height: 500px;
-    width: 500px;
-    -webkit-clip-path: polygon(0 100%, 0 7%, 8% 0, 79% 0, 84% 6%, 94% 6%, 100% 11%, 100% 65%, 95% 73%, 95% 85%, 81% 100%, 29% 100%);
-    clip-path: polygon(0 100%, 0 7%, 8% 0, 79% 0, 84% 6%, 94% 6%, 100% 11%, 100% 65%, 95% 73%, 95% 85%, 81% 100%, 29% 100%);
-    float: right
+  text-align: center;
+  background-color: #0072b1;
+  height: 500px;
+  width: 500px;
+  -webkit-clip-path: polygon(0 100%, 0 7%, 8% 0, 79% 0, 84% 6%, 94% 6%, 100% 11%, 100% 65%, 95% 73%, 95% 85%, 81% 100%, 29% 100%);
+  clip-path: polygon(0 100%, 0 7%, 8% 0, 79% 0, 84% 6%, 94% 6%, 100% 11%, 100% 65%, 95% 73%, 95% 85%, 81% 100%, 29% 100%);
+  float: right
 }
 
 hr {
-    width: 50%;
-    text-align: center;
-    margin: auto;
+  width: 50%;
+  text-align: center;
+  margin: auto;
 }
 
 
@@ -144,49 +137,49 @@ hr {
 
 /*Header stylization*/
 header {
-    background-color: rgba(5,12,18,255);
+  background-color: rgba(5, 12, 18, 255);
 }
 
 ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: space-evenly;
 
 }
 
 button {
-    text-decoration: none;
-    color: rgba(88,221,229,255);
+  text-decoration: none;
+  color: rgba(88, 221, 229, 255);
 }
 
 .nav-item {
-    background-color: rgba(44,17,25,0.6);
-    color: rgba(88,221,229,255);
-    text-align: center;
-    border-width: 3px;
-    border-color: rgba(88,221,229,255);
-    padding: 15px;
-    /* background: linear-gradient(to bottom, #a90329 0%, #a90329 15%, #a90329 15%, #a90329 29%, #8f0222 36%, #8f0222 39%, #6d0019 63%, #6d0019 92%); */
-    /* opacity: .80; */
-    height: 60px;
-    width: 90px;
-    -webkit-clip-path: polygon(69% 0, 100% 0, 100% 100%, 12% 100%, 0 88%, 0 4%, 58% 4%);
-    clip-path: polygon(69% 0, 100% 0, 100% 100%, 12% 100%, 0 88%, 0 4%, 58% 4%);
+  background-color: rgba(44, 17, 25, 0.6);
+  color: rgba(88, 221, 229, 255);
+  text-align: center;
+  border-width: 3px;
+  border-color: rgba(88, 221, 229, 255);
+  padding: 15px;
+  /* background: linear-gradient(to bottom, #a90329 0%, #a90329 15%, #a90329 15%, #a90329 29%, #8f0222 36%, #8f0222 39%, #6d0019 63%, #6d0019 92%); */
+  /* opacity: .80; */
+  height: 60px;
+  width: 90px;
+  -webkit-clip-path: polygon(69% 0, 100% 0, 100% 100%, 12% 100%, 0 88%, 0 4%, 58% 4%);
+  clip-path: polygon(69% 0, 100% 0, 100% 100%, 12% 100%, 0 88%, 0 4%, 58% 4%);
 }
 
 .nav-item:hover {
-    background-color: rgba(106,39,44,255);
+  background-color: rgba(106, 39, 44, 255);
 }
 
 .nav-logo {
-    text-align: center;
-    padding-top: 5px;
-    background-color: #0072b1;
-    height: 80px;
-    width: 120px;
-    -webkit-clip-path: polygon(69% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 0, 58% 0);
-    clip-path: polygon(69% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 0, 58% 0);
+  text-align: center;
+  padding-top: 5px;
+  background-color: #0072b1;
+  height: 80px;
+  width: 120px;
+  -webkit-clip-path: polygon(69% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 0, 58% 0);
+  clip-path: polygon(69% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 0, 58% 0);
 }
 
 /*Game pages sytlization*/
@@ -214,156 +207,157 @@ button {
 /* ABOUT PAGE STYLE ---- Starts-----*/
 
 .profile_about_Box {
-    clip-path: polygon(50% 0%, 91% 0, 100% 10%, 100% 100%, 8% 100%, 0 91%, 0 0);
+  clip-path: polygon(50% 0%, 91% 0, 100% 10%, 100% 100%, 8% 100%, 0 91%, 0 0);
 
-  }
+}
 
-  .box_profile_img {
-    background: rgba(0, 0, 0, 0.5);
+.box_profile_img {
+  background: rgba(0, 0, 0, 0.5);
 
-  }
+}
 
-  .profileBox_right_side {
-    clip-path: polygon(50% 0%, 91% 0, 100% 10%, 100% 100%, 8% 100%, 0 91%, 0 0);
+.profileBox_right_side {
+  clip-path: polygon(50% 0%, 91% 0, 100% 10%, 100% 100%, 8% 100%, 0 91%, 0 0);
 
-  }
+}
 
-  .box_profile_img_right {
-    background: rgba(0, 0, 0, 0.5);
+.box_profile_img_right {
+  background: rgba(0, 0, 0, 0.5);
 
-  }
+}
 
-  .white_profileBox {
-    background: rgba(0, 0, 0, 0);
+.white_profileBox {
+  background: rgba(0, 0, 0, 0);
 
-  }
+}
 
-  .about_description {
-    clip-path: polygon(50% 0%, 100% 0, 100% 88%, 95% 100%, 25% 100%, 0 100%, 0 0);
+.about_description {
+  clip-path: polygon(50% 0%, 100% 0, 100% 88%, 95% 100%, 25% 100%, 0 100%, 0 0);
 
-  }
+}
 
-  .about_title_page {
-    font-family: cyberpunk;
-    background: rgba(0, 0, 0, 0);
+.about_title_page {
+  font-family: cyberpunk;
+  background: rgba(0, 0, 0, 0);
 
-  }
+}
 
 
-  .profile_desciptions {
-    background: rgba(0, 0, 0, 0);
-    
+.profile_desciptions {
+  background: rgba(0, 0, 0, 0);
 
-  }
 
-  .profile_desciptions_right {
-    background: rgba(0, 0, 0, 0);
-  
+}
 
-  }
+.profile_desciptions_right {
+  background: rgba(0, 0, 0, 0);
 
-  .about_text {
-    background: rgba(0, 0, 0, 0);
 
-  }
-    
+}
+
+.about_text {
+  background: rgba(0, 0, 0, 0);
+
+}
+
 /* Profile page styles */
 
 /* Profile page styles /
   / making a custom clip path */
-  .clip-custom1{
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%)
-  }
-  .clip-custom2{
-    clip-path: polygon(0% 0%, 89% 0, 100% 7%, 100% 100%, 0% 100%);
-  }
+.clip-custom1 {
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%)
+}
 
-  .clip-custom3{
-    clip-path: polygon(15% 0, 100% 0, 100% 85%, 86% 100%, 0 100%, 0 14%);
-  }
+.clip-custom2 {
+  clip-path: polygon(0% 0%, 89% 0, 100% 7%, 100% 100%, 0% 100%);
+}
+
+.clip-custom3 {
+  clip-path: polygon(15% 0, 100% 0, 100% 85%, 86% 100%, 0 100%, 0 14%);
+}
 
 /* LOGIN PAGE STYLIZATION */
 .formPages {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .loginBox {
-    height: 400px;
-    width: 400px;
-    background-color: rgba(0,0,0,0.4);
-    border-color: rgba(88,221,229,255);
-    border-width: 3px;
-    color: rgba(26,250,141,255);
-    padding: 36px;
-    -webkit-clip-path: polygon(0 100%, 0 7%, 8% 0, 79% 0, 84% 6%, 94% 6%, 100% 11%, 100% 65%, 95% 73%, 95% 85%, 81% 100%, 29% 100%);
-    clip-path: polygon(0 100%, 0 7%, 8% 0, 79% 0, 84% 6%, 94% 6%, 100% 11%, 100% 65%, 95% 73%, 95% 85%, 81% 100%, 29% 100%);
+  height: 400px;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: rgba(88, 221, 229, 255);
+  border-width: 3px;
+  color: rgba(26, 250, 141, 255);
+  padding: 36px;
+  -webkit-clip-path: polygon(0 100%, 0 7%, 8% 0, 79% 0, 84% 6%, 94% 6%, 100% 11%, 100% 65%, 95% 73%, 95% 85%, 81% 100%, 29% 100%);
+  clip-path: polygon(0 100%, 0 7%, 8% 0, 79% 0, 84% 6%, 94% 6%, 100% 11%, 100% 65%, 95% 73%, 95% 85%, 81% 100%, 29% 100%);
 }
 
 .formTitle {
-    all: unset;
-    font-size: 24px;
-    
+  all: unset;
+  font-size: 24px;
+
 }
 
 .loginForm {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .inputEntry {
-    height: 30px;
-    width: 250px;
-    margin: 10px 0px;
-    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
-    clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
+  height: 30px;
+  width: 250px;
+  margin: 10px 0px;
+  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
+  clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
 }
 
 .formButtonNav {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .formButton {
-    color: black;
-    background-color: rgba(26,250,141,0.4);
-    border-color: rgba(26,250,141,255);
-    border-width: 2px;
-    height: 30px;
-    width: 75px;
-    margin-right: 5px;
-    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
-    clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
+  color: black;
+  background-color: rgba(26, 250, 141, 0.4);
+  border-color: rgba(26, 250, 141, 255);
+  border-width: 2px;
+  height: 30px;
+  width: 75px;
+  margin-right: 5px;
+  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
+  clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
 }
 
 .formButton:hover {
-    background-color: rgba(26,250,141,255);
+  background-color: rgba(26, 250, 141, 255);
 }
 
 .loginForm a {
-    margin-top: 10px;
-    text-decoration: underline;
-    cursor: pointer;
+  margin-top: 10px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .loginForm a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* REGISTRATION PAGE STYLIZATION */
 .registerBox {
-    height: 400px;
-    width: 400px;
-    background-color: #0072b1;
-    padding: 36px;
-    -webkit-clip-path: polygon(0 100%, 0 7%, 8% 0, 79% 0, 84% 6%, 94% 6%, 100% 11%, 100% 65%, 95% 73%, 95% 85%, 81% 100%, 29% 100%);
-    clip-path: polygon(0 100%, 0 7%, 8% 0, 79% 0, 84% 6%, 94% 6%, 100% 11%, 100% 65%, 95% 73%, 95% 85%, 81% 100%, 29% 100%);
+  height: 400px;
+  width: 400px;
+  background-color: #0072b1;
+  padding: 36px;
+  -webkit-clip-path: polygon(0 100%, 0 7%, 8% 0, 79% 0, 84% 6%, 94% 6%, 100% 11%, 100% 65%, 95% 73%, 95% 85%, 81% 100%, 29% 100%);
+  clip-path: polygon(0 100%, 0 7%, 8% 0, 79% 0, 84% 6%, 94% 6%, 100% 11%, 100% 65%, 95% 73%, 95% 85%, 81% 100%, 29% 100%);
 }
 
 .registerForm {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -374,10 +368,10 @@ button {
 
 } */
 
-.setting-headers{
-    background: rgba(0, 0, 0, 0);
-    font-family: cyber_text;
-    /* font-size: 40px;
+.setting-headers {
+  background: rgba(0, 0, 0, 0);
+  font-family: cyber_text;
+  /* font-size: 40px;
     margin-left: 50px;
     margin-top: 100px;
     margin-bottom: 20px;
@@ -398,109 +392,109 @@ button {
 
 } */
 
-.pic-container{
-    /* display: grid;
+.pic-container {
+  /* display: grid;
     grid-template-columns: auto auto auto;
     margin-left: 500px;
     margin-top: 80px; */
-    justify-content: left;
-    /* column-gap: 50px;
+  justify-content: left;
+  /* column-gap: 50px;
     grid-row-gap: 20px; */
 
 }
 
-#profile-main-pic{
-    position: absolute;
-    margin-left: 150px;
-    margin-top: 50px;
-    
-}
-
-.choose-img-text{
-    position: absolute;
-    background-color:  rgba(0, 0, 0, 0);
-    font-size: 20px;
-    color: rgba(26,250,141,255);
-    margin-left: 520px;
+#profile-main-pic {
+  position: absolute;
+  margin-left: 150px;
+  margin-top: 50px;
 
 }
 
-.theme-selector-box{
-    display: grid;
-    grid-template-columns: auto auto;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    justify-content: left;
-    column-gap: 50px;
-    grid-row-gap: 20px;
+.choose-img-text {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 20px;
+  color: rgba(26, 250, 141, 255);
+  margin-left: 520px;
 
 }
 
-.theme-button{
-    background-color: rgba(26,250,141,0.4);
-    height: 50px;
-    width: 80px;
-    clip-path: polygon(50% 0%, 100% 0, 100% 88%, 95% 100%, 25% 100%, 0 100%, 0 0);
+.theme-selector-box {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  justify-content: left;
+  column-gap: 50px;
+  grid-row-gap: 20px;
 
 }
 
-.palete-shape{
-    background-color: rgba(26,250,141,0.4);
-    height: 50px;
-    width: 350px;
-    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
-    clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
+.theme-button {
+  background-color: rgba(26, 250, 141, 0.4);
+  height: 50px;
+  width: 80px;
+  clip-path: polygon(50% 0%, 100% 0, 100% 88%, 95% 100%, 25% 100%, 0 100%, 0 0);
 
 }
 
-.clear-box{
-    background-color:  rgba(0, 0, 0, 0.4);
-    margin-left: 100px;
-    padding-top: 10px;
-    padding-bottom: 200px;
-    margin-right: 100px;
-    
+.palete-shape {
+  background-color: rgba(26, 250, 141, 0.4);
+  height: 50px;
+  width: 350px;
+  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
+  clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
 
 }
 
-.clear-box2{
-    background-color: rgba(0, 0, 0, 0.4);
-    margin-left: 100px;
-    margin-right: 100px;
-    padding-top: 10px;
-    margin-top: 30px;
-    padding-bottom: 60px;    
+.clear-box {
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-left: 100px;
+  padding-top: 10px;
+  padding-bottom: 200px;
+  margin-right: 100px;
+
+
+}
+
+.clear-box2 {
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-top: 10px;
+  margin-top: 30px;
+  padding-bottom: 60px;
 
 }
 
 .inputEntry-settings {
-    height: 40px;
-    width: 300px;
-    margin: 10px 0px;
-    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
-    clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
+  height: 40px;
+  width: 300px;
+  margin: 10px 0px;
+  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
+  clip-path: polygon(50% 0%, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 0);
 }
 
-.save-changes{
-    background-color: #000;
-    height: 60px;
-    width: 110px;
-    -webkit-clip-path: polygon(69% 0, 100% 0, 100% 100%, 12% 100%, 0 88%, 0 4%, 58% 4%);
-    clip-path: polygon(69% 0, 100% 0, 100% 100%, 12% 100%, 0 88%, 0 4%, 58% 4%);
-    float: right;
-    margin-right: 100px;
-    margin-top: 100px;
-    border-width: 3px;
-    border-color: rgba(88,221,229,255);
-    
+.save-changes {
+  background-color: #000;
+  height: 60px;
+  width: 110px;
+  -webkit-clip-path: polygon(69% 0, 100% 0, 100% 100%, 12% 100%, 0 88%, 0 4%, 58% 4%);
+  clip-path: polygon(69% 0, 100% 0, 100% 100%, 12% 100%, 0 88%, 0 4%, 58% 4%);
+  float: right;
+  margin-right: 100px;
+  margin-top: 100px;
+  border-width: 3px;
+  border-color: rgba(88, 221, 229, 255);
+
 }
 
-.save-changes:hover{
-    background-color: #ffffff;
-    color: #000;
-    border-color: #000;
+.save-changes:hover {
+  background-color: #ffffff;
+  color: #000;
+  border-color: #000;
 
 }
 

@@ -5,16 +5,16 @@ const Comment = require('../models/Comment')
 // @access  Private
 const getAllComments = async (req, res) => {
 
-    // get comments quickly with lean
-    const comments = await Comment.find({}).lean()
+  // get comments quickly with lean
+  const comments = await Comment.find({}).lean()
 
-    // check if there are any comments
-    if (!comments?.length) {
-        return res.status(400).json({ message: 'No comments found' })
-    }
+  // check if there are any comments
+  if (!comments?.length) {
+    return res.status(400).json({ message: 'No comments found' })
+  }
 
-    // send response with users
-    res.status(200).json(comments)
+  // send response with users
+  res.status(200).json(comments)
 }
 
 // @desc    Get comment
@@ -22,24 +22,24 @@ const getAllComments = async (req, res) => {
 // @access  Private
 const getComment = async (req, res) => {
 
-    // get user id from url
-    const { userId } = req.params
+  // get user id from url
+  const { userId } = req.params
 
-    // check if id is valid
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(400).json({ message: 'Invalid ID' })
-    }
+  // check if id is valid
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).json({ message: 'Invalid ID' })
+  }
 
-    // get comments from the db with specific userId
-    const comments = await Comment.find({ userId })
+  // get comments from the db with specific userId
+  const comments = await Comment.find({ userId })
 
-    // check if there are any comments
-    if (!comments) {
-        return res.status(400).json({ message: 'Comment not found' })
-    }
+  // check if there are any comments
+  if (!comments) {
+    return res.status(400).json({ message: 'Comment not found' })
+  }
 
 
-    res.status(200).json(comments)
+  res.status(200).json(comments)
 }
 
 // @desc    Create new comment
@@ -47,23 +47,23 @@ const getComment = async (req, res) => {
 // @access  Private
 const createComment = async (req, res) => {
 
-    // grab values from request body
-    const { content } = req.body
+  // grab values from request body
+  const { content } = req.body
 
-    // check if values are present
-    if (!content) {
-        res.status(400).json({ message: 'Content missing' })
-    }
+  // check if values are present
+  if (!content) {
+    res.status(400).json({ message: 'Content missing' })
+  }
 
-    // create comment with values
-    const comment = await Comment.create({ content })
+  // create comment with values
+  const comment = await Comment.create({ content })
 
-    // check if comment is created
-    if (comment) {
-        return res.status(201).json({ message: 'New comment created' })
-    } else {
-        return res.status(400).json({ message: 'Invaldi comment data received' })
-    }
+  // check if comment is created
+  if (comment) {
+    return res.status(201).json({ message: 'New comment created' })
+  } else {
+    return res.status(400).json({ message: 'Invaldi comment data received' })
+  }
 }
 
 // @desc    Update comment
@@ -71,38 +71,38 @@ const createComment = async (req, res) => {
 // @access  Private
 const updateComment = async (req, res) => {
 
-    // grab comment id from url
-    const { id } = req.body
+  // grab comment id from url
+  const { id } = req.body
 
-    // check if id is valid
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(400).json({ message: 'Invalid ID' })
-    }
+  // check if id is valid
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).json({ message: 'Invalid ID' })
+  }
 
-    // get the comment from the db with id
-    const comment = await Comment.findById(id).exec()
+  // get the comment from the db with id
+  const comment = await Comment.findById(id).exec()
 
-    // check if there is a comment
-    if (!comment) {
-        return res.status(400).json({ message: 'Comment not found' })
-    }
+  // check if there is a comment
+  if (!comment) {
+    return res.status(400).json({ message: 'Comment not found' })
+  }
 
-    // grab content from request body
-    const { content } = req.body
+  // grab content from request body
+  const { content } = req.body
 
-    // check if there is content
-    if (!content) {
-        return res.status(400).json({ message: 'All fields required' })
-    }
+  // check if there is content
+  if (!content) {
+    return res.status(400).json({ message: 'All fields required' })
+  }
 
-    // set content
-    comment.content = content
+  // set content
+  comment.content = content
 
-    // grab the updated comment
-    const updatedComment = await comment.save()
+  // grab the updated comment
+  const updatedComment = await comment.save()
 
-    // send response stating comment was updated
-    res.status(200).json(`Comment with id: ${updatedComment.id} updated`)
+  // send response stating comment was updated
+  res.status(200).json(`Comment with id: ${updatedComment.id} updated`)
 }
 
 // @desc    Delete comment
@@ -110,30 +110,30 @@ const updateComment = async (req, res) => {
 // @access  Private
 const deleteComment = async (req, res) => {
 
-    // get comment id from url
-    const { id } = req.params
+  // get comment id from url
+  const { id } = req.params
 
-    // check if id is valid
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(400).json({ message: 'Invalid ID' })
-    }
+  // check if id is valid
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).json({ message: 'Invalid ID' })
+  }
 
-    // delete comment with id
-    const comment = await Comment.findOneAndDelete({ _id: id })
+  // delete comment with id
+  const comment = await Comment.findOneAndDelete({ _id: id })
 
-    // check if there is a comment
-    if (!comment) {
-        return res.status(400).json({ message: 'Comment not found' })
-    }
+  // check if there is a comment
+  if (!comment) {
+    return res.status(400).json({ message: 'Comment not found' })
+  }
 
-    // send response stating what comment id was deleted
-    res.status(200).json({ message: `Comment with ID ${comment._id} deleted` })
+  // send response stating what comment id was deleted
+  res.status(200).json({ message: `Comment with ID ${comment._id} deleted` })
 }
 
 module.exports = {
-    getAllComments,
-    getComment,
-    createComment,
-    updateComment,
-    deleteComment
+  getAllComments,
+  getComment,
+  createComment,
+  updateComment,
+  deleteComment
 }
