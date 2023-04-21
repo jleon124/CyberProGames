@@ -5,26 +5,26 @@ const Profile = () => {
 
   return (
     <main>
-      <div class="profile bg-cover bg-no-repeat bg-center pt-12 z-10 pb-52">
+      <div className="profile bg-cover bg-no-repeat bg-center pt-12 z-10 pb-52">
         <br></br>
 
         <UserInfo />
 
         {/* {/ columnBox-container /} */}
-        <div class="flex flex-wrap justify-evenly align-center mt-[100px]">
+        <div className="flex flex-wrap justify-evenly align-center mt-[100px]">
           {/* {/ column /} */}
-          <div class="column">
+          <div className="column">
             {/* {/ titleBox-small /} */}
-            <div class="w-[200px] h-[60px] bg-cyan-600 m-[20px] clip-custom1">&nbsp; Favorite</div>
+            <div className="w-[200px] h-[60px] bg-cyan-600 m-[20px] clip-custom1">&nbsp; Favorite</div>
             {/* {/ titleBox-big /} */}
-            <div class="w-[400px] h-[600px] bg-cyan-600 m-[20px] clip-custom2"></div>
+            <div className="w-[400px] h-[600px] bg-cyan-600 m-[20px] clip-custom2"></div>
           </div>
           {/* {/ column /} */}
-          <div class="column">
+          <div className="column">
             {/* {/ titleBox-small /} */}
-            <div class="w-[200px] h-[60px] bg-cyan-600 m-[20px] clip-custom1">&nbsp; Recently Played</div>
+            <div className="w-[200px] h-[60px] bg-cyan-600 m-[20px] clip-custom1">&nbsp; Recently Played</div>
             {/* {/ titleBox-big */}
-            <div class="w-[400px] h-[600px] bg-cyan-600 m-[20px] clip-custom2"></div>
+            <div className="w-[400px] h-[600px] bg-cyan-600 m-[20px] clip-custom2"></div>
           </div>
         </div>
 

@@ -34,13 +34,13 @@ const Header = () => {
           </li>
           <li>
             {user && (
-              <Link to="/" class="nav-item" onClick={() => dispatch(setLogout())}>
+              <Link to="/" className="nav-item" onClick={() => dispatch(setLogout())}>
                 Logout
               </Link>
             )}
 
             {!user && (
-              <Link to="/login" class="nav-item">
+              <Link to="/login" className="nav-item">
                 Login
               </Link>
             )}

@@ -42,12 +42,12 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   return (
-    <main class="min-h-screen flex justify-center items-center">
-      <div class="h-[400px] w-[400px] bg-black/40 border-cyan-400 border-4 text-teal-400 p-9 login-box">
-        <h1 class="text-2xl text-[#1afa8d]">Login</h1>
-        <form class="flex flex-col" onSubmit={onLoginUserClicked}>
+    <main className="min-h-screen flex justify-center items-center">
+      <div className="h-[400px] w-[400px] bg-black/40 border-cyan-400 border-4 text-teal-400 p-9 login-box">
+        <h1 className="text-2xl text-[#1afa8d]">Login</h1>
+        <form className="flex flex-col" onSubmit={onLoginUserClicked}>
           <input
-            class="h-[30px] w-[250px] my-[10px] input-box text-black"
+            className="h-[30px] w-[250px] my-[10px] input-box text-black"
             type='text'
             name="email"
             placeholder=" Email"
@@ -56,7 +56,7 @@ const LoginPage = () => {
             value={email}
           />
           <input
-            class="h-[30px] w-[250px] my-[10px] input-box text-black"
+            className="h-[30px] w-[250px] my-[10px] input-box text-black"
             type='text'
             name="password"
             placeholder=" Password"
@@ -64,11 +64,11 @@ const LoginPage = () => {
             onChange={onPasswordChanged}
             value={password}
           />
-          <nav class="mt-[5px]">
-            <button class="text-black bg-emerald-700 border-[#1afa8d] border-2 h-[30px] w-[75px] mr-[5px] hover:bg-[#1afa8d] form-button-box" onClick={() => navigate("/")}>Back</button>
-            <button class="text-black bg-emerald-700 border-[#1afa8d] border-2 h-[30px] w-[75px] mr-[5px] hover:bg-[#1afa8d] form-button-box" type="submit">Login</button>
+          <nav className="mt-[5px]">
+            <button className="text-black bg-emerald-700 border-[#1afa8d] border-2 h-[30px] w-[75px] mr-[5px] hover:bg-[#1afa8d] form-button-box" onClick={() => navigate("/")}>Back</button>
+            <button className="text-black bg-emerald-700 border-[#1afa8d] border-2 h-[30px] w-[75px] mr-[5px] hover:bg-[#1afa8d] form-button-box" type="submit">Login</button>
           </nav>
-          <a class="text-[#1afa8d] mt-[10px] underline cursor-pointer hover:no-underline" href='/register'>Sign-up?</a>
+          <a className="text-[#1afa8d] mt-[10px] underline cursor-pointer hover:no-underline" href='/register'>Sign-up?</a>
         </form>
       </div>
     </main>

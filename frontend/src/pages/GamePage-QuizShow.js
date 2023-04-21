@@ -10,7 +10,7 @@ const GamePage = () => {
 
   return (
     <main className='h-[1750px] pt-5 pb-5'>
-      <h1 class="text-[yellow] font-cyber text-5xl mb-12 ml-36">CyberProGames</h1>
+      <h1 className="text-[yellow] font-cyber text-5xl mb-12 ml-36">CyberProGames</h1>
       <GamePageBox
         name={"Linux Quiz Show"}
         src={'games/quiz/index.html'} />
