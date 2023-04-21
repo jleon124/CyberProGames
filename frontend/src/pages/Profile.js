@@ -5,7 +5,7 @@ const Profile = () => {
 
   return (
     <main>
-      <body class="profile bg-cover bg-no-repeat bg-center pt-12 z-10 pb-52">
+      <div class="profile bg-cover bg-no-repeat bg-center pt-12 z-10 pb-52">
         <br></br>
 
         <UserInfo />
@@ -28,7 +28,7 @@ const Profile = () => {
           </div>
         </div>
 
-      </body>
+      </div>
     </main>
   )
 

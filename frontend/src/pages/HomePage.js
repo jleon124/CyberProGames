@@ -24,7 +24,7 @@ const HomePage = () => {
             title={"Linux Quiz Show"}
             src={"gameboxicons/quizshow.png"}
             link={"gamepage"}
-            style={"mr-36"} />
+            className="mr-36" />
           <GameBox />
         </div>
 
