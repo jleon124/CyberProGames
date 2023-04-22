@@ -23,7 +23,7 @@ const RegisterPage = () => {
     const savedUser = await savedUserResponse.json()
 
     if (savedUser) {
-      navigate('/')
+      navigate('/login')
     }
   }
 

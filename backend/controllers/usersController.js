@@ -1,4 +1,5 @@
 const User = require('../models/User')
+const bcrypt = require('bcrypt')
 
 // @desc    Get all users
 // @route   GET /user/all
@@ -25,11 +26,6 @@ const getUser = async (req, res) => {
   // get user id from url
   const { id } = req.params
 
-  // check if id is valid
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).json({ message: 'Invalid ID' })
-  }
-
   // get the user from the db with id
   const user = await User.findById(id).exec()
 
@@ -43,16 +39,18 @@ const getUser = async (req, res) => {
 }
 
 // @desc    Update a user
-// @route   PATCH /user/:id/edit
+// @route   PATCH /user/:id/editPicture
 // @access  Private
-const updateUser = async (req, res) => {
+const updatePicture = async (req, res) => {
 
   // grab user id from url
   const { id } = req.params
 
-  // check if id is valid
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).json({ message: 'Invalid ID' })
+  // grab profile pic from request body
+  const { profilePicture } = req.body
+
+  if (!profilePicture) {
+    return res.status(400).json({message: 'No pic found'})
   }
 
   // get the user from the db with id
@@ -63,22 +61,88 @@ const updateUser = async (req, res) => {
     return res.status(400).json({ message: 'User not found' })
   }
 
+  // set profile picture
+  user.profilePicture = profilePicture
+
+  // grab the updated user
+  user.save()
+
+  // send response stating that user was updated
+  res.status(200).json({ user })
+}
+
+// @desc    Update a user
+// @route   PATCH /user/:id/editDescription
+// @access  Private
+const updateDescription = async (req, res) => {
+
+  // grab user id from url
+  const { id } = req.params
+
   // grab description from request body
   const { description } = req.body
 
-  // check if there is a description
   if (!description) {
-    return res.status(400).json({ message: 'All fields reqiured' })
+    return res.status(400).json({message: 'No pic found'})
+  }
+
+  // get the user from the db with id
+  const user = await User.findById(id).exec()
+
+  // check if there is a user
+  if (!user) {
+    return res.status(400).json({ message: 'User not found' })
   }
 
   // set description
   user.description = description
 
   // grab the updated user
-  const updatedUser = await user.save()
+  user.save()
 
   // send response stating that user was updated
-  res.status(200).json({ message: `${updatedUser.username} updated` })
+  res.status(200).json({ user })
+}
+
+// @desc    Update a user
+// @route   PATCH /user/:id/editPassword
+// @access  Private
+const updatePassword = async (req, res) => {
+
+  // grab user id from url
+  const { id } = req.params
+
+  // grab description from request body
+  const { oldPassword, newPassword } = req.body
+
+  if (!oldPassword || !newPassword) {
+    return res.status(400).json({message: 'No values found'})
+  }
+
+  // get the user from the db with id
+  const user = await User.findById(id).exec()
+
+  // check if there is a user
+  if (!user) {
+    return res.status(400).json({ message: 'User not found' })
+  }
+
+  // see if passwords match
+  const isMatch = await bcrypt.compare(oldPassword, user.password)
+  if (!isMatch) {
+    return res.status(400).json({ message: 'Passwords do not match' })
+  }
+
+  const newHashedPassword = await bcrypt.hash(newPassword, 10)
+
+  // set description
+  user.password = newHashedPassword
+
+  // grab the updated user
+  user.save()
+
+  // send response stating that user was updated
+  res.status(200).json({ user })
 }
 
 // @desc    Delete a user
@@ -89,11 +153,6 @@ const deleteUser = async (req, res) => {
   // get user id from url
   const { id } = req.params
 
-  // check if id is valid
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).json({ message: 'Invalid ID' })
-  }
-
   // delete user with id
   const user = await User.findOneAndDelete({ _id: id })
 
@@ -103,12 +162,14 @@ const deleteUser = async (req, res) => {
   }
 
   // send response stating what user was deleted
-  res.status(200).json({ message: `Username ${user.username} with ID ${user._id} deleted` })
+  res.status(200).json({ user })
 }
 
 module.exports = {
   getAllUsers,
   getUser,
-  updateUser,
+  updatePicture,
+  updateDescription,
+  updatePassword,
   deleteUser
 }
