@@ -11,6 +11,7 @@ import GamePage from './pages/GamePage-QuizShow';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 import { useSelector } from 'react-redux';
+import GamePageZombieHunter from './pages/GamePage-ZombieHunter';
 
 function App() {
 
@@ -34,7 +35,8 @@ function App() {
             />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
-            <Route path="/gamepage" element={<GamePage />} />
+            <Route path="/quizshow" element={<GamePage />} />
+            <Route path="/zombiehunter" element={<GamePageZombieHunter />} />
           </Route>
         </Routes>
       </BrowserRouter>
