@@ -21,18 +21,21 @@ const HomePage = () => {
 
         <div className=" col-span-2 flex ">
           <GameBox
-            title={"Linux Quiz Show"}
             src={"gameboxicons/quizshow.png"}
-            link={"gamepage"}
-            className="mr-36" />
-          <GameBox />
+            link={"quizshow"}
+            className="mr-24" />
+          <GameBox 
+          src={'gameboxicons/zombiehunter.png'}
+          link={"zombiehunter"}/>
         </div>
 
       </div>
 
       <h1 className="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 pt-20 pb-4">Programming</h1>
       <div className="flex justify-evenly pb-6">
-        <GameBox />
+        <GameBox 
+          src={"gameboxicons/quizshow.png"}
+          link={"quizshow"}/>
         <GameBox />
         <GameBox />
         <GameBox />
@@ -40,9 +43,13 @@ const HomePage = () => {
 
       <h1 className="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Fun</h1>
       <div className="flex justify-evenly pb-6">
-        <GameBox />
-        <GameBox />
-        <GameBox />
+        <GameBox 
+          src={'gameboxicons/zombiehunter.png'}
+          link={"zombiehunter"}/>
+        <GameBox 
+        src={'gameboxicons/rocket.png'}/>
+        <GameBox 
+        src={'gameboxicons/samuraifight.png'}/>
         <GameBox />
       </div>
 
