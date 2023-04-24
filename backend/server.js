@@ -4,7 +4,6 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const { logger, logEvents } = require('./middleware/logger')
 const errorHandler = require('./middleware/errorHandler')
-const cookieParser = require('cookie-parser')
 const connectDB = require('./config/dbConn')
 const app = express()
 
@@ -21,6 +20,7 @@ app.use('/', express.static('public'), require('./routes/root'))
 app.use('/auth', require('./routes/authRoutes'))
 app.use('/user', require('./routes/usersRoutes'))
 app.use('/comment', require('./routes/commentsRoutes'))
+app.use('/game', require('./routes/gameRoutes'))
 
 // MONGOOSE SETUP
 const PORT = process.env.PORT || 3500
