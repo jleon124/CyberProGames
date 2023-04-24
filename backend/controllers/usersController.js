@@ -50,7 +50,7 @@ const updatePicture = async (req, res) => {
   const { profilePicture } = req.body
 
   if (!profilePicture) {
-    return res.status(400).json({message: 'No pic found'})
+    return res.status(400).json({ message: 'No pic found' })
   }
 
   // get the user from the db with id
@@ -83,7 +83,7 @@ const updateDescription = async (req, res) => {
   const { description } = req.body
 
   if (!description) {
-    return res.status(400).json({message: 'No pic found'})
+    return res.status(400).json({ message: 'No pic found' })
   }
 
   // get the user from the db with id
@@ -116,7 +116,7 @@ const updatePassword = async (req, res) => {
   const { oldPassword, newPassword } = req.body
 
   if (!oldPassword || !newPassword) {
-    return res.status(400).json({message: 'No values found'})
+    return res.status(400).json({ message: 'No values found' })
   }
 
   // get the user from the db with id

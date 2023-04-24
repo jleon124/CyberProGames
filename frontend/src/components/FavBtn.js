@@ -18,7 +18,7 @@ function FavBtn() {
         Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ userId: user._id})
+      body: JSON.stringify({ userId: user._id })
     })
 
     const favStatus = await response.json()

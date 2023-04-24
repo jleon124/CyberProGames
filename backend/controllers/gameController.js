@@ -78,7 +78,7 @@ const updateLikeDislike = async (req, res) => {
 // @route   PATCH /game/:id/favtoggle
 // @access  Private
 const favoriteGame = async (req, res) => {
-    
+
     // grab gameId from url
     const { gameId } = req.params
 

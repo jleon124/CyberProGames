@@ -7,7 +7,7 @@ function Comments() {
       <span>Comments</span>
     </div>
   )
-  
+
 }
 
 export default Comments;
