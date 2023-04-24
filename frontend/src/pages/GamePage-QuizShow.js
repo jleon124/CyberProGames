@@ -6,7 +6,38 @@ import Description from '../components/Description'
 import Comments from '../components/Comments'
 import GamePageBox from '../components/GamePageBox'
 
+import { useDispatch, useSelector } from 'react-redux'
+import { setGameData } from '../state'
+import { useEffect } from 'react'
+
 const GamePage = () => {
+
+
+  const dispatch = useDispatch()
+  // const user = useSelector((state) => state.user)
+  const game = useSelector((state) => state.game)
+
+  const getGameData = async () => {
+    const response = await fetch('http://localhost:3500/game/64446517836062ea7c5bc61f', {
+      method: 'GET'
+    })
+
+    const gameData = await response.json()
+    
+    if (gameData) {
+      dispatch(
+        setGameData({
+          game: gameData
+        })
+      )
+    }
+  }
+
+  useEffect(() => {
+    if (!game || game.title !== "Linux Quiz Show") {
+      getGameData()
+    }
+  })
 
   return (
     <main className='h-[1750px] pt-5 pb-5'>

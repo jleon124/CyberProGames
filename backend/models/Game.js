@@ -5,28 +5,22 @@ const gameSchema = new mongoose.Schema(
     title: {
       type: String,
       unique: true,
-      required: true
     },
     likes: {
-      type: Array,
-      default: []
+      type: Map,
+      of: Boolean
     },
     dislikes: {
-      type: Array,
-      default: []
+      type: Map,
+      of: Boolean
     },
     favorites: {
-      type: Array,
-      default: []
-    },
-    views: {
-      type: Array,
-      default: []
+      type: Map,
+      of: Boolean
     },
     description: {
       type: String,
       default: "",
-      required: true
     },
     comments: {
       type: Array,

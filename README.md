@@ -20,19 +20,22 @@ This project was created with the following:
 <a href=""> <img title="" src="" height="80"> </a>
 
 ## Setup
-To run this project locally, ...
+To run this project locally: <br/>
+Open project in root folder and run `npm run dev` <br/>
+This will run the concurrently script to run both backend and frontend
+
 
 ## Features
-- User can navigate between basic pages
+- Account creation and login
+- Ability to change profile picture, description, and password
+- Users can play games within the web application
+- Ability to like, dislike, and favorite games
 ### To Do:
-- Insert games on to specific pages
-- Develop the backend server
-    - Connect to frontend
-    - Store account data such as profile picture
-    - Store comments and like/dislike counters on game pages
-- Convert as much CSS styling to Tailwind CSS formatting
-- Clean up several page stylings
-- Ensure the correct login and registration of accounts
+- Create, view, and store comments under specific game pages
+- Convert as much CSS styling to Tailwind CSS formatting and cleanup
+- Include a few more games
+- Adjust visuals for like, dislike, and ratings
+- Add error handling (error messages and restrictions)
 
 ## Meet the AFK Team
 - Miranda Darlington
