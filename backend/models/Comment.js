@@ -21,12 +21,12 @@ const commentSchema = new mongoose.Schema(
       required: true
     },
     likes: {
-      type: Array,
-      default: []
+      type: Map,
+      of: Boolean
     },
     dislikes: {
-      type: Array,
-      default: []
+      type: Map,
+      of: Boolean
     },
   },
   { timestamps: true }

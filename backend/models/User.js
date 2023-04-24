@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema(
       type: Array,
       default: []
     },
-    recentGames: {
+    comments: {
       type: Array,
       default: []
     }
