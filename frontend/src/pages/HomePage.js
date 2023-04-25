@@ -36,7 +36,9 @@ const HomePage = () => {
         <GameBox 
           src={"gameboxicons/quizshow.png"}
           link={"quizshow"}/>
-        <GameBox />
+        <GameBox          
+          src={"gameboxicons/quizshow.png"}
+          link={"matching"}/>
         <GameBox />
         <GameBox />
       </div>

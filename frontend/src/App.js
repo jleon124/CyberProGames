@@ -13,6 +13,7 @@ import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import GamePageZombieHunter from './pages/GamePage-ZombieHunter';
 import GamePageRocket from './pages/GamePage-Rocket';
+import GamePageMatching from './pages/GamePage-Matching';
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
             <Route path="/quizshow" element={<GamePage />} />
             <Route path="/zombiehunter" element={<GamePageZombieHunter />} />
             <Route path="/rocket" element={<GamePageRocket />} />
+            <Route path="/matching" element={<GamePageMatching />} />
           </Route>
         </Routes>
       </BrowserRouter>
