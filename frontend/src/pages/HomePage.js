@@ -53,7 +53,9 @@ const HomePage = () => {
         link={"rocket"}/>
         <GameBox 
         src={'gameboxicons/samuraifight.png'}/>
-        <GameBox />
+        <GameBox 
+        src={'gameboxicons/escaperoom.png'}
+        link={'escape'}/>
       </div>
 
       <h1 className="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Coming Soon</h1>

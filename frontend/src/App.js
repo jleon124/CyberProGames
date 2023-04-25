@@ -14,6 +14,7 @@ import { useSelector } from 'react-redux';
 import GamePageZombieHunter from './pages/GamePage-ZombieHunter';
 import GamePageRocket from './pages/GamePage-Rocket';
 import GamePageMatching from './pages/GamePage-Matching';
+import GamePageEscape from './pages/GamePage-EscapeRoom';
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
             <Route path="/zombiehunter" element={<GamePageZombieHunter />} />
             <Route path="/rocket" element={<GamePageRocket />} />
             <Route path="/matching" element={<GamePageMatching />} />
+            <Route path="/escape" element={<GamePageEscape />} />
           </Route>
         </Routes>
       </BrowserRouter>
