@@ -16,7 +16,7 @@ function FavBtn() {
       method: 'PATCH',
       headers: {
         Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({ userId: user._id })
     })

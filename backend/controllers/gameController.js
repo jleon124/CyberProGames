@@ -24,49 +24,35 @@ const getGameData = async (req, res) => {
 // @desc    Update like and dislike
 // @route   PATCH /game/:gameId/liketoggle
 // @access  Private
-const updateLikeDislike = async (req, res) => {
+const updateLike = async (req, res) => {
 
     // grab gameId from url
     const { gameId } = req.params
 
     // grab userId and rating status from request body
-    const { userId, rtnStatus } = req.body
+    const { userId } = req.body
 
     // find game by gameId
     const game = await Game.findById(gameId).exec()
 
     // check if the user has like or disliked the game
     const isLiked = game.likes.get(userId)
-    const isDisliked = game.dislikes.get(userId)
 
     // if cannot find game
     if (!game) {
         return res.status(400).json({ message: `No game found id is ${gameId}` })
     }
 
-    // adds or removes user from game ratings depending on
-    // if rating status is like, dislike, or neither
-    if (rtnStatus === "like") {
-        if (isLiked) { game.likes.delete(userId) }
-        else {
-            game.likes.set(userId, true)
-            game.dislikes.delete(userId)
-        }
-    } else if (rtnStatus === "dislike") {
-        if (isDisliked) { game.dislikes.delete(userId) }
-        else {
-            game.dislikes.set(userId, true)
-            game.likes.delete(userId)
-        }
-    } else {
+    if (isLiked) {
         game.likes.delete(userId)
-        game.dislikes.delete(userId)
+    } else {
+        game.likes.set(userId, true)
     }
 
     // update the game with updates
     const updatedGame = await Game.findByIdAndUpdate(
         gameId,
-        { likes: game.likes, dislikes: game.dislikes },
+        { likes: game.likes },
         { new: true }
     )
 
@@ -95,7 +81,7 @@ const favoriteGame = async (req, res) => {
         user.favGames = user.favGames.filter((gameid) => gameid !== gameId)
         game.favorites.delete(userId)
     } else {
-        user.favGames.push(gameId)
+        user.favGames.unshift(gameId)
         game.favorites.set(userId, true)
     }
 
@@ -115,6 +101,6 @@ const favoriteGame = async (req, res) => {
 
 module.exports = {
     getGameData,
-    updateLikeDislike,
+    updateLike,
     favoriteGame
 }
