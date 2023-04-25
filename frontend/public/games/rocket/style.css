@@ -1,0 +1,45 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    
+} */
+#game{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    overflow: hidden;
+    background-image: url("https://media1.giphy.com/media/1jXAh9RJME0LZoBFRp/giphy.gif?cid=ecf05e47yvxdsh15twtt5nh0c4d7g5r76f899wvd1orlrni5&rid=giphy.gif&ct=g");
+    background-repeat: no-repeat;
+}
+#block{
+    width: 50px;
+    height: 500px;
+    background-image: url("https://i.pinimg.com/originals/af/b6/87/afb6872a0fbefb737c7636270f3b626b.jpg");
+    position: relative;
+    left: 400px;
+    animation: block 2s infinite linear;
+}
+@keyframes block{
+    0%{left:400px}
+    100%{left:-50px}
+}
+#hole{
+    width: 50px;
+    height: 150px;
+    background-image: url("https://media1.giphy.com/media/1jXAh9RJME0LZoBFRp/giphy.gif?cid=ecf05e47yvxdsh15twtt5nh0c4d7g5r76f899wvd1orlrni5&rid=giphy.gif&ct=g");
+    position: relative;
+    left: 400px;
+    top: -500px;
+    animation: block 2s infinite linear;
+}
+#character{
+    transform: rotate(90deg);
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 100px;
+    /* border-radius: 50%; */
+}

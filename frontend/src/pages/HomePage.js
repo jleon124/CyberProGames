@@ -47,7 +47,8 @@ const HomePage = () => {
           src={'gameboxicons/zombiehunter.png'}
           link={"zombiehunter"}/>
         <GameBox 
-        src={'gameboxicons/rocket.png'}/>
+        src={'gameboxicons/rocket.png'}
+        link={"rocket"}/>
         <GameBox 
         src={'gameboxicons/samuraifight.png'}/>
         <GameBox />
