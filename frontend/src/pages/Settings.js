@@ -127,7 +127,7 @@ const Account = () => {
 
 
   // delete
-  const deleteAcc = async (theuser) => {
+  const deleteAcc = async () => {
     const deletedResponse = await fetch(`http://localhost:3500/user/${user._id}`, {
       method: 'DELETE',
       headers: {
