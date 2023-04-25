@@ -3,7 +3,6 @@ import GameBox from '../components/GameBox'
 import RatingBtn from '../components/RatingBtn'
 import FavBtn from '../components/FavBtn'
 import Description from '../components/Description'
-import Comments from '../components/Comments'
 import GamePageBox from '../components/GamePageBox'
 
 const GamePageZombieHunter = () => {
@@ -32,7 +31,7 @@ const GamePageZombieHunter = () => {
           desc={'How much do you know Linux? Play along to earn points!'}
           contrls={'click on the right answer and go inbetween questions with the right and left buttons'}
           tips={'Just know Linux lol.'} />
-        <Comments />
+        
       </div>
     </main>
   )
