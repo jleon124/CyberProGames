@@ -1,6 +1,6 @@
 import React from "react";
 
-function GamePageBox({ name, src, w = 900, h = 475 }) {
+function GamePageBox({ name, src, w = 900, h = 500 }) {
 
   return (
     <div>
