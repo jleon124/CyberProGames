@@ -36,7 +36,9 @@ const HomePage = () => {
         <GameBox 
           src={"gameboxicons/quizshow.png"}
           link={"quizshow"}/>
-        <GameBox />
+        <GameBox          
+          src={"gameboxicons/quizshow.png"}
+          link={"matching"}/>
         <GameBox />
         <GameBox />
       </div>
@@ -47,10 +49,13 @@ const HomePage = () => {
           src={'gameboxicons/zombiehunter.png'}
           link={"zombiehunter"}/>
         <GameBox 
-        src={'gameboxicons/rocket.png'}/>
+        src={'gameboxicons/rocket.png'}
+        link={"rocket"}/>
         <GameBox 
         src={'gameboxicons/samuraifight.png'}/>
-        <GameBox />
+        <GameBox 
+        src={'gameboxicons/escaperoom.png'}
+        link={'escape'}/>
       </div>
 
       <h1 className="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Coming Soon</h1>

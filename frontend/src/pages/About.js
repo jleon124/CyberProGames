@@ -15,7 +15,7 @@ const About = () => {
 
         <div className='flex'>
           <div data-aos="zoom-out-down" className="about_description text-center bg-[rgba(0,0,0,0.4)] h-80 w-[650px] ml-[100px] mt-[100px] border-[rgba(88,221,229,255)] border-[3px]">
-            <p className="about_text text-left text-base uppercase text-[rgba(26,250,141,255)] leading-loose font-bold p-[50px] font-sans">
+            <div className="about_text text-left text-base uppercase text-[rgba(26,250,141,255)] leading-loose font-bold p-[50px] font-sans">
               A website with a purpose of hosting various <br></br>
               games ranging from just-for-fun to game to <br></br>
               learning about programming/computer science. <br></br>
@@ -24,12 +24,12 @@ const About = () => {
               course to get us comfortable with the MERN <br></br>
               stack and deploy a full-stack web application. <br></br>
 
-            </p>
+            </div>
 
           </div>
 
           <div data-aos="zoom-out-down" className="about_description text-center bg-[rgba(0,0,0,0.4)] h-80 w-[650px] ml-[100px] mt-[100px] border-[rgba(88,221,229,255)] border-[3px] ">
-            <p className="about_text text-left text-base uppercase text-[rgba(26,250,141,255)] leading-loose font-bold p-[50px] font-sans">
+            <div className="about_text text-left text-base uppercase text-[rgba(26,250,141,255)] leading-loose font-bold p-[50px] font-sans">
               Technologies Used <br></br>
               <div className='flex'>
                 <img className='h-[100px] w-[100px] mx-5 my-2' src='logos\react_logo.png' alt="error"></img>
@@ -41,7 +41,7 @@ const About = () => {
                 <img className='h-[80px] w-[200px] mx-5 my-2' src='logos\tailwind_logo.png' alt="error"></img>
                 <img className='h-[100px] w-[100px] mx-5 my-2' src='logos\github_logo.png' alt="error"></img>
               </div>
-            </p>
+            </div>
 
           </div>
         </div>
@@ -75,7 +75,7 @@ const About = () => {
 
         <div className="white_profileBox h-[500px] w-[400px]"></div>
 
-        <div data-aos="fade-left">
+        <div data-aos="fade-right">
           <div className="box_profile_img_right h-[350px] w-[250px] absolute z-[2] mr-[50px] mb-[400px] p-2.5 right-[330px]">
             <img src='teampictures/jafet_pic.png' alt="souvenir" />
 
@@ -123,7 +123,7 @@ const About = () => {
 
         <div className="white_profileBox h-[500px] w-[400px]"></div>
 
-        <div data-aos="fade-left">
+        <div data-aos="fade-right">
           <div className="box_profile_img_right h-[350px] w-[250px] absolute z-[2] mr-[50px] mb-[400px] p-2.5 right-[330px]">
             <img src='teampictures/Javier_pic.png' alt="souvenir" />
           </div>
