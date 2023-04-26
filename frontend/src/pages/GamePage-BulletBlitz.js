@@ -87,7 +87,7 @@ const GamePageBulletBlitz = () => {
   }
 
   useEffect(() => {
-    if (!game || game.title !== "Zombie Hunter") {
+    if (!game || game.title !== "Bullet Blitz") {
       getGameData()
       setGameComments()
     }
@@ -97,7 +97,7 @@ const GamePageBulletBlitz = () => {
     <main className='h-[1750px] pt-5 pb-5'>
       <h1 className="text-[yellow] font-cyber text-5xl mb-12 ml-36">CyberProGames</h1>
       <GamePageBox
-        name={"Zombie Hunter"}
+        name={"Bullet Blitz"}
         src={'games/bulletblitz'} />
       <br></br>
       <div className='flex'>

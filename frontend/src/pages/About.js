@@ -85,11 +85,11 @@ const About = () => {
               <p className="profile_desciptions_right text-left uppercase text-[rgba(26,250,141,255)] leading-loose pl-[280px] pt-[70px] font-sans font-extrabold text-lg">
                 Name: <span className="text-white">Jafet Leon-Perez</span> <br></br>
                 Gender: <span className="text-white">Male</span><br></br>
-                Age: <span className="text-white">Data Lost</span><br></br>
-                Height: <span className="text-white">Data Lost</span><br></br>
+                Age: <span className="text-white">20</span><br></br>
+                Height: <span className="text-white">2'5</span><br></br>
                 Skills: <span className="text-white">HTML, CSS, Java</span> <br></br>
                 <br></br>
-                Role: <span className="text-white">Unknown</span><br></br>
+                Role: <span className="text-white">Backend Man</span><br></br>
                 Social content: <span className="text-white"><a href="https://www.linkedin.com/in/jafet-leon-perez/" target="blank">LinkedIn</a></span>
               </p>
 

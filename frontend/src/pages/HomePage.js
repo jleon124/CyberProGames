@@ -12,9 +12,9 @@ const HomePage = () => {
 
         <div data-aos="fade-right" className="bg-black/40 col-span-2 mb-4 ">
           <div className="text-[#58dde5] text-lg p-5">Hello, world! Welcome to the AFK gaming website. This website was created for the purpose
-           of teaching you the basics of programming. This website hosts various games from helping you understand programming/computer science 
-           to playing mindless fun games. You can create a profile like, favorite, and comment on each game. WOW, that's amazing! You can start 
-           with a few clicks. Click login in the far right corner to get started.</div>
+            of teaching you the basics of programming. This website hosts various games from helping you understand programming/computer science
+            to playing mindless fun games. You can create a profile like, favorite, and comment on each game. WOW, that's amazing! You can start
+            with a few clicks. Click login in the far right corner to get started.</div>
         </div>
 
         <div data-aos="fade-right" className="justify-self-center col-span-2 row-span-2 text-center bg-black/40 text-[#58dde5] w-[500px] leaderboard-box ">
@@ -51,44 +51,41 @@ const HomePage = () => {
             src={"gameboxicons/quizshow.png"}
             link={"quizshow"}
             className="mr-24" />
-          <GameBox 
-          src={'gameboxicons/bulletblitz.png'}
-          link={"zombiehunter"}/>
+          <GameBox
+            src={'gameboxicons/bulletblitz.png'}
+            link={"bulletblitz"} />
         </div>
 
       </div>
 
       <h1 className="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 pt-20 pb-4">Programming</h1>
       <div data-aos="fade-right" className="flex justify-evenly pb-6">
-        <GameBox 
+        <GameBox
           src={"gameboxicons/quizshow.png"}
-          link={"quizshow"}/>
-        <GameBox          
+          link={"quizshow"} />
+        <GameBox
           src={"gameboxicons/matching.png"}
-          link={"matching"}/>
-        <GameBox 
+          link={"matching"} />
+        <GameBox
           src={"gameboxicons/datafrogger.png"}
-          link={"frogger"}/>
+          link={"frogger"} />
         <GameBox />
       </div>
 
       <h1 className="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Fun</h1>
       <div data-aos="fade-right" className="flex justify-evenly pb-6">
-        <GameBox 
+        <GameBox
           src={'gameboxicons/bulletblitz.png'}
-          link={"zombiehunter"}/>
-        <GameBox 
-        src={'gameboxicons/rocket.png'}
-        link={"rocket"}/>
-        <GameBox 
-        src={'gameboxicons/samuraifight.png'}
-        link={"samurai"}/>
-        <GameBox 
-        src={'gameboxicons/escaperoom.png'}
-        link={'escape'}/>
-        <GameBox 
-        src={'gameboxicons/zombiehunter.png'}
-        link={'frogger'}/>
+          link={"zombiehunter"} />
+        <GameBox
+          src={'gameboxicons/rocket.png'}
+          link={"rocket"} />
+        <GameBox
+          src={'gameboxicons/samuraifight.png'}
+          link={"samurai"} />
+        <GameBox
+          src={'gameboxicons/escaperoom.png'}
+          link={'escape'} />
       </div>
 
       <h1 className="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Coming Soon</h1>
