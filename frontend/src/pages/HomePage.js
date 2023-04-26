@@ -1,8 +1,30 @@
 import React from 'react'
 import GameBox from '../components/GameBox'
-
+import { useDispatch } from 'react-redux'
+import { setGameData } from '../state'
+import { useEffect } from 'react'
 
 const HomePage = () => {
+
+  const dispatch = useDispatch()
+
+  const getGameData = async () => {
+    const response = await fetch('http://localhost:3500/game/64446517836062ea7c5bc61f', {
+      method: 'GET'
+    })
+    const gameData = await response.json()
+    if (gameData) {
+      dispatch(
+        setGameData({
+          game: gameData
+        })
+      )
+    }
+  }
+
+  useEffect(() => {
+    getGameData()
+  }, [])
 
   return (
     <main className=" pt-5 pb-5 h-auto bg-[linear-gradient(to_bottom,#050b13,#11131e,#1c1727,#2b192e,#3c1b30,#431a2f,#4a192c,#511929,#511627,#501324,#501022,#4f0c1f)]">
