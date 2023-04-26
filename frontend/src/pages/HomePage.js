@@ -26,7 +26,7 @@ const HomePage = () => {
             className="mr-24" />
           <GameBox 
           src={'gameboxicons/zombiehunter.png'}
-          link={"zombiehunter"}/>
+          link={"bulletblitz"}/>
         </div>
 
       </div>
@@ -47,7 +47,7 @@ const HomePage = () => {
       <div className="flex justify-evenly pb-6">
         <GameBox 
           src={'gameboxicons/zombiehunter.png'}
-          link={"zombiehunter"}/>
+          link={"bulletblitz"}/>
         <GameBox 
         src={'gameboxicons/rocket.png'}
         link={"rocket"}/>

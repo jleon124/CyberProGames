@@ -6,14 +6,14 @@ import Description from '../components/Description'
 import Comments from '../components/Comments'
 import GamePageBox from '../components/GamePageBox'
 
-const GamePageZombieHunter = () => {
+const GamePageBulletBlitz = () => {
 
   return (
     <main className='h-[1750px] pt-5 pb-5'>
       <h1 className="text-[yellow] font-cyber text-5xl mb-12 ml-36">CyberProGames</h1>
       <GamePageBox
         name={"Zombie Hunter"}
-        src={'games/'} />
+        src={'games/bulletblitz'} />
       <br></br>
       <div className='flex'>
         <RatingBtn />
@@ -39,4 +39,4 @@ const GamePageZombieHunter = () => {
 
 }
 
-export default GamePageZombieHunter
+export default GamePageBulletBlitz
