@@ -3,14 +3,12 @@ const commentsController = require('../controllers/commentsController')
 const router = express.Router()
 const verifyJWT = require('../middleware/verifyJWT')
 
-router.use(verifyJWT)
-
 // /comment/
-router.get('/all', commentsController.getAllComments)
-router.get('/:userId/comments', commentsController.getComment)
-router.post('/new', commentsController.createComment)
-router.patch('/:id/edit', commentsController.updateComment)
-router.delete('/:id', commentsController.deleteComment)
+router.get("/:gameId/comments", commentsController.getGameComments)
+router.get("/:userId/comments", verifyJWT, commentsController.getUserComments)
+router.post("/new-comment", verifyJWT, commentsController.createComment)
+router.patch("/:id/liketoggle", verifyJWT, commentsController.likeComment)
+router.delete("/:id", verifyJWT, commentsController.deleteComment)
 
 
 module.exports = router
