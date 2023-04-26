@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="text-white flex flex-col">
           <h1 className="text-[#29bffd] text-xl"><strong>Browse Games</strong></h1>
           <Link to="/quizshow" className=' hover:underline hover:text-[yellow]'>Linux Quiz Show</Link>
-          <Link to="/zombiehunter" className=' hover:underline hover:text-[yellow]'>Bullet Blitz</Link>
+          <Link to="/bulletblitz" className=' hover:underline hover:text-[yellow]'>Bullet Blitz</Link>
           <Link to="/rocket" className=' hover:underline hover:text-[yellow]'>Rocket</Link>
           <Link to="/matching" className=' hover:underline hover:text-[yellow]'>The Matching Game</Link>
         </div>
