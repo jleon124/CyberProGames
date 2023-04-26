@@ -52,7 +52,7 @@ const HomePage = () => {
             link={"quizshow"}
             className="mr-24" />
           <GameBox 
-          src={'gameboxicons/zombiehunter.png'}
+          src={'gameboxicons/bulletblitz.png'}
           link={"zombiehunter"}/>
         </div>
 
@@ -64,16 +64,17 @@ const HomePage = () => {
           src={"gameboxicons/quizshow.png"}
           link={"quizshow"}/>
         <GameBox          
-          src={"gameboxicons/quizshow.png"}
+          src={"gameboxicons/matching.png"}
           link={"matching"}/>
-        <GameBox />
+        <GameBox 
+          src={"gameboxicons/datafrogger.png"}/>
         <GameBox />
       </div>
 
       <h1 className="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Fun</h1>
       <div data-aos="zoom-out-down" className="flex justify-evenly pb-6">
         <GameBox 
-          src={'gameboxicons/zombiehunter.png'}
+          src={'gameboxicons/bulletblitz.png'}
           link={"zombiehunter"}/>
         <GameBox 
         src={'gameboxicons/rocket.png'}
