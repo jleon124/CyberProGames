@@ -98,7 +98,7 @@ const HomePage = () => {
       <div data-aos="fade-right" className="flex justify-evenly pb-6">
         <GameBox
           src={'gameboxicons/bulletblitz.png'}
-          link={"zombiehunter"} />
+          link={"bulletblitz"} />
         <GameBox
           src={'gameboxicons/rocket.png'}
           link={"rocket"} />
