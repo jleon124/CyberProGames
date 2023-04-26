@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { setComments, setGameData, updateUser } from "../state";
+import ProfilePicture from './ProfilePicture'
+import { BsArrowRightCircleFill } from "react-icons/bs";
 
 const CreateComment = ({ user, game }) => {
 
@@ -55,9 +57,9 @@ const CreateComment = ({ user, game }) => {
   }
 
   return (
-    <div className="bg-orange-600">
-      <div>User Image</div>
-      <form id="commentForm" onSubmit={onCreateComment}>
+    <div className="flex mb-10 content-center">
+      <ProfilePicture alt={'userpic'} src={user.profilePicture} height={70} width={70} />
+      <form id="commentForm" onSubmit={onCreateComment} className="flex content-center">
         <textarea
           form="commentForm"
           onChange={onCommentChanged}
@@ -66,14 +68,14 @@ const CreateComment = ({ user, game }) => {
           rows={2}
           cols={50}
           maxLength={150}
-          className="resize-none"
+          className="resize-none bg-transparent text-white border-transparent"
         ></textarea>
         <button
           disabled={!comment}
           type="submit"
-          className="bg-slate-500 text-white"
+          className=""
         >
-          Comment
+          <BsArrowRightCircleFill className='text-white h-[40px] w-[40px] ml-2'/>
         </button>
       </form>
     </div>

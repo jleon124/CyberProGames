@@ -7,30 +7,33 @@ const Profile = () => {
 
   const user = useSelector((state) => state.user)
 
+  const formatDate = user.createdAt
+  const newDate = formatDate.slice(0, 10)
+
   return (
     <main>
-      <div className="profile bg-cover bg-no-repeat bg-center pt-12 z-10 pb-52">
+      <div className="profile bg-cover bg-no-repeat bg-center pt-12 z-10 pb-52 ">
         <br></br>
 
         <div className='flex flex-wrap justify-evenly relative'>
+
           <div className='absolute top-[-70px] h-96 left-0 w-full bg-black z-0 bg-opacity-20 '></div>
-          <div className='text-left w-80 inline-block relative bg-cyan-600 clip-custom3'>
-            <br></br>
-            <br></br>
-            {/* profile-info /} */}
-            <div className='w-[200px] bg-cyan-600 font-bold'>
-              <ProfilePicture alt={'userpic'} picNum={user.profilePicture} />
-            </div>
+
+          <div data-aos="zoom-out-down" className='h-[200px] w-[200px] bg-transparent border-4 border-[rgba(88,221,229,255)] clip-custom3'>
+            <ProfilePicture alt={'userpic'} picNum={user.profilePicture} />
           </div>
-          {/* {/ descriptionContainer /} */}
-          <div className='font-bold bg-transparent h-[250px] w-[400px] m-[10px] z-20 text-[#1afa8d]'>
+
+          <div className='font-bold clip-custom3 border-4 border-[rgba(88,221,229,255)] bg-transparent h-[250px] w-[600px] m-[10px] z-20 text-[#1afa8d] text-2xl pt-6 pl-6'>
             <p>{user.username}</p>
             <p>{user.description}</p>
-            <p>Created at {user.createdAt}</p>
+            <p>Created on {newDate}</p>
           </div>
         </div>
 
-        <FavGameList favorites={user.favGames} className={"flex bg-black/40 mt-20"}/>
+        <div data-aos="zoom-out-down" className="mt-20 ml-20">
+          <h1 className="font-valo text-3xl text-[rgb(255,255,255,0.4)] mb-6">Favorite Games:</h1>
+          <FavGameList favorites={user.favGames} className={"flex "} />
+        </div>
 
       </div>
     </main>

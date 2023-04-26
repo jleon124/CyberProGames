@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setComment, setGameData, updateUser } from '../state'
+import ProfilePicture from './ProfilePicture'
 
 const SingleComment = ({
   commentId,
@@ -19,6 +20,8 @@ const SingleComment = ({
   const loggedUser = useSelector((state) => state.user)
   // const isLiked = Boolean(likes[loggedUser._id])
   // const likeCount = Object.keys(likes).length
+
+  const formatDate = createdAt.slice(0, 10)
 
   const patchLike = async () => {
     const response = await fetch(`http://localhost:3500/comment/${commentId}/liketoggle`, {
@@ -45,21 +48,13 @@ const SingleComment = ({
 
   return (
     <div>
-      <div>
-        ProfilePic: {profilePicture}
-      </div>
-      <div>
-        Username: {username}
-      </div>
-      <div>
-        Comment: {content}
-      </div>
-      <div>
-        Created: {createdAt}
-      </div>
-      {/* {isLiked ? (<h1>True</h1>) : (<h1>False</h1>)} */}
-      <div>
-        {/* Like Count: {likeCount} */}
+      <div className='flex'>
+        <ProfilePicture alt={'otheruser'} src={profilePicture} height={70} width={70} />
+        <div className='flex flex-col'>
+          <p>{username}</p>
+          <p>{content}</p>
+          <p>Posted on: {formatDate}</p>
+        </div>
       </div>
     </div>
   )
