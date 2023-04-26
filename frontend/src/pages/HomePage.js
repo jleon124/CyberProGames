@@ -52,13 +52,8 @@ const HomePage = () => {
             link={"quizshow"}
             className="mr-24" />
           <GameBox 
-<<<<<<< HEAD
-          src={'gameboxicons/zombiehunter.png'}
-          link={"bulletblitz"}/>
-=======
           src={'gameboxicons/bulletblitz.png'}
           link={"zombiehunter"}/>
->>>>>>> main
         </div>
 
       </div>
@@ -72,20 +67,16 @@ const HomePage = () => {
           src={"gameboxicons/matching.png"}
           link={"matching"}/>
         <GameBox 
-          src={"gameboxicons/datafrogger.png"}/>
+          src={"gameboxicons/datafrogger.png"}
+          link={"frogger"}/>
         <GameBox />
       </div>
 
       <h1 className="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Fun</h1>
       <div data-aos="zoom-out-down" className="flex justify-evenly pb-6">
         <GameBox 
-<<<<<<< HEAD
-          src={'gameboxicons/zombiehunter.png'}
-          link={"bulletblitz"}/>
-=======
           src={'gameboxicons/bulletblitz.png'}
           link={"zombiehunter"}/>
->>>>>>> main
         <GameBox 
         src={'gameboxicons/rocket.png'}
         link={"rocket"}/>

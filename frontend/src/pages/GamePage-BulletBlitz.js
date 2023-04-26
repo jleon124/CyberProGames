@@ -3,9 +3,6 @@ import GameBox from '../components/GameBox'
 import Description from '../components/Description'
 import GamePageBox from '../components/GamePageBox'
 
-<<<<<<< HEAD:frontend/src/pages/GamePage-BulletBlitz.js
-const GamePageBulletBlitz = () => {
-=======
 import { useDispatch, useSelector } from 'react-redux'
 import { setComments, setGameData, updateUser } from '../state'
 import { useEffect } from 'react'
@@ -13,8 +10,7 @@ import CreateComment from '../components/CreateComment'
 import CommentsSection from '../components/CommentsSection'
 import { BsFillHandThumbsDownFill, BsFillHandThumbsUpFill, BsFillHeartFill } from 'react-icons/bs'
 
-const GamePageZombieHunter = () => {
->>>>>>> main:frontend/src/pages/GamePage-ZombieHunter.js
+const GamePageBulletBlitz = () => {
 
   const dispatch = useDispatch()
   const user = useSelector((state) => state.user)

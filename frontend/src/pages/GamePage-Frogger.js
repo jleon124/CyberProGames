@@ -1,9 +1,7 @@
 import React from 'react'
 import GameBox from '../components/GameBox'
-import RatingBtn from '../components/RatingBtn'
 import FavBtn from '../components/FavBtn'
 import Description from '../components/Description'
-import Comments from '../components/Comments'
 import GamePageBox from '../components/GamePageBox'
 
 const GamePageFrogger = () => {
@@ -16,7 +14,6 @@ const GamePageFrogger = () => {
         src={'games/frogger'} />
       <br></br>
       <div className='flex'>
-        <RatingBtn />
         <FavBtn />
       </div>
 
@@ -32,7 +29,6 @@ const GamePageFrogger = () => {
           desc={'Match the corresponding variable types.'}
           contrls={'Use your clicker to flip each card.'}
           tips={"Stronger the memory the better the player"} />
-        <Comments />
       </div>
     </main>
   )
