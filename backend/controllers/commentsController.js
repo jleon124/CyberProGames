@@ -1,12 +1,15 @@
 const Comment = require('../models/Comment')
+const User = require('../models/User')
+const Game = require('../models/Game')
 
-// @desc    Get all comments
-// @route   GET /comment/all
-// @access  Private
-const getAllComments = async (req, res) => {
+// @desc    Get all game comments
+// @route   GET /:gameId/comments
+// @access  Public
+const getGameComments = async (req, res) => {
 
-  // get comments quickly with lean
-  const comments = await Comment.find({}).lean()
+  const { gameId } = req.params
+
+  const comments = await Comment.find({ gameId: gameId })
 
   // check if there are any comments
   if (!comments?.length) {
@@ -18,17 +21,12 @@ const getAllComments = async (req, res) => {
 }
 
 // @desc    Get comment
-// @route   GET /comment/:userId/comments
+// @route   GET /:userId/comments
 // @access  Private
-const getComment = async (req, res) => {
+const getUserComments = async (req, res) => {
 
   // get user id from url
   const { userId } = req.params
-
-  // check if id is valid
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).json({ message: 'Invalid ID' })
-  }
 
   // get comments from the db with specific userId
   const comments = await Comment.find({ userId })
@@ -38,85 +36,102 @@ const getComment = async (req, res) => {
     return res.status(400).json({ message: 'Comment not found' })
   }
 
-
   res.status(200).json(comments)
 }
 
 // @desc    Create new comment
-// @route   POST /comment/new
+// @route   POST /new-comment
 // @access  Private
 const createComment = async (req, res) => {
 
   // grab values from request body
-  const { content } = req.body
+  const { userId, gameId, content } = req.body
+
+  if (!userId || !gameId) {
+    res.status(400).json({ message: 'No userid or gameid found' })
+  }
 
   // check if values are present
   if (!content) {
     res.status(400).json({ message: 'Content missing' })
   }
 
+  // find user and game by their ids
+  const user = await User.findById(userId).exec()
+  const game = await Game.findById(gameId).exec()
+
   // create comment with values
-  const comment = await Comment.create({ content })
+  const comment = await Comment.create({
+    userId: user._id,
+    gameId: game._id,
+    username: user.username,
+    profilePicture: user.profilePicture,
+    content
+  })
+
+  // put comment in beginning 
+  user.comments.unshift(comment)
+  game.comments.unshift(comment)
+
+  await user.save()
+  await game.save()
 
   // check if comment is created
   if (comment) {
-    return res.status(201).json({ message: 'New comment created' })
+    return res.status(201).json({ user, game, comment })
   } else {
-    return res.status(400).json({ message: 'Invaldi comment data received' })
+    return res.status(400).json({ message: 'Invalid comment data received' })
   }
 }
 
-// @desc    Update comment
-// @route   PATCH /comment/:id/edit
+// @desc    Like comment
+// @route   PATCH /:id/liketoggle
 // @access  Private
-const updateComment = async (req, res) => {
+const likeComment = async (req, res) => {
+  const { id } = req.params
+  const { userId, gameId } = req.body
 
-  // grab comment id from url
-  const { id } = req.body
+  const comment = await Comment.findById(id)
+  const isLiked = comment.likes.get(userId)
 
-  // check if id is valid
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).json({ message: 'Invalid ID' })
+  if (isLiked) {
+    comment.likes.delete(userId)
+  } else {
+    comment.likes.set(userId, true)
   }
 
-  // get the comment from the db with id
-  const comment = await Comment.findById(id).exec()
+  const updatedComment = await Comment.findByIdAndUpdate(
+    id,
+    { likes: comment.likes },
+    { new: true }
+  )
 
-  // check if there is a comment
-  if (!comment) {
-    return res.status(400).json({ message: 'Comment not found' })
+  // find user and game by their ids
+  const user = await User.findById(userId).exec()
+  const game = await Game.findById(gameId).exec()
+
+  user.comments[user.comments.findIndex((theId) => theId == id)] = updatedComment
+  game.comments[game.comments.findIndex((theId) => theId == id)] = updatedComment
+
+  await user.save()
+  await game.save()
+
+  // check if comment is created
+  if (comment) {
+    return res.status(201).json({ user, game, comment })
+  } else {
+    return res.status(400).json({ message: 'Invalid comment data received' })
   }
-
-  // grab content from request body
-  const { content } = req.body
-
-  // check if there is content
-  if (!content) {
-    return res.status(400).json({ message: 'All fields required' })
-  }
-
-  // set content
-  comment.content = content
-
-  // grab the updated comment
-  const updatedComment = await comment.save()
-
-  // send response stating comment was updated
-  res.status(200).json(`Comment with id: ${updatedComment.id} updated`)
 }
 
 // @desc    Delete comment
-// @route   DELETE /comment/:id
+// @route   DELETE /:id
 // @access  Private
 const deleteComment = async (req, res) => {
 
   // get comment id from url
   const { id } = req.params
-
-  // check if id is valid
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).json({ message: 'Invalid ID' })
-  }
+  const { userId, gameId } = req.body
 
   // delete comment with id
   const comment = await Comment.findOneAndDelete({ _id: id })
@@ -126,14 +141,24 @@ const deleteComment = async (req, res) => {
     return res.status(400).json({ message: 'Comment not found' })
   }
 
+  // find user and game by their ids
+  const user = await User.findById(userId).exec()
+  const game = await Game.findById(gameId).exec()
+
+  user.comments = user.comments.filter((commendid) => commendid !== id)
+  game.comments = game.comments.filter((commendid) => commendid !== id)
+
+  await user.save()
+  await game.save()
+
   // send response stating what comment id was deleted
-  res.status(200).json({ message: `Comment with ID ${comment._id} deleted` })
+  res.status(200).json({ user, game })
 }
 
 module.exports = {
-  getAllComments,
-  getComment,
+  getGameComments,
+  getUserComments,
   createComment,
-  updateComment,
+  likeComment,
   deleteComment
 }

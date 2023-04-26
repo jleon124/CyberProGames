@@ -1,7 +1,6 @@
 import './App.css';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
-import GamesList from './components/GamesList';
 import About from './pages/About';
 import Settings from './pages/Settings'
 import Profile from './pages/Profile';
@@ -26,7 +25,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />} >
             <Route index element={<HomePage />} />
-            <Route path="/gamelist" element={<GamesList />} />
             <Route path="/about" element={<About />} />
             <Route
               path="/settings"

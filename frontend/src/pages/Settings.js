@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { setLogout, updateUser } from '../state'
 import { Link, useNavigate } from 'react-router-dom'
+import ProfilePicture from '../components/ProfilePicture'
 
 const Account = () => {
 
@@ -39,27 +40,6 @@ const Account = () => {
     e.preventDefault()
 
     updatePic(picture)
-  }
-
-  const showProfilePicture = (user) => {
-    switch (user.profilePicture) {
-      case 1:
-        return 'profilepictures/default_profilepic.png'
-      case 2:
-        return 'profilepictures/eye_profile.png'
-      case 3:
-        return 'profilepictures/glasses_profile.png'
-      case 4:
-        return 'profilepictures/griz_profile.png'
-      case 5:
-        return 'profilepictures/img_profile.png'
-      case 6:
-        return 'profilepictures/mask_profilepic.png'
-      case 7:
-        return 'profilepictures/angy_profilepic.png'
-      default:
-        return 'profilepictures/default_profilepic.png'
-    }
   }
 
   // description
@@ -127,7 +107,7 @@ const Account = () => {
 
 
   // delete
-  const deleteAcc = async (theuser) => {
+  const deleteAcc = async () => {
     const deletedResponse = await fetch(`http://localhost:3500/user/${user._id}`, {
       method: 'DELETE',
       headers: {
@@ -176,7 +156,7 @@ const Account = () => {
       <div className="clear-box2">
         <h1 className="setting-headers text-[40px] text-[rgba(255,255,255,0.4)] ml-[50px] mt-[100px] mb-5">Profile Picture</h1>
         <p className="choose-img-text">Choose a image</p>
-        <img id="profile-main-pic" src={showProfilePicture(user)} alt="user pp" width='200' height='200' />
+        <ProfilePicture picNum={user.profilePicture} height={200} width={200} className={'absolute ml-40 mt-12'} alt={'userpp'}/>
 
         <form onSubmit={onChosenPic} className="pic-container grid grid-cols-[auto_auto_auto] gap-x-[50px] gap-y-5 ml-[500px] mt-20">
           <button onClick={onPicChanged} type='submit' name='option1' value={1} className='bg-defaulticon h-[100px] w-[100px] bg-no-repeat bg-cover bg-center'
