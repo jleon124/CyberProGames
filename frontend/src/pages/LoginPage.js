@@ -14,7 +14,7 @@ const LoginPage = () => {
   const onPasswordChanged = e => setPassword(e.target.value)
 
   const login = async (email, password) => {
-    const loggedInResponse = await fetch('http://localhost:3500/auth/login', {
+    const loggedInResponse = await fetch('https://cyber-pro-games-backend.vercel.app/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })

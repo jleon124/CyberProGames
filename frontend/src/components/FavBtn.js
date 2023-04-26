@@ -12,7 +12,7 @@ function FavBtn() {
   const game = useSelector((state) => state.game)
 
   const patchFavorite = async () => {
-    const response = await fetch(`http://localhost:3500/game/${game._id}/favtoggle`, {
+    const response = await fetch(`https://cyber-pro-games-backend.vercel.app/game/${game._id}/favtoggle`, {
       method: 'PATCH',
       headers: {
         Authorization: `Bearer ${token}`,

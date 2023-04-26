@@ -16,7 +16,7 @@ const Account = () => {
   const onPicChanged = e => setPicture(e.target.value)
 
   const updatePic = async (pic) => {
-    const updatedPicResponse = await fetch(`http://localhost:3500/user/${user._id}/editPicture`, {
+    const updatedPicResponse = await fetch(`https://cyber-pro-games-backend.vercel.app/user/${user._id}/editPicture`, {
       method: 'PATCH',
       headers: {
         Authorization: `Bearer ${token}`,
@@ -47,7 +47,7 @@ const Account = () => {
   const onDescriptionChanged = e => setDescription(e.target.value)
 
   const updateDes = async (des) => {
-    const updatedDesResponse = await fetch(`http://localhost:3500/user/${user._id}/editDescription`, {
+    const updatedDesResponse = await fetch(`https://cyber-pro-games-backend.vercel.app/user/${user._id}/editDescription`, {
       method: 'PATCH',
       headers: {
         Authorization: `Bearer ${token}`,
@@ -79,7 +79,7 @@ const Account = () => {
   const onNewPwdChange = e => setNewPassword(e.target.value)
 
   const updatePwd = async (oldPwd, newPwd) => {
-    const updatedPwdResponse = await fetch(`http://localhost:3500/user/${user._id}/editPassword`, {
+    const updatedPwdResponse = await fetch(`https://cyber-pro-games-backend.vercel.app/user/${user._id}/editPassword`, {
       method: 'PATCH',
       headers: {
         Authorization: `Bearer ${token}`,
@@ -108,7 +108,7 @@ const Account = () => {
 
   // delete
   const deleteAcc = async () => {
-    const deletedResponse = await fetch(`http://localhost:3500/user/${user._id}`, {
+    const deletedResponse = await fetch(`https://cyber-pro-games-backend.vercel.app/user/${user._id}`, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${token}`,

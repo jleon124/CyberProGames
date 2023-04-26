@@ -18,7 +18,7 @@ const GamePageBulletBlitz = () => {
   const token = useSelector((state) => state.token)
 
   const getGameData = async () => {
-    const response = await fetch('http://localhost:3500/game/64485b00d440c37883379432', {
+    const response = await fetch('https://cyber-pro-games-backend.vercel.app/game/64485b00d440c37883379432', {
       method: 'GET'
     })
     const gameData = await response.json()
@@ -32,7 +32,7 @@ const GamePageBulletBlitz = () => {
   }
 
   const setGameComments = async () => {
-    const response = await fetch(`http://localhost:3500/comment/64485b00d440c37883379432/comments`, {
+    const response = await fetch(`https://cyber-pro-games-backend.vercel.app/comment/64485b00d440c37883379432/comments`, {
       method: 'GET',
     })
     const commentData = await response.json()
@@ -46,7 +46,7 @@ const GamePageBulletBlitz = () => {
   }
 
   const patchLike = async () => {
-    const response = await fetch(`http://localhost:3500/game/${game._id}/liketoggle`, {
+    const response = await fetch(`https://cyber-pro-games-backend.vercel.app/game/${game._id}/liketoggle`, {
       method: 'PATCH',
       headers: {
         Authorization: `Bearer ${token}`,
@@ -65,7 +65,7 @@ const GamePageBulletBlitz = () => {
   }
 
   const patchFavorite = async () => {
-    const response = await fetch(`http://localhost:3500/game/${game._id}/favtoggle`, {
+    const response = await fetch(`https://cyber-pro-games-backend.vercel.app/game/${game._id}/favtoggle`, {
       method: 'PATCH',
       headers: {
         Authorization: `Bearer ${token}`,

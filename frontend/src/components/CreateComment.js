@@ -12,7 +12,7 @@ const CreateComment = ({ user, game }) => {
   const token = useSelector((state) => state.token)
 
   const createComment = async (content) => {
-    const response = await fetch(`http://localhost:3500/comment/new-comment`, {
+    const response = await fetch(`https://cyber-pro-games-backend.vercel.app/comment/new-comment`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -37,7 +37,7 @@ const CreateComment = ({ user, game }) => {
   }
 
   const setGameComments = async () => {
-    const response = await fetch(`http://localhost:3500/comment/64446517836062ea7c5bc61f/comments`, {
+    const response = await fetch(`https://cyber-pro-games-backend.vercel.app/comment/64446517836062ea7c5bc61f/comments`, {
       method: 'GET',
     })
     const commentData = await response.json()

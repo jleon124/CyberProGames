@@ -18,7 +18,7 @@ const GamePageEscape = () => {
   const token = useSelector((state) => state.token)
 
   const getGameData = async () => {
-    const response = await fetch('http://localhost:3500/game/6448424dd440c3788337942f', {
+    const response = await fetch('https://cyber-pro-games-backend.vercel.app/game/6448424dd440c3788337942f', {
       method: 'GET'
     })
     const gameData = await response.json()
@@ -32,7 +32,7 @@ const GamePageEscape = () => {
   }
 
   const setGameComments = async () => {
-    const response = await fetch(`http://localhost:3500/comment/6448424dd440c3788337942f/comments`, {
+    const response = await fetch(`https://cyber-pro-games-backend.vercel.app/comment/6448424dd440c3788337942f/comments`, {
       method: 'GET',
     })
     const commentData = await response.json()
@@ -46,7 +46,7 @@ const GamePageEscape = () => {
   }
 
   const patchLike = async () => {
-    const response = await fetch(`http://localhost:3500/game/${game._id}/liketoggle`, {
+    const response = await fetch(`https://cyber-pro-games-backend.vercel.app/game/${game._id}/liketoggle`, {
       method: 'PATCH',
       headers: {
         Authorization: `Bearer ${token}`,
@@ -65,7 +65,7 @@ const GamePageEscape = () => {
   }
 
   const patchFavorite = async () => {
-    const response = await fetch(`http://localhost:3500/game/${game._id}/favtoggle`, {
+    const response = await fetch(`https://cyber-pro-games-backend.vercel.app/game/${game._id}/favtoggle`, {
       method: 'PATCH',
       headers: {
         Authorization: `Bearer ${token}`,

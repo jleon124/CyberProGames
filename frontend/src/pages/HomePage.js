@@ -9,7 +9,7 @@ const HomePage = () => {
   const dispatch = useDispatch()
 
   const getGameData = async () => {
-    const response = await fetch('http://localhost:3500/game/64446517836062ea7c5bc61f', {
+    const response = await fetch('https://cyber-pro-games-backend.vercel.app/game/64446517836062ea7c5bc61f', {
       method: 'GET'
     })
     const gameData = await response.json()

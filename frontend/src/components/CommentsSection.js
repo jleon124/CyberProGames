@@ -9,7 +9,7 @@ const CommentsSection = ({ gameId, userId }) => {
   const comments = useSelector((state) => state.comments)
 
   const getComments = async () => {
-    const response = await fetch(`http://localhost:3500/comment/${gameId}/comments`, {
+    const response = await fetch(`https://cyber-pro-games-backend.vercel.app/comment/${gameId}/comments`, {
       method: "GET",
     })
     const data = await response.json()

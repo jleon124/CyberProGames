@@ -14,7 +14,7 @@ const RegisterPage = () => {
   const onPasswordChanged = e => setPassword(e.target.value)
 
   const register = async (username, email, password) => {
-    const savedUserResponse = await fetch('http://localhost:3500/auth/register', {
+    const savedUserResponse = await fetch('https://cyber-pro-games-backend.vercel.app/auth/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, email, password })

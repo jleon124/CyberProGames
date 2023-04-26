@@ -24,7 +24,7 @@ const SingleComment = ({
   const formatDate = createdAt.slice(0, 10)
 
   const patchLike = async () => {
-    const response = await fetch(`http://localhost:3500/comment/${commentId}/liketoggle`, {
+    const response = await fetch(`https://cyber-pro-games-backend.vercel.app/comment/${commentId}/liketoggle`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
