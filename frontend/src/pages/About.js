@@ -14,7 +14,7 @@ const About = () => {
         <br></br><br></br>
 
         <div className='flex'>
-          <div data-aos="zoom-out-down" className="about_description text-center bg-[rgba(0,0,0,0.4)] h-80 w-[650px] ml-[100px] mt-[100px] border-[rgba(88,221,229,255)] border-[3px]">
+          <div data-aos="fade-right" className="about_description text-center bg-[rgba(0,0,0,0.4)] h-80 w-[650px] ml-[100px] mt-[100px] border-[rgba(88,221,229,255)] border-[3px]">
             <div className="about_text text-left text-base uppercase text-[rgba(26,250,141,255)] leading-loose font-bold p-[50px] font-sans">
               A website with a purpose of hosting various <br></br>
               games ranging from just-for-fun to game to <br></br>
@@ -28,7 +28,7 @@ const About = () => {
 
           </div>
 
-          <div data-aos="zoom-out-down" className="about_description text-center bg-[rgba(0,0,0,0.4)] h-80 w-[650px] ml-[100px] mt-[100px] border-[rgba(88,221,229,255)] border-[3px] ">
+          <div data-aos="fade-right" className="about_description text-center bg-[rgba(0,0,0,0.4)] h-80 w-[650px] ml-[100px] mt-[100px] border-[rgba(88,221,229,255)] border-[3px] ">
             <div className="about_text text-left text-base uppercase text-[rgba(26,250,141,255)] leading-loose font-bold p-[50px] font-sans">
               Technologies Used <br></br>
               <div className='flex'>
@@ -62,7 +62,7 @@ const About = () => {
                 <span className="text-white">Darlington</span> <br></br>
                 Gender: <span className="text-white">Female</span><br></br>
                 Age: <span className="text-white">25</span><br></br>
-                Height: <span className="text-white">5'5</span><br></br>
+                Height: <span className="text-white">5'5"</span><br></br>
                 Skills: <span className="text-white">HTML, CSS, Java,<br></br> Python</span> <br></br>
                 <br></br>
                 Role: <span className="text-white">Graphic Designer, Game Developer, Frontend</span><br></br>
@@ -109,11 +109,11 @@ const About = () => {
               <p className="profile_desciptions text-left uppercase text-[rgba(26,250,141,255)] leading-loose pl-[30px] pt-[70px] font-sans font-extrabold text-lg">
                 Name: <span className="text-white">Saif Shaikh</span> <br></br>
                 Gender: <span className="text-white">Male</span><br></br>
-                Age: <span className="text-white">Data Lost</span><br></br>
-                Height: <span className="text-white">Data Lost</span><br></br>
+                Age: <span className="text-white">23</span><br></br>
+                Height: <span className="text-white">5'9"</span><br></br>
                 Skills: <span className="text-white">HTML, CSS, Java</span> <br></br>
                 <br></br>
-                Role: <span className="text-white">Unknown</span><br></br>
+                Role: <span className="text-white">UI/UX Designer, <br></br>Game Developer, Frontend</span><br></br>
                 Social content: <span className="text-white"><a href="https://www.linkedin.com/in/-saif-shaikh/" target="blank">LinkedIn</a></span>
               </p>
 

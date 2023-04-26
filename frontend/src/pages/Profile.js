@@ -19,7 +19,7 @@ const Profile = () => {
 
           <div className='absolute top-[-70px] h-96 left-0 w-full bg-black z-0 bg-opacity-20 '></div>
 
-          <div data-aos="zoom-out-down" className='h-[200px] w-[200px] bg-transparent border-4 border-[rgba(88,221,229,255)] clip-custom3'>
+          <div data-aos="fade-right" className='h-[200px] w-[200px] bg-transparent border-4 border-[rgba(88,221,229,255)] clip-custom3'>
             <ProfilePicture alt={'userpic'} picNum={user.profilePicture} />
           </div>
 
@@ -30,7 +30,7 @@ const Profile = () => {
           </div>
         </div>
 
-        <div data-aos="zoom-out-down" className="mt-20 ml-20">
+        <div data-aos="fade-right" className="mt-20 ml-20">
           <h1 className="font-valo text-3xl text-[rgb(255,255,255,0.4)] mb-6">Favorite Games:</h1>
           <FavGameList favorites={user.favGames} className={"flex "} />
         </div>

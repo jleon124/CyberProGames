@@ -10,14 +10,14 @@ const HomePage = () => {
 
       <div className="grid grid-cols-4 grid-rows-2 mx-36 ">
 
-        <div data-aos="zoom-out-down" className="bg-black/40 col-span-2 mb-4 ">
+        <div data-aos="fade-right" className="bg-black/40 col-span-2 mb-4 ">
           <div className="text-[#58dde5] text-lg p-5">Hello, world! Welcome to the AFK gaming website. This website was created for the purpose
            of teaching you the basics of programming. This website hosts various games from helping you understand programming/computer science 
            to playing mindless fun games. You can create a profile like, favorite, and comment on each game. WOW, that's amazing! You can start 
            with a few clicks. Click login in the far right corner to get started.</div>
         </div>
 
-        <div data-aos="zoom-out-down" className="justify-self-center col-span-2 row-span-2 text-center bg-black/40 text-[#58dde5] w-[500px] leaderboard-box ">
+        <div data-aos="fade-right" className="justify-self-center col-span-2 row-span-2 text-center bg-black/40 text-[#58dde5] w-[500px] leaderboard-box ">
           <div className='p-5'>Leaderboard</div>
           <div className="grid grid-cols-[repeat(2,1fr)] grid-rows-[repeat(11,1fr)] gap-x-0 gap-y-0 text-left p-5">
             <div class="div1">Bullet-Blitz</div>
@@ -46,7 +46,7 @@ const HomePage = () => {
 
         </div>
 
-        <div data-aos="zoom-out-down" className=" col-span-2 flex ">
+        <div data-aos="fade-right" className=" col-span-2 flex ">
           <GameBox
             src={"gameboxicons/quizshow.png"}
             link={"quizshow"}
@@ -59,7 +59,7 @@ const HomePage = () => {
       </div>
 
       <h1 className="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 pt-20 pb-4">Programming</h1>
-      <div data-aos="zoom-out-down" className="flex justify-evenly pb-6">
+      <div data-aos="fade-right" className="flex justify-evenly pb-6">
         <GameBox 
           src={"gameboxicons/quizshow.png"}
           link={"quizshow"}/>
@@ -72,7 +72,7 @@ const HomePage = () => {
       </div>
 
       <h1 className="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Fun</h1>
-      <div data-aos="zoom-out-down" className="flex justify-evenly pb-6">
+      <div data-aos="fade-right" className="flex justify-evenly pb-6">
         <GameBox 
           src={'gameboxicons/bulletblitz.png'}
           link={"zombiehunter"}/>
@@ -87,7 +87,7 @@ const HomePage = () => {
       </div>
 
       <h1 className="text-[rgb(255,255,255,0.4)] font-valo text-3xl mb-6 ml-36 py-4">Coming Soon</h1>
-      <div data-aos="zoom-out-down" className="flex justify-evenly pb-6">
+      <div data-aos="fade-right" className="flex justify-evenly pb-6">
         <GameBox />
         <GameBox />
         <GameBox />
