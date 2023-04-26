@@ -132,7 +132,7 @@ const Account = () => {
       <h1 className="about_title_page text-5xl text-[yellow] font-[bolder] ml-[100px] pt-[70px]">CyberProGames</h1>
       <br></br><br></br>
 
-      <div className='clear-box2' data-aos="zoom-out-down" >
+      <div className='clear-box2' data-aos="fade-right" >
         <h1 className='setting-headers text-[40px] text-[rgba(255,255,255,0.4)] ml-[50px] mt-[100px] mb-5'>Description</h1>
         <h2 className="text-[rgba(26,250,141,255)] text-[25px] ml-[50px]">Change Description</h2>
 
@@ -142,7 +142,7 @@ const Account = () => {
         </form>
       </div>
 
-      <div className="clear-box2" data-aos="zoom-out-down" >
+      <div className="clear-box2" data-aos="fade-right" >
         <h1 className="setting-headers text-[40px] text-[rgba(255,255,255,0.4)] ml-[50px] mt-[100px] mb-5">Security</h1>
         <h2 className="text-[rgba(26,250,141,255)] text-[25px] ml-[50px]">Change Password</h2>
         <form className="ml-[50px]" onSubmit={onChangePassword}>
@@ -153,7 +153,7 @@ const Account = () => {
       </div>
 
 
-      <div className="clear-box2" data-aos="zoom-out-down" >
+      <div className="clear-box2" data-aos="fade-right" >
         <h1 className="setting-headers text-[40px] text-[rgba(255,255,255,0.4)] ml-[50px] mt-[100px] mb-5">Profile Picture</h1>
         <p className="choose-img-text">Choose a image</p>
         <ProfilePicture picNum={user.profilePicture} height={200} width={200} className={'absolute ml-40 mt-12'} alt={'userpp'}/>
@@ -183,7 +183,7 @@ const Account = () => {
         </form>
       </div>
 
-      <div className='clear-box2' data-aos="zoom-out-down" >
+      <div className='clear-box2' data-aos="fade-right" >
         <h1 className="setting-headers text-[40px] text-[rgba(255,255,255,0.4)] ml-[50px] mt-[100px] mb-5">Account Deletion</h1>
         <div className='save-changes h-[60px] w-[110px] bg-black text-[rgba(88,221,229,255)] text-center ml-[50px] border-[3px] border-[rgba(88,221,229,255)] py-3 '>
           <Link to="/" onClick={() => deleteAcc(user)}>Click to Delete</Link>
