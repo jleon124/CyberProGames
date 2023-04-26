@@ -11,26 +11,26 @@ const Footer = () => {
 
         <div className="text-[white] flex flex-col">
           <h1 className="text-[#29bffd] text-xl"><strong>CyberProGames</strong></h1>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/settings">Settings</Link>
-          <Link to="/profile">Profile</Link>
+          <Link to="/" className=' hover:underline hover:text-[yellow]'>Home</Link>
+          <Link to="/about" className=' hover:underline hover:text-[yellow]'>About</Link>
+          <Link to="/settings" className=' hover:underline hover:text-[yellow]'>Settings</Link>
+          <Link to="/profile" className=' hover:underline hover:text-[yellow]'>Profile</Link>
         </div>
 
         <div className="text-white flex flex-col">
           <h1 className="text-[#29bffd] text-xl"><strong>Browse Games</strong></h1>
-          <Link to="/gamepage">Game</Link>
-          <Link to="/gamepage">Game</Link>
-          <Link to="/gamepage">Game</Link>
-          <Link to="/gamepage">Game</Link>
+          <Link to="/quizshow" className=' hover:underline hover:text-[yellow]'>Linux Quiz Show</Link>
+          <Link to="/zombiehunter" className=' hover:underline hover:text-[yellow]'>Bullet Blitz</Link>
+          <Link to="/rocket" className=' hover:underline hover:text-[yellow]'>Rocket</Link>
+          <Link to="/matching" className=' hover:underline hover:text-[yellow]'>The Matching Game</Link>
         </div>
 
         <div className="text-white flex flex-col">
           <h1 className="text-[#29bffd] text-xl"><strong>Follow Us</strong></h1>
-          <Link to="https://www.linkedin.com/in/m1darl1ng/" target="blank">Miranda</Link>
-          <Link to="https://www.linkedin.com/in/jafet-leon-perez/" target="blank">Jafet</Link>
-          <Link to="https://www.linkedin.com/in/-saif-shaikh/" target="blank">Saif</Link>
-          <Link to="https://www.linkedin.com/in/javier-zarate-zaragoza-7b6817240/" target="blank">Javier</Link>
+          <Link to="https://www.linkedin.com/in/m1darl1ng/" target="blank" className=' hover:underline hover:text-[yellow]'>Miranda</Link>
+          <Link to="https://www.linkedin.com/in/jafet-leon-perez/" target="blank" className=' hover:underline hover:text-[yellow]'>Jafet</Link>
+          <Link to="https://www.linkedin.com/in/-saif-shaikh/" target="blank" className=' hover:underline hover:text-[yellow]'>Saif</Link>
+          <Link to="https://www.linkedin.com/in/javier-zarate-zaragoza-7b6817240/" target="blank" className=' hover:underline hover:text-[yellow]'>Javier</Link>
         </div>
 
 

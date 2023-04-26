@@ -132,28 +132,28 @@ const Account = () => {
       <h1 className="about_title_page text-5xl text-[yellow] font-[bolder] ml-[100px] pt-[70px]">CyberProGames</h1>
       <br></br><br></br>
 
-      <div className='clear-box2'>
+      <div className='clear-box2' data-aos="zoom-out-down" >
         <h1 className='setting-headers text-[40px] text-[rgba(255,255,255,0.4)] ml-[50px] mt-[100px] mb-5'>Description</h1>
         <h2 className="text-[rgba(26,250,141,255)] text-[25px] ml-[50px]">Change Description</h2>
 
-        <form onSubmit={onChosenDes} id='desform'>
-          <textarea form='desform' onChange={onDescriptionChanged} value={description} className='resize-none' placeholder={user.description} rows={4} cols={50} maxLength={160}></textarea>
-          <button type='submit' className='bg-slate-500 text-white mt-5 ml-5'>Change Description</button>
+        <form onSubmit={onChosenDes} id='desform' className='ml-11'>
+          <textarea form='desform' onChange={onDescriptionChanged} value={description} className='resize-none bg-black/30 text-white ' placeholder={user.description} rows={4} cols={50} maxLength={160}></textarea>
+          <button type='submit' className='flex text-[rgba(88,221,229,255)] mt-5 bg-black h-[40px] w-[150px] border-[3px] border-[rgba(88,221,229,255)]'>Change Description</button>
         </form>
       </div>
 
-      <div className="clear-box2">
+      <div className="clear-box2" data-aos="zoom-out-down" >
         <h1 className="setting-headers text-[40px] text-[rgba(255,255,255,0.4)] ml-[50px] mt-[100px] mb-5">Security</h1>
         <h2 className="text-[rgba(26,250,141,255)] text-[25px] ml-[50px]">Change Password</h2>
         <form className="ml-[50px]" onSubmit={onChangePassword}>
-          <input className="inputEntry-settings" onChange={onOldPwdChange} value={oldPassword} placeholder='Old Password'></input>
-          <input className="inputEntry-settings" onChange={onNewPwdChange} value={newPassword} placeholder='New Password'></input>
-          <button type='submit' className='bg-slate-500 text-white mt-5 ml-5'>Change Password</button>
+          <input className="inputEntry-settings bg-black/30 text-white" onChange={onOldPwdChange} value={oldPassword} placeholder='Old Password'></input>
+          <input className="inputEntry-settings flex bg-black/30 text-white" onChange={onNewPwdChange} value={newPassword} placeholder='New Password'></input>
+          <button type='submit' className='flex text-[rgba(88,221,229,255)] mt-5 bg-black h-[40px] w-[140px] border-[3px] border-[rgba(88,221,229,255)]'>Change Password</button>
         </form>
       </div>
 
 
-      <div className="clear-box2">
+      <div className="clear-box2" data-aos="zoom-out-down" >
         <h1 className="setting-headers text-[40px] text-[rgba(255,255,255,0.4)] ml-[50px] mt-[100px] mb-5">Profile Picture</h1>
         <p className="choose-img-text">Choose a image</p>
         <ProfilePicture picNum={user.profilePicture} height={200} width={200} className={'absolute ml-40 mt-12'} alt={'userpp'}/>
@@ -183,46 +183,15 @@ const Account = () => {
         </form>
       </div>
 
-
-      {/* <script>
-        function changeImage(filename) {
-          img = document.querySelector("#profile-main-pic");
-          img.setAttribute("src", filename);
-
-          }
-       </script>  */}
-
-
-      <div className="clear-box2">
-        <h1 className="setting-headers text-[40px] text-[rgba(255,255,255,0.4)] ml-[50px] mt-[100px] mb-5">Themes</h1>
-        <div className="theme-selector-box">
-          <button className="theme-button">Classic</button>
-          <div className="palete-shape">Image</div>
-          <button className="theme-button">Samurai</button>
-          <div className="palete-shape"></div>
-          <button className="theme-button">Retro</button>
-          <div className="palete-shape"></div>
-        </div>
-        <button className="save-changes">Save Changes</button>
-      </div>
-
-      <div className='clear-box2'>
+      <div className='clear-box2' data-aos="zoom-out-down" >
         <h1 className="setting-headers text-[40px] text-[rgba(255,255,255,0.4)] ml-[50px] mt-[100px] mb-5">Account Deletion</h1>
-        <Link to="/" onClick={() => deleteAcc(user)} className='bg-red-600 text-white'>Click to Delete</Link>
+        <div className='save-changes h-[60px] w-[110px] bg-black text-[rgba(88,221,229,255)] text-center ml-[50px] border-[3px] border-[rgba(88,221,229,255)] py-3 '>
+          <Link to="/" onClick={() => deleteAcc(user)}>Click to Delete</Link>
+        </div>
+        
       </div>
-
-
-
-      {/* <div classNameName="bg-white dark:bg-slate-700">
-        <img className="moon cursor-pointer" src="cpg_logo.png" alt=''></img>
-        <img className="sun cursor-pointer" src="griz_profile.png" alt=''></img>
-        <p className="bg-white dark:bg-slate-700">basrhgard</p>
-
-      </div> */}
-
 
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-      <script src='./drkMod.js'></script>
 
     </main>
   )
