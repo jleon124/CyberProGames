@@ -10,7 +10,7 @@ import CreateComment from '../components/CreateComment'
 import CommentsSection from '../components/CommentsSection'
 import { BsFillHandThumbsUpFill, BsFillHeartFill } from 'react-icons/bs'
 
-const GamePageEscape = () => {
+const GamePageSamurai = () => {
 
   const dispatch = useDispatch()
   const user = useSelector((state) => state.user)
@@ -18,7 +18,7 @@ const GamePageEscape = () => {
   const token = useSelector((state) => state.token)
 
   const getGameData = async () => {
-    const response = await fetch('http://localhost:3500/game/6448424dd440c3788337942f', {
+    const response = await fetch('http://localhost:3500/game/6448a15bcd81248913feefb3', {
       method: 'GET'
     })
     const gameData = await response.json()
@@ -32,7 +32,7 @@ const GamePageEscape = () => {
   }
 
   const setGameComments = async () => {
-    const response = await fetch(`http://localhost:3500/comment/6448424dd440c3788337942f/comments`, {
+    const response = await fetch(`http://localhost:3500/comment/6448a15bcd81248913feefb3/comments`, {
       method: 'GET',
     })
     const commentData = await response.json()
@@ -87,7 +87,7 @@ const GamePageEscape = () => {
   }
 
   useEffect(() => {
-    if (!game || game.title !== "Escape the House") {
+    if (!game || game.title !== "Samurai Fight") {
       getGameData()
       setGameComments()
     }
@@ -97,8 +97,8 @@ const GamePageEscape = () => {
     <main className='h-[1750px] pt-5 pb-5'>
       <h1 className="text-[yellow] font-cyber text-5xl mb-12 ml-36">CyberProGames</h1>
       <GamePageBox
-        name={"Escape the House"}
-        src={'games/adventure'} />
+        name={"Samurai Fight"}
+        src={'games/samurai'} />
       <br></br>
       <div className='flex'>
         <div className='flex '>
@@ -119,7 +119,6 @@ const GamePageEscape = () => {
             <BsFillHeartFill /> Favorite
           </button>
         </div>
-
       </div>
 
       <div className='pr-44 text-center h-44 float-right mb-2'>
@@ -131,9 +130,9 @@ const GamePageEscape = () => {
 
       <div className='ml-44 mt-5'>
         <Description
-          desc={'Use your wits to escape the mysterious house you wake up in.'}
-          contrls={'Click on the options with the mouse.'}
-          tips={"You can always try again if you get a bad end."} />
+          desc={'A fight between two mad samurai.'}
+          contrls={'Player 1 uses WASD and Player 2 uses the arrow keys.'}
+          tips={'Use spacebar and the down arrow key to fight.'} />
       </div>
 
       <div className='ml-44 mt-5 w-[800px] bg-black/40 text-white h-auto pl-5 py-5'>
@@ -145,4 +144,4 @@ const GamePageEscape = () => {
 
 }
 
-export default GamePageEscape
+export default GamePageSamurai

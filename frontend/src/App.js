@@ -14,6 +14,7 @@ import GamePageBulletBlitz from './pages/GamePage-BulletBlitz';
 import GamePageRocket from './pages/GamePage-Rocket';
 import GamePageMatching from './pages/GamePage-Matching';
 import GamePageEscape from './pages/GamePage-EscapeRoom';
+import GamePageSamurai from './pages/GamePage-Samurai';
 import GamePageFrogger from './pages/GamePage-Frogger';
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
             <Route path="/rocket" element={<GamePageRocket />} />
             <Route path="/matching" element={<GamePageMatching />} />
             <Route path="/escape" element={<GamePageEscape />} />
+            <Route path="/samurai" element={<GamePageSamurai />} />
             <Route path="/frogger" element={<GamePageFrogger/>} />
           </Route>
         </Routes>
