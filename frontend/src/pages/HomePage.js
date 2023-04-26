@@ -52,7 +52,8 @@ const HomePage = () => {
         src={'gameboxicons/rocket.png'}
         link={"rocket"}/>
         <GameBox 
-        src={'gameboxicons/samuraifight.png'}/>
+        src={'gameboxicons/samuraifight.png'}
+        link={"samurai"}/>
         <GameBox 
         src={'gameboxicons/escaperoom.png'}
         link={'escape'}/>
