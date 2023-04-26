@@ -8,7 +8,7 @@ import { setComments, setGameData, updateUser } from '../state'
 import { useEffect } from 'react'
 import CreateComment from '../components/CreateComment'
 import CommentsSection from '../components/CommentsSection'
-import { BsFillHandThumbsDownFill, BsFillHandThumbsUpFill, BsFillHeartFill } from 'react-icons/bs'
+import { BsFillHandThumbsUpFill, BsFillHeartFill } from 'react-icons/bs'
 
 const GamePageRocket = () => {
 
