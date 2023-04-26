@@ -10,7 +10,7 @@ import CreateComment from '../components/CreateComment'
 import CommentsSection from '../components/CommentsSection'
 import { BsFillHandThumbsDownFill, BsFillHandThumbsUpFill, BsFillHeartFill } from 'react-icons/bs'
 
-const GamePageZombieHunter = () => {
+const GamePageBulletBlitz = () => {
 
   const dispatch = useDispatch()
   const user = useSelector((state) => state.user)
@@ -98,7 +98,7 @@ const GamePageZombieHunter = () => {
       <h1 className="text-[yellow] font-cyber text-5xl mb-12 ml-36">CyberProGames</h1>
       <GamePageBox
         name={"Zombie Hunter"}
-        src={'games/'} />
+        src={'games/bulletblitz'} />
       <br></br>
       <div className='flex'>
         <div className='flex '>
@@ -144,4 +144,4 @@ const GamePageZombieHunter = () => {
 
 }
 
-export default GamePageZombieHunter
+export default GamePageBulletBlitz

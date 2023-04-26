@@ -10,10 +10,11 @@ import GamePage from './pages/GamePage-QuizShow';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 import { useSelector } from 'react-redux';
-import GamePageZombieHunter from './pages/GamePage-ZombieHunter';
+import GamePageBulletBlitz from './pages/GamePage-BulletBlitz';
 import GamePageRocket from './pages/GamePage-Rocket';
 import GamePageMatching from './pages/GamePage-Matching';
 import GamePageEscape from './pages/GamePage-EscapeRoom';
+import GamePageFrogger from './pages/GamePage-Frogger';
 
 function App() {
 
@@ -37,10 +38,11 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/quizshow" element={<GamePage />} />
-            <Route path="/zombiehunter" element={<GamePageZombieHunter />} />
+            <Route path="/bulletblitz" element={<GamePageBulletBlitz />} />
             <Route path="/rocket" element={<GamePageRocket />} />
             <Route path="/matching" element={<GamePageMatching />} />
             <Route path="/escape" element={<GamePageEscape />} />
+            <Route path="/frogger" element={<GamePageFrogger/>} />
           </Route>
         </Routes>
       </BrowserRouter>
