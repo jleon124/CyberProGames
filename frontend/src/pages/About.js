@@ -61,11 +61,11 @@ const About = () => {
                 Name: <span className="text-white">Miranda </span><br></br>
                 <span className="text-white">Darlington</span> <br></br>
                 Gender: <span className="text-white">Female</span><br></br>
-                Age: <span className="text-white">Data Lost</span><br></br>
-                Height: <span className="text-white">Data Lost</span><br></br>
-                Skills: <span className="text-white">HTML, CSS, Java</span> <br></br>
+                Age: <span className="text-white">25</span><br></br>
+                Height: <span className="text-white">5'5</span><br></br>
+                Skills: <span className="text-white">HTML, CSS, Java,<br></br> Python</span> <br></br>
                 <br></br>
-                Role: <span className="text-white">Unknown</span><br></br>
+                Role: <span className="text-white">Graphic Designer, Game Developer, Frontend</span><br></br>
                 Social content: <span className="text-white"><a href="https://www.linkedin.com/in/m1darl1ng/" target="blank" >LinkedIn</a></span>
               </p>
 
