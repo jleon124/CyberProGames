@@ -50,14 +50,14 @@ const updateLike = async (req, res) => {
     }
 
     // update the game with updates
-    const updatedGame = await Game.findByIdAndUpdate(
+    await Game.findByIdAndUpdate(
         gameId,
         { likes: game.likes },
         { new: true }
     )
 
     // return the updated game
-    res.status(200).json({ updatedGame })
+    res.status(200).json({ game })
 }
 
 // @desc    Update game fav map and user fav array
@@ -77,10 +77,10 @@ const favoriteGame = async (req, res) => {
 
     // add each other to favorites depending
     // if user has favorited or not
-    if (user.favGames.includes(gameId)) {
+    if (user.favGames.includes(gameId)) { // if user fav then remove
         user.favGames = user.favGames.filter((gameid) => gameid !== gameId)
         game.favorites.delete(userId)
-    } else {
+    } else { // else add it
         user.favGames.unshift(gameId)
         game.favorites.set(userId, true)
     }
@@ -89,14 +89,14 @@ const favoriteGame = async (req, res) => {
     await user.save()
 
     // update the game with updated favorites
-    const updatedGame = await Game.findByIdAndUpdate(
+    await Game.findByIdAndUpdate(
         gameId,
         { favorites: game.favorites },
         { new: true }
     )
 
     // return the updated user and game
-    res.status(200).json({ user, updatedGame })
+    res.status(200).json({ user, game })
 }
 
 module.exports = {
