@@ -98,7 +98,7 @@ const GamePageEscape = () => {
       <h1 className="text-[yellow] font-cyber text-5xl mb-12 ml-36">CyberProGames</h1>
       <GamePageBox
         name={"Escape the House"}
-        src={'games/adventure'} />
+        src={'games/adventure/index.html'} />
       <br></br>
       <div className='flex'>
         <div className='flex '>

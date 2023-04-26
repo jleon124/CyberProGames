@@ -98,7 +98,7 @@ const GamePageBulletBlitz = () => {
       <h1 className="text-[yellow] font-cyber text-5xl mb-12 ml-36">CyberProGames</h1>
       <GamePageBox
         name={"Bullet Blitz"}
-        src={'games/bulletblitz'} />
+        src={'games/bulletblitz/index.html'} />
       <br></br>
       <div className='flex'>
         <div className='flex '>
