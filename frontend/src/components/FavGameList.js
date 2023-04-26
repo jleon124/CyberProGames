@@ -15,7 +15,7 @@ const FavGameList = ({ favorites, className }) => {
           link={'escape'} className="mr-6" />
       case '64485825d440c37883379430':
         return <GameBox
-          src={"gameboxicons/quizshow.png"}
+          src={"gameboxicons/matching.png"}
           link={"matching"} className="mr-6" />
       case '6448594dd440c37883379431':
         return <GameBox
